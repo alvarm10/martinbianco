@@ -2,3 +2,47 @@ body {
     background-color: whitesmoke;
     height: auto;
 }
+
+footer {
+    width: 100%;
+    bottom: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.wrapper {
+    border: 1px solid grey;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.center {
+    text-align: center !important;
+}
+
+.wknd {
+    background: yellow !important;
+}
+
+.work {
+    background: green !important;
+}
+
+.holiday {
+    background: orange !important;
+}
+
+.invalid {
+    background: gray !important;
+}
+
+.next,
+.prev {
+    background: #C5C5C5;
+}
+
+.disabled {
+    cursor: not-allowed !important;
+}
