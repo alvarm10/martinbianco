@@ -22,7 +22,7 @@
 
 </head>
 
-<body>
+<body onload="runPage()">
 
     <div class="wrapper container" style="margin-top: 50px !important;">
         <div class="container row">
@@ -31,7 +31,7 @@
                     <div class="form-group ">
                         <div class="input-group">
                             <label class="control-label requiredField" for="date">
-                                 Date:
+                                 Date: (Before August 2017)
                                 </label>
                             <input class="form-control" id="date" name="date" placeholder="Example: 2008-01-01" type="text" size="100" required/>
                         </div>
@@ -48,6 +48,7 @@
                         <button class="calculate btn btn-block btn-primary" type="button" onclick="getData()">
                             Submit
                             </button>
+                        <i>*(For refresh, is necesary to click 2 times)</i>
                     </div>
                 </form>
             </div>
