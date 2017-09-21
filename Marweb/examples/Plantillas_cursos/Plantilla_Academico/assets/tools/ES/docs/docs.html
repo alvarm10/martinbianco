@@ -1,0 +1,88 @@
+<div class="modal fade modalfooter" id="ModalDocs" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+            <!-- Encabezado-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">---Documentación---</h4>
+            </div>
+            <!-- Contenido-->
+            <div class="modal-body">
+                <ul class="nav nav-tabs">
+                  <li class="active"><a data-toggle="tab" href="#home"><i class='fa fa-file-text-o' aria-hidden='true'></i> Documentación adicional</a></li>
+                  <li><a data-toggle="tab" href="#menu1"><i class='fa fa-book' aria-hidden='true'></i> Bibliografía</a></li> 
+                  <li><a data-toggle="tab" href="#menu2"><i class='fa fa-external-link' aria-hidden='true'></i> Enlaces de interés</a></li>                   
+                </ul>
+                <div class="tab-content">
+                  <div id="home" class="tab-pane fade in active">
+                    <h6 class="DocsTabTitle"></h6>
+                    <p class="pAudio">Pulsa en cada enlace para descargar el documento.</p>
+                    <ol class="listaOrdenada">
+                      <li><a href="descargables/rwd.pdf" download>Responsive Web Design</a> </li>
+                      <li><a href="descargables/responsive-design.pdf" download>Mobile World Congress, Barcelona, 2013</a> </li>
+                      <li><a href="descargables/HTML5 and CSS3 Responsive Web Design Cookbook.pdf" download>HTML5 and CSS3 Responsive Web Design Cookbook</a> </li>
+                    </ol> 
+                  </div>
+                  <div id="menu1" class="tab-pane fade in">
+                    <h6 class="DocsTabTitle"></h6>
+                    <ol class="listaOrdenada">
+                        <li><a target="_blank" class="enlace" href="http://diseñowebresponsivo.com.ar/">Traducción del artículo original "Responsive Web Design" por Ethan Marcotte (en español).</a></li>
+                        <li><a target="_blank" class="enlace" href="http://web.archive.org/web/http://arborwebsolutions.com/articles/responsive-design-is-an-official-w3c-recommendation">Artículo sobre Recomendación oficial del consorcio W3C en Arbor Web Solutions (en inglés).</a></li>
+                        <li><a target="_blank" class="enlace" href="http://www.w3.org/TR/mobile-bp/#OneWeb">Apartado 3.1 OneWeb en la recomendación "Mobile Web Best Practices" del consorcio W3C (en inglés).</a></li>
+                        <li><a target="_blank" class="enlace" href="http://www.w3.org/Consortium/mission.html">La misión de W3C (en inglés).</a></li>
+                        <li><a target="_blank" class="enlace" href="http://www.ecbloguer.com/marketingdigital/?p=2635">Beneficios del Responsive Web Design en ecbloguer.com</a></li>
+                        <li><a target="_blank" class="enlace" href="http://www.practicalecommerce.com/articles/3395-SEO-Benefits-of-Responsive-Web-Design">«SEO Benefits of Responsive Web Design.» (en inglés).</a></li>
+                    </ol>
+                  </div>                          
+                  <div id="menu2" class="tab-pane fade in">
+                    <h6 class="DocsTabTitle"></h6>
+                    <p class="pAudio">Pulsa en cada enlace para ir a la página correspondiente.</p>
+                    <ol class="listaOrdenada">
+                      <li><a href="" target="_blank">Enlace 1</a></li> 
+                      <li><a href="" target="_blank">Enlace 2</a></li> 
+                      <li><a href="" target="_blank">Enlace 3</a></li>
+                    </ol>     
+                  </div>
+                </div>                                        
+            </div>
+            <!-- Pié, se puede quitar si no se necesita-->                    
+      </div>      
+    </div>
+</div>
+
+<style type="text/css">
+  #ModalDocs a {color: #68655C !important;}
+  #ModalDocs a i {color: inherit;}
+  .DocsTabTitle {
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  .nav-tabs li {
+    text-align: center;
+  }
+</style>
+
+<script type="text/javascript">
+  function docsResponsive () {
+    if (window.matchMedia("(max-width: 666px)").matches) {
+      $(".nav-tabs li").css("width", "33.33%");
+      $(".nav-tabs li:eq(0) a").html("<i class='fa fa-2x fa-file-text-o' aria-hidden='true'></i>");
+      $(".nav-tabs li:eq(1) a").html("<i class='fa fa-2x fa-book' aria-hidden='true'></i>");
+      $(".nav-tabs li:eq(2) a").html("<i class='fa fa-2x fa-external-link' aria-hidden='true'></i>");
+      $("#home h6").html("Documentación adicional");
+      $("#menu1 h6").html("Bibliografía");
+      $("#menu2 h6").html("Enlaces de interés");
+    }
+    else{
+      $(".nav-tabs li").css("width", "auto");
+      $(".nav-tabs li:eq(0) a").html("<i class='fa fa-file-text-o' aria-hidden='true'></i> Documentación adicional");
+      $(".nav-tabs li:eq(1) a").html("<i class='fa fa-book' aria-hidden='true'></i> Bibliografía");
+      $(".nav-tabs li:eq(2) a").html("<i class='fa fa-external-link' aria-hidden='true'></i> Enlaces de interés");
+      $("#home h6").html("");
+      $("#menu1 h6").html("");
+      $("#menu2 h6").html("");
+    }
+  }
+  docsResponsive();
+  $(window).on("resize", function(){docsResponsive();})
+</script>

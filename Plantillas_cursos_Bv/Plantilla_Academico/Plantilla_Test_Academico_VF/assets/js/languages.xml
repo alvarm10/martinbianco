@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<languages>
+	<language idioma="ES">
+		<buttons>
+			<audio>Audio</audio>
+			<ayuda>Ayuda</ayuda>
+			<cerrar>Cerrar</cerrar>
+			<documentacion>Doc. Documentación</documentacion>
+			<glosario>Glosario</glosario>
+		</buttons>
+		<elementos>
+			<sumario>Sumario</sumario>
+		</elementos>
+	</language>
+	<language idioma="EN">
+		<buttons>
+			<audio>Audio</audio>
+			<ayuda>Help</ayuda>
+			<cerrar>Close</cerrar>
+			<documentacion>Additional documentation</documentacion>
+			<glosario>Glossary</glosario>
+		</buttons>
+		<elementos>
+			<sumario>Summary</sumario>
+		</elementos>
+	</language>
+	<language idioma="FR">
+		<buttons>
+			<audio>Acoustique</audio>
+			<ayuda>Aide</ayuda>
+			<cerrar>Fermer</cerrar>
+			<documentacion>Doc. Supplémentaire</documentacion>
+			<glosario>Glossaire</glosario>
+		</buttons>
+		<elementos>
+			<sumario>Résumé</sumario>
+		</elementos>
+	</language>
+</languages>

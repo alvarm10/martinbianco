@@ -1,0 +1,89 @@
+<div class="container">
+	<form ng-submit="bloque8Cer.showScope()" >
+
+		<lri-title title="Certificado de Deuda" ></lri-title>
+		<div class="row">
+			<lri-title title="Datos Generales" ></lri-title>
+			<div class="row">
+				<lri-input title="Activo" model="al.certificadoDeuda.activo"  disabled="true" type-validation="cliente"></lri-input>
+
+				<lri-input title="Cuenta Origen" model="al.certificadoDeuda.cuentaOrigen" disabled="true" type-validation="cliente"></lri-input>
+
+				<lri-input title="Cuenta Aval" model="al.certificadoDeuda.cuentaAval" disabled="true" ></lri-input>
+
+				<lri-input title="Fecha de Cierre" model="al.certificadoDeuda.fecCierre" disabled="true" type-validation="fecha"></lri-input>
+
+				<lri-input title="Moneda" model="al.certificadoDeuda.moneda" disabled="true"></lri-input>
+
+			</div>
+			<lri-title title="Titular/es" ></lri-title>
+			<div class="row">
+				<p class="col-md-12">tabla titular/es</p>
+			</div>
+
+			<lri-title title="Letrado" ></lri-title>
+			<div class="row">
+				<p class="col-md-12">tabla letrado</p>
+			</div>	
+
+			<div class="row">
+				<lri-input title="Código" model="al.certificadoDeuda.codigo"></lri-input>
+
+				<lri-input title="Primer Apoderado" model="al.certificadoDeuda.primerApoderado" type-validation="cliente"></lri-input>
+
+				<lri-boton class-boton="" id="buscar" dataid="buscar" name="Buscar" type="submit" url="/bloque8"></lri-boton>		
+
+			</div>
+
+			<div class="row">
+				<p class="col-md-12">tabla apoderados</p>
+			</div>	
+
+			<div class="row">
+				<lri-boton class-boton="" id="selApoderado" dataid="selApoderado" name="Seleccionar Apoderado" type="submit" url="/bloque8"></lri-boton>		
+
+			</div>
+		</div>
+
+		<div class="row">
+			<lri-input title="Fecha Subasta" model="al.certificadoDeuda.fecSubasta"></lri-input>
+
+			<lri-input title="Tipo de Interés Moratorio" model="al.certificadoDeuda.tipoIntMoratorio"></lri-input>
+
+			<lri-boton class-boton="" id="calcular" dataid="calcular" name="Calcular" type="submit" url="/bloque8"></lri-boton>
+
+			<lri-input title="Plazo Transcurrido (Días)" model="al.certificadoDeuda.plazoTranscurrido" disabled="true"></lri-input>
+
+		</div>
+
+		<div class="row">
+				<lri-title title="Certificación de Deuda" ></lri-title>
+				<p class="col-md-12">tabla certif deuda</p>
+		</div>
+
+		<div class="row">
+			<lri-input title="Interes Moratorio Posteriores al Certificado o de Deuda" model="al.certificadoDeuda.fecSubasta" disabled="true"></lri-input>
+		</div>
+		<div class="row">
+			<lri-input title="D.H.R. Interes Moratorios" model="al.certificadoDeuda.plazoTranscurrido" disabled="true"></lri-input>
+
+		</div>
+
+		<div class="row">
+				<lri-title title="Entregas Realizadas al Activo" ></lri-title>
+				<p class="col-md-12">tabla entregas</p>
+		</div>
+
+		<div class="row">
+				<lri-title title="Total Deuda Financiera a Fecha de Subasta" ></lri-title>
+				<p class="col-md-12">tabla entregas</p>
+		</div>
+
+		<div class="row">
+			<lri-boton class-boton="" id="precarta" dataid="precarta" name="Precarta" type="submit" url="/bloque8"></lri-boton>
+			<lri-boton class-boton="" id="cancelar2" dataid="cancelar2" name="Cancelar" type="button" url="/bloque8" onaction=bloque8Cer.cancel()></lri-boton>
+			<lri-boton class-boton="" id="aceptar2" dataid="aceptar2" name="Aceptar" type="submit" url="/bloque8"></lri-boton>
+		</div>
+
+	</form>
+</div>

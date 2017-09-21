@@ -1,0 +1,198 @@
+<div class="container">
+
+	<div ng-if= "currentPage == 1">
+
+		<div class="row col-md-12">
+			<alert-component class-alert="col-md-10" alerts-object=alerts></alert-component>
+		</div>
+
+		<form ng-submit="$ctrl.showScope()" >
+			<title-component title="Información relevante" ></title-component>
+			<div class="row col-md-12">
+				<input-component title="Situación concursal cliente/grupo " model="fichaCliente.SituacionConcursalCliente " disabled="true" type-validation="cliente"></input-component>
+				<input-component title="Situación concursal" model="fichaCliente.SituacionConcursal" disabled="true" type-validation="cliente"></input-component>
+				<input-component title="Fecha concursal" model="fichaCliente.FechaConcursal" disabled="true" type-validation="fecha"></input-component>
+				<input-component title="Antiguedad cliente" model="fichaCliente.AntiguedadCliente" disabled="true" type-validation="fecha"></input-component>
+
+				<title-component title="	Contador contactos por:" ></title-component>
+				<div class="col-md-12">
+					  <input-component title="Telefónico" model="fichaCliente.Telefonico" disabled="true" type-validation="variostamanio1"></input-component>
+					  <input-component title="Correo" model="fichaCliente.Correo" disabled="true" type-validation="variostamanio2"  ></input-component>
+					  <input-component title="Presencial" model="fichaCliente.Presencial" disabled="true"  type-validation="variostamanio2"></input-component>	 
+				</div>
+
+				<input-component title="Cliente refinanciado" model="fichaCliente.ClienteRefinanciado" disabled="true" type-validation="variostamanio2"></input-component>	
+				<input-component title="Grupo económico" model="fichaCliente.GrupoEconomico" disabled="true" type-validation="variostamanio2"></input-component>			
+
+				<boton-component class-boton="" id="Consultar" dataid="Consultar" name="Consutar" type="button" url="" onaction=$ctrl.changeCurrentPage(3) ></boton-component>
+			</div>
+		</form>	
+
+		<title-component title="Posición Agregada"></title-component>
+		<div class="row col-md-12">
+		<title-component title="Resumen posiciones 31/12/2015 (Datos o D-1)"></title-component>
+			<div class="col-md-12">
+			<h1> Tabla Activo</h1>
+			<h1> Tabla Pasivo</h1>	
+			</div>
+		<title-component title="Resumen Calificaciones de deuda (Datos A D-1)"></title-component>
+		<h1> Tabla </h1>
+		<title-component title="Pool bancario (Top 4) 31/12/2015 (Datos A D-1)"></title-component>	
+		<h1> Tabla</h1>
+
+		<input-component title="Fecha" model="fichaCliente.Fecha" disabled="true" type-validation="fecha"></input-component>	
+		<input-component title="Total CIRBE" model="fichaCliente.TotalCirbe" disabled="true" type-validation="importe"></input-component>	
+		<input-component title="Cuota CIRBE" model="fichaCliente.CuotaCirbe" disabled="true" type-validation="porcentaje"></input-component>					
+		</div>
+
+		<title-component title="Relación contratos (Datos a fecha 99/99/9999)" ></title-component>
+		<div class="row col-md-12">
+			<title-component title="Relación de contratos como titular, irregulares"></title-component>
+			<div class="row">
+			<h1 class="col-md-12">tabla</h1>
+			</div>
+
+			<title-component title="Relación de contratos como titualar, regulares"></title-component>
+			<div class="row">
+			<h1 class="col-md-12">tabla</h1>
+			</div>
+
+			<title-component title="Relación de Contratos como garante/avalista, irregulares"></title-component>
+			<div class="row">
+			<h1 class="col-md-12">tabla</h1>
+			</div>
+
+			<title-component title="Relación de contratos como garante/avalista, regulares"></title-component>
+			<div class="row">
+			<h1 class="col-md-12">tabla</h1>
+			</div>
+
+			<title-component title="Contratos irregulares seleccionados"></title-component>
+			<div class="row">
+			<h1 class="col-md-12">tabla</h1>
+			</div>
+
+			<title-component title="Contratos regulares seleccionados"></title-component>
+			<div class="row">
+			<h1 class="col-md-12">tabla</h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<links-panel-component link-panel=true link-class="col-md-3" urls-object=urlsDetalleCliente title-panel="Acceso información"></links-panel-component>
+		</div>
+			
+	</div>
+
+	<div ng-if="currentPage == 2">
+
+		<title-component title="Información relevante" ></title-component>
+		<div class="row col-md-12">
+
+			<title-component title="Resultado comportamental" ></title-component>
+			<div class="col-md-12">
+				  <input-component title="Fecha" model="infRelevante[0][0]" disabled="true" type-validation="fecha"></input-component>
+				  <input-component title="Observación" model="infRelevante[0][1]" disabled="true" type-validation="cliente"  ></input-component>
+				  <input-component title="Tipo de contacto" model="infRelevante[0][2]" disabled="true"  type-validation="tipos"></input-component>
+				  <input-component title="Importe pactado" model="infRelevante[0][3]" disabled="true" type-validation="importe"></input-component>
+			</div>
+
+			<input-component title="Fecha último impago (Impago actual)" model="infRelevante[1]" disabled="true" type-validation="fecha"></input-component>
+			<input-component title="Categorización" model="infRelevante[2]" disabled="true" type-validation="cliente"></input-component>
+			<input-component title="Contrato refinanciado" model="infRelevante[3]" disabled="true" type-validation="variostamanio2"></input-component>
+			<input-component title="Situación financiera" model="infRelevante[4]" disabled="true" type-validation="cliente"></input-component>
+			<input-component title="Resultado de estrategia recuperatoria" model="infRelevante[5]" disabled="true" type-validation="cliente"></input-component>			
+		</div>
+
+		<title-component title="Detalle de Contrato" ></title-component>
+		<div class="col-md-12 row"cliente>
+
+			<input-component title="Ind. Active." model="detallesContrato.IndActive" disabled="true" type-validation="cliente"></input-component>
+			<input-component title="Des. producto" model="detallesContrato.Des" disabled="true" type-validation="cliente"></input-component>
+			<input-component title="Contrato" model="detallesContrato.Contrato" disabled="true" type-validation="contratocuenta"></input-component>
+			<title-component class-container="row col-md-12" title="Activo" ></title-component>
+			<div class="col-md-12">
+				<title-component title="Importes (Miles €)" ></title-component>
+				<div class="col-md-12">
+					 <input-component title="Importe Concedido" model="detallesContrato.ImporteConcedido" disabled="true" type-validation="importe"  ></input-component>
+				 	 <input-component title="Límite actual" model="detallesContrato.LimiteActual" disabled="true" type-validation="importe"  ></input-component>
+				 	 <input-component title="Saldo Dpto." model="detallesContrato.SaldoDto" disabled="true" type-validation="importe"  ></input-component>
+				 	 <input-component title="Saldo disponible" model="detallesContrato.SaldoDisponible" disabled="true" type-validation="importe"  ></input-component>
+			  	  	 <input-component title="Imp. exceso" model="detallesContrato.ImpExceso" disabled="true" type-validation="importe"  ></input-component>
+				 	 <input-component title="Imp. Provis." model="detallesContrato.ImpProvis" disabled="true" type-validation="importe"  ></input-component>
+				</div>
+				<title-component title="Fechas" ></title-component>
+				<div class="col-md-12">
+					 <input-component title="Formal." model="detallesContrato.Formal" disabled="true" type-validation="fecha"  ></input-component>
+				 	 <input-component title="Vencimiento operación" model="detallesContrato.fecha" disabled="true" type-validation="fecha"  ></input-component>
+				 	 <input-component title="Vencimiento Carenc." model="detallesContrato.VencimientoCarenc" disabled="true" type-validation="fecha"  ></input-component>
+				 	 <input-component title="Primer impago" model="detallesContrato.PrimerImpago" disabled="true" type-validation="importe"  ></input-component>
+			  	  	 <input-component title="Clasificación contable" model="detallesContrato.ClasificacionContable" disabled="true" type-validation="tipos"  ></input-component>
+				</div>
+				<title-component title="Liquidaciones" ></title-component>
+				<div class="rcol-md-12">
+					 <input-component title="Refer." model="detallesContrato.Refer" disabled="true" type-validation="importe"  ></input-component>
+				 	 <input-component title="%Difer." model="detallesContrato.difer" disabled="true" type-validation="porcentaje"  ></input-component>
+				 	 <input-component title="%Int. " model="detallesContrato.Int" disabled="true" type-validation="porcentaje"  ></input-component>
+				 	 <input-component title="Liq. Int." model="detallesContrato.LidInt" disabled="true" type-validation="importe"  ></input-component>
+			  	  	 <input-component title="Amort. capital" model="detallesContrato.AmortCapital" disabled="true" type-validation="importe"  ></input-component>
+			  	  	 <input-component title="Prox. cuota" model="detallesContrato.ProxCuot" disabled="true" type-validation="importe"  ></input-component>
+				</div>
+				<title-component title="Garantías" ></title-component>
+				<div class="col-md-12">
+					 <input-component title="Tasación" model="detallesContrato.Tasacion" disabled="true" type-validation="importe"  ></input-component>
+				 	 <input-component title="Fecha tasación" model="detallesContrato.FechaTasacion" disabled="true" type-validation="fecha"  ></input-component>
+				 	 <input-component title="%LTV" model="detallesContrato.LTV" disabled="true" type-validation="porcentaje"  ></input-component>
+				 	 <input-component title="Garantía" model="detallesContrato.Garantia" disabled="true" type-validation="tipos"  ></input-component>
+			  	  	 <input-component title="Área geográfica" model="detallesContrato.AreaGeografica" disabled="true" type-validation="tipos"  ></input-component>
+			  	  	 <input-component title="Nº Viv." model="detallesContrato.NViv" disabled="true" type-validation="importe"  ></input-component>
+			  	  	 <input-component title="Nº Vtas." model="detallesContrato.NVent" disabled="true" type-validation="importe"  ></input-component>
+				 	 <input-component title="%Ejec." model="detallesContrato.Ejer" disabled="true" type-validation="porcentaje"  ></input-component>
+				 	 <input-component title="%Ret." model="detallesContrato.Ret" disabled="true" type-validation="porcentaje"  ></input-component>
+				 	 <input-component title="EPA" model="detallesContrato.EPA" disabled="true" type-validation="variostamanio1"  ></input-component>  	
+				</div>
+
+				<input-component title="DRC" model="detallesContrato.DRC" disabled="true" type-validation="variostamanio2"  ></input-component>
+			</div>
+
+		</div>
+
+		<title-component title="Pasivo" ></title-component>
+		<div class="row">
+			<input-component title="Limitación actividad" model="detallesContrato.LimitacionActividad" disabled="true" type-validation="importe"  ></input-component>
+			<input-component title="Saldo actual" model="detallesContrato.SaldoActual" disabled="true" type-validation="importe"  ></input-component>
+			<input-component title="Saldo medio mes" model="detallesContrato.Importe" disabled="true" type-validation="importe"  ></input-component>
+			<input-component title="Apertura" model="detallesContrato.Apertura" disabled="true" type-validation="importe"  ></input-component>
+		</div>
+
+		<title-component title="Últimos informes" ></title-component> <links-panel-component link-panel=true link-class="col-md-3" urls-object=link title-panel="Acceso información"></links-panel-component>
+		<div class="row">
+			<p class="col-md-12">tabla</p>
+		</div>
+
+		<div class="row">
+			<links-panel-component link-panel=true link-class="col-md-3" urls-object=urls title-panel="Acceso información"></links-panel-component>
+		</div>
+		<div class="row">
+			<boton-component class-boton="" id="cerrrar2" dataid="cerrrar2" name="Cerrar" type="button" url="" onaction=$ctrl.changeCurrentPage(1)></boton-component>		
+		</div>
+	</div>
+
+	<div ng-if="currentPage == 3">
+		<form ng-submit="$ctrl.showScope()" >
+			
+			<div class="row">
+				<input-component title="Identigicación del grupo económico" model="propuestaLitigio.deudaEstimada" disabled="true" type-validation="entidad"></input-component>
+
+				<title-component title="Grupo económico"></title-component>
+				<div class="row">
+					<h1 class="col-md-12">tabla</h1>
+				</div>
+				
+				<boton-component class-boton="" id="cerrar3" dataid="cerrar3" name="Cerrar" type="button" url="" onaction=$ctrl.changeCurrentPage(1)></boton-component>
+			</div>
+		</form>	
+
+	</div>
+
+</div>

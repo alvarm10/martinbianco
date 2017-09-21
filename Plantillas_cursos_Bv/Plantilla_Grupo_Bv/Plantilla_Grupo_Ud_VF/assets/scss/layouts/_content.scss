@@ -1,0 +1,11 @@
+/* C O N T E N T
+================================================== */
+
+.contenedor-unidad{
+	/*overflow: hidden;*/
+	padding: 0 3%;
+	@media only screen and (max-width: 1000px) {
+		padding: 35px 3%;
+	} 
+}
+

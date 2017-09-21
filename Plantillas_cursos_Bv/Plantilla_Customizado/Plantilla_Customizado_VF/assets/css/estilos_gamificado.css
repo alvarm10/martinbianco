@@ -1,0 +1,38 @@
+
+/* Para que funcione el scroll en las ventanas modales en Safari */
+.modal {
+    /* ... */
+    -webkit-overflow-scrolling:auto
+}
+
+/* A C T I V I D A D    D E    A S O C I A R    G R Á F I C O
+
+*/
+/* Para los bullets de las ventanas emergentes*/
+#instruccionesAsociarGrafico .modal-body>.lista span{
+  color:#B0002D;
+}
+
+/* Botón de reiniciar actividad */
+
+.contenedor-btnreiniciar{
+  display: none;
+  text-align: center;
+  margin-top:30px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.contenedor-btnreiniciar>.btn-reiniciar{
+    width: 46%;
+    background: rgba(183, 177, 169, 0.2);
+}
+
+.cronometrografico{
+	color: #B0002D;
+    font-weight: bold;
+    font-size: 16px;
+    transition: opacity 0.7s ease;
+    margin-bottom: 15px;
+    text-align: center;
+}

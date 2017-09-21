@@ -1,0 +1,144 @@
+<div class="row-fluid ejercicio ejercicioAsociar grafico" game="7">
+
+	<div class="enunciado">
+		<p>
+			Vivamus sollicitudin viverra leo, id lobortis elit rhoncus efficitur. Sed tincidunt convallis tellus, et bibendum lectus interdum at:
+		</p>
+	</div>
+
+	<!-- Versión escritorio y tablet  -->
+	<div class="pregunta">
+		
+			<ul class="listaAsociar opciones-1 row-fluid">
+
+				<li class="col-xs-6 col-sm-3">
+					<h6>A</h6>
+					<div class="textografico">
+						<!-- Introducir texto de pregunta de asociar gráfico  -->
+						Norte
+					</div>
+					<div class="clearfix"></div>
+				</li>
+				<li class="col-xs-6 col-sm-3">
+					<h6>B</h6>
+					<div class="textografico">
+						<!-- Introducir texto de pregunta de asociar gráfico  -->
+						Sur
+					</div>
+					<div class="clearfix"></div>
+				</li>
+				<li class="col-xs-6 col-sm-3">
+					<h6>C</h6>
+					<div class="textografico">
+						<!-- Introducir texto de pregunta de asociar gráfico  -->
+						Este
+					</div>
+					<div class="clearfix"></div>
+				</li>
+				<li class="col-xs-6 col-sm-3">
+					<h6>D</h6>
+					<div class="textografico">
+						<!-- Introducir texto de pregunta de asociar gráfico  -->
+						Oeste
+					</div>
+					<div class="clearfix"></div>
+				</li>
+
+				
+				
+
+				<div class="clearfix"></div>
+			</ul>
+		</div>
+
+		<div class="cont-asociargrafico">
+			<img src="img/rosa_vientos.svg" alt="rosa de los vientos">
+			<ul class="listaAsociar opciones-2">
+				<li data-result="A">
+					<h6 class="h6-hover">?</h6>
+					<div class="clearfix"></div>
+				</li>
+
+				<li data-result="B">
+					<h6 class="h6-hover">?</h6>
+					<div class="clearfix"></div>
+				</li>
+
+				<li data-result="C">
+					<h6 class="h6-hover">?</h6>
+					<div class="clearfix"></div>
+				</li>
+
+				<li data-result="D">
+					<h6 class="h6-hover">?</h6>
+					<div class="clearfix"></div>
+				</li>
+			</ul>
+		</div>
+
+	<div class="col-xs-12" style="margin-bottom:10px"><span class="contesta-asociar contesta-asociargrafico"></span></div>
+
+	<div class="row-fluid botonera">
+		<div class="btn btn-corregir asociar asociargrafico col-lg-2 col-md-2 col-sm-2 col-xs-6"></div>
+		<div class="btn btn-reiniciar asociar asociargrafico col-lg-2 col-md-2 col-sm-2 col-xs-6"></div>
+		<div class="btn btn-solucion asociar asociargrafico col-lg-2 col-md-2 col-sm-2 col-xs-6"></div>
+	</div>
+
+</div>
+
+<style>
+
+/*CONTROLAMOS LA ANCHURA DE LA IMAGEN DEL GRÁFICO*/
+.cont-asociargrafico{
+	width:60%;
+	margin:0 20%;
+}
+
+@media only screen and (max-width: 991px){
+	.cont-asociargrafico{
+		width:60%;
+		margin:0 20%;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	.cont-asociargrafico{
+		width:80%;
+		margin:0 10%;
+	}
+}
+
+@media only screen and (max-width: 600px){
+	.cont-asociargrafico{
+		width:100%;
+		margin:0 0%;
+	}
+}
+
+
+/*POSICIONAMOS LOS BOTONES DEL GRÁFICO*/
+.cont-asociargrafico li[data-result="A"]{
+	top:0%;
+	left:47%;
+}
+
+.cont-asociargrafico li[data-result="B"]{
+	bottom:0%;
+	left:47%;
+}
+
+.cont-asociargrafico li[data-result="C"]{
+	top:46.5%;
+	right:0%;
+}
+
+.cont-asociargrafico li[data-result="D"]{
+	top:46.5%;
+	left:0%;
+}
+
+</style>
+
+<!-- j a v a s c r i p t   d e   l a   p á g i n a  H T M L  -->
+<script src="../assets/js/functions.js"></script>
+<script src="../assets/js/asociategraphicgamificado.js"></script>

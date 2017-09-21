@@ -1,0 +1,37 @@
+-------------------------Readme realizado por Alvaro Martin ------------------------------------
+
+Este test, esta configurado ESTRICTAMENTE para el siguiente uso:
+
+-10 preguntas, ni más ni menos.
+-2 intentos, ni más ni menos.
+-Se aprueba con el 60% ( 3 preguntas de 5 en cualquiera de los 2 intentos)
+-No se suman las notas de los intentos, son independientes.
+-El orden de las preguntas no es aleatorio, no es necesario ya que los intentos
+ tienen preguntas distintas.
+
+Se puede modificar el object SOLO para mostrar el feedback (o no) 
+y mostrar la revision de preguntas (o no)
+
+Este test funciona de esta manera:
+
+En el primer intento, se lanzan las 5 primeras preguntas. Si el alumno obtiene, 
+almenos, el 60% (3 preguntas correctas). Se dara por aprobado, se guardara su nota,
+y el alumno podra revisar las preguntas contestadas en el primer intento 
+NO PUEDE VOLVER A INTENTARLO, NI REVISAR LAS PREGUNTAS DEL SEGUNDO INTENTO, OBVIAMENTE.
+
+Si el alumno no llega al 60% en el primer intento, se le da la opcion de volver a
+intentarlo. Se cargaran 5 nuevas preguntas que EN NINGUN CASO se hayan preguntado en el 1ºro.
+
+Se dejara revisar las preguntas de este segundo intento haya o no aprobado
+(NO SE PUEDEN REVISAR LAS PREGUNTAS DEL PRIMER INTENTO EN EL SEGUNDO)
+
+Cualquier alteración de codigo puede ocasionar un mal funcionamiento de dicha plantilla.
+
+
+
+Gracias.                Fecha:10/08/17
+------------------------------------------------------------------------------------------------
+
+
+
+	

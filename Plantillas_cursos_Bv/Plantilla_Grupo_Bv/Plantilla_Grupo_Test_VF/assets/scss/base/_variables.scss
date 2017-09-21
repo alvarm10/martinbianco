@@ -1,0 +1,201 @@
+@charset "utf-8"; 
+/* V A R I A B L E S
+======================================================================================= */
+
+
+
+
+/* ======================================================================================
+1. C O L O R E S
+======================================================================================= */
+
+/*
+1.1. Variables
+*/
+
+/* 1.1.1. Colores Principales --------------------------------------------------------- */                           
+$color1: #68655C;  /* gris medio    */
+$color2: #B0002D;  /* rojo          */
+$color3: #822433;  /* granate       */
+$color4: #B7B1A9;  /* gris claro    */
+$color5: #C79900;  /* dorado        */
+$color6: #1E1E1E;  /* negro         */
+
+/* 1.1.2. Colores Secundarios --------------------------------------------------------- */
+$color7: #002F5F;  /* azul marino   */
+$color8: #0088CE;  /* azul claro    */
+$color9: #BD4F19;  /* naranja       */
+$color10: #007A4D; /* verde         */
+
+/* 1.1.3. Colores --------------------------------------------------------------------- */
+$blanco: #FFFFFF;
+$rojo: #FF3B30;
+$verde: #4CD964;
+$grisClaro: #fafafa;
+
+/*
+1.2. Elementos del Entorno
+*/
+
+/* 1.3.1 Header ----------------------------------------------------------------------- */
+$bgHeader1: $color3;                    /* Banda Superior de la cabecera de la página   */
+$bgHeader2: $color2;                    /* Banda Inferior de la cabecera de la página   */
+$tituloUnit: $blanco;                   /* Título de la Unidad                          */
+$titleTheme: $color1;                   /* Título del Tema / Conocimiento               */
+$titleSubtheme: $color2;                /* Título del Subtema / Subconocimiento         */
+$iconClose: $color1;                    /* Icono de Cerrar                              */
+$iconCloseHover: $color2;               /* Icono de Cerrar, estado hover                */
+
+/* 1.3.2 Footer ----------------------------------------------------------------------- */
+$iconsOnFooter: 3;                   	/* Cantidad de Iconos en el footer 											*/
+$audioIcon: block;                      /* Mostrar u ocultar el icono de audio (block / none) 						*/
+$helpIcon: none;	                   	/* Mostrar u ocultar el icono de ayuda (block / none) 						*/
+$glosaryIcon: none;	                   	/* Mostrar u ocultar el icono de glosario (block / none) 					*/
+$docsIcon: none;	                   	/* Mostrar u ocultar el icono de documentación (block / none) 				*/
+$redTextIcon: block;                   	/* Mostrar u ocultar el icono de reducir el tamaño del texto (block / none)*/
+$enlTextIcon: block;                   	/* Mostrar u ocultar el icono de aumentar el tamaño del texto (block / none)*/
+$downlIcon: none;	                   	/* Mostrar u ocultar el icono de descargas (block / none)
+*/
+$iconsFooterInactive: $color6;			/* Iconos de Atrás y Adelante, estado inactivo  */
+$bgFooter: $color4;                     /* Fondo del pie de la página                   */
+$bgFooterPrevNextMobile: $color6;       /* Fondo del pie de la página botones en la barra de los botones de anterior y siguiente en la versión móvil      */
+$iconsFooter: $blanco;                  /* Iconos de Audio, Ayuda, Glosario, Documentación y Descargas                 */
+$iconsFooterHover: $color4;             /* Iconos de Audio, Ayuda, Glosario, Documentación y Descargas, estado hover   */
+$bgProgressBar: $blanco;                /* Fondo de la barra de progreso                */
+$progressBar: $color2;                  /* Relleno de la barra de progreso              */
+$iconNavigation: $color1;               /* Iconos de Atrás y Siguiente                  */
+$iconNavigationHover: $color6;          /* Iconos de Atrás y Siguiente, estado hover    */
+$paged: $color1;                        /* Texto del paginado                           */
+$tooltip: transparentize($color6, 0.2); /* Relleno del tooltip                          */
+$tooltipText: $blanco;                  /* Texto del tooltip                            */
+
+
+
+/* 1.3.3 Summary ---------------------------------------------------------------------- */
+$bgNav: transparentize($color1, 0.8);   /* Fondo del sumario                            */
+$bgNavPhone: transparentize($blanco, 0.8);   /* Fondo del sumario en versión movil      */
+$titleNav: $blanco;                     /* Título del sumario                           */
+$iconNav: $blanco;                      /* Icono del sumario                            */
+$iconNavHover: $color6;                 /* Icono del sumario Hover                      */
+$iconCheckOff: $blanco;                 /* Icono checkoff, este icono es el de no visto */
+$iconCheckOffHover: $blanco;            /* Icono checkoff, este icono es el de no visto Hover 						 	*/
+$iconCheckOn: $blanco;                  /* Icono checkon, este icono es el de visto     								*/
+$iconCheckOnHover: $blanco;             /* Icono checkon, este icono es el de visto Hover 								*/
+$iconMore: $color6;                     /* Icono que aparece a la derecha de la fila que despliega contenido           */
+$filaVista: transparentize($color1, 0.5);	/* Background - Relleno de la fila estado Visitado   						*/
+$filaNoVista: transparentize($color1, 0.8);	/* Background - Relleno de la fila estado Normal    						*/
+$filaNoVistaTxt: $color6;				/* Texto - Texto de la fila en estado Normal 	*/
+$filaActiva: $color2;					/* Background - Relleno de la fila en Activo    */
+$filaActivaTxt: $blanco;				/* Texto - Texto de la fila en Activo  			*/
+$filaHover: $color1;					/* Background - Relleno de la fila en Hover     */
+$filaHoverTxt: $blanco;					/* Texto - Texto de la fila en Hover  			*/
+$filaBorde: $blanco;					/* Border - Línea inferior de la fila           */
+$subFila: $color4;						/* Background - Relleno de la subfila           */
+
+
+/* 1.3.4 Test ------------------------------------------------------------------------- */
+$titleTheme: $color1;                   /* Color del texto de la cabecera donde dice: "Pregunta x de x  */
+$titleSubtheme: $color2;                /* Color del Texto de la cabecera donde dice: "Intento x de x   */
+$cronometro:$color3;					/* Color del cronometro del test   								*/
+$pregunta:$color3; 						/* Color de las preguntas del test                              */
+$opcionMarcada: $color3;   				/* Color de fondo de la opción marcada en una pregunta del test     
+		*/
+$opcionHover:transparentize($color3, 0.8); /* Color de fondo de la opción en una pregunta del test en su estado Hover   */
+
+$txtOpcion:$color1; 					/* Color del texto de las opciones 				      			*/
+$txtOpcionMarcada:$blanco; 				/* Color del texto de la opción marcada			      			*/
+$circuloInterrogacion:$color2; 			/* Color del circulo que bordea la interrogación de inicio 
+de test */
+$interrogacion:$color3; 				/* Color de la interrogación de inicio de test		      		*/
+
+
+/* 1.3.4 Pantalla de calificación y pantalla de revisión de las preguntas del test y -------------------- */
+$txtTituloRevision: $color3;			/* Color del título principal de las dos pantallas  */
+$bordeBotones: $color3;					/* Color del borde de los botones de repetir test y revisar preguntas estado normal */
+$backgroundBotones: $blanco;			/* Color de fondo de los botones en estado normal   */
+$txtBotones: inherit;					/* Color del texto de los botones en estado normal  */
+$bordeBotonesHover: $color3;			/* Color del borde de los botones de repetir test y revisar preguntas estado hover  */
+$backgroundBotonesHover: $color3;		/* Color de fondo de los botones en estado hover   */
+$txtBotonesHover: $blanco;					/* Color del texto de los botones en estado hover */
+
+$txtPregunta: $color2;                  /* Color del texto de las preguntas en la pantalla de revisión de preguntas     */
+$txtPreguntaHover: $blanco;             /* Color del texto de las preguntas en estado hover 
+y cuando el acordeón esta desplegado en la pantalla de revisión de preguntas */
+$txtFeedback: $color4;                  /* Color del texto del feedback en la pantalla de revisión 
+de preguntas  */
+
+/* ======================================================================================
+2. T I P O G R A F Í A
+======================================================================================= */
+
+$arial: "Arial, Helvetica, sans-serif";
+$roboto: "robotoregular";
+$robotoBold: "robotobbold";
+$lato: "latoblack";
+
+/* ======================================================================================
+3. E L E M E N T O S   E S T Á T I C O S
+======================================================================================= */
+
+$txtNormal: $color1;					/* Texto - Texto normal           				*/
+$txtEnlace: $color8;					/* Texto - Texto para enlaces        			*/
+$txtTituloMedio: $color2;				/* Texto - Títulos en la unidad H4     		    */
+$vinetasSquare: $color2;				/* Background - Relleno de la viñeta     		*/
+$subVinetaSquare: $blanco;				/* Background - Relleno de la subviñeta     	*/
+$subVinetaSquareBorde: $color2;			/* Borde - Borde de la subviñeta     			*/
+$colorAudio: $color4;					/* Background - Color de fondo de la barra de audio    	*/
+$tablaCabecera: $color2;
+$tablaCelda: $color4;
+
+
+/* ======================================================================================
+4. E L E M E N T O S   D I N Á M I C O S
+======================================================================================= */
+
+$accordion-BgCabecera: $color1;			/* Background - Fondo de la cabecera, estado normal	*/
+$accordion-TxtCabecera: $color2;		/* Texto - Texto de la cabecera, estado normal 		*/
+$accordion-BgCabeceraHover: $color2;	/* Background - Fondo de la cabecera, estado hover	*/
+$accordion-TxtCabeceraHover: $blanco;	/* Texto - Texto de la cabecera, estado hover		*/
+$accordion-BgCabeceraActivo: $color2;	/* Background - Fondo de la cabecera, estado activo	*/
+$accordion-TxtCabeceraActivo: $blanco;	/* Texto - Texto de la cabecera, estado activo  	*/
+$accordion-BgCuerpo: $blanco;			/* Background - Texto normal           				*/
+$navPills: $color4;						/* Background y bordes - Botoneras            		*/
+$navPillsActive: $color3;				/* Background - Botoneras activas          			*/
+$navPillsHover: $color1;				/* Background - Botoneras en hover        			*/
+$NavPillsText:$blanco;					/* Texto - Botoneras estado normal        			*/
+$NavPillsTextActive:$blanco;			/* Texto - Botoneras activas        				*/
+$NavPillsTextHover:$blanco;				/* Texto - Botoneras en hover        				*/
+$DinamicTableBackground: $grisClaro;	/* Fondo Tabla Dinámica								*/
+$DinamicTable: $color4;					/* Celda normal Tabla Dinámica						*/
+$DinamicTableHover: $color1;			/* Celda en hover Tabla Dinámica					*/
+$DinamicTableActive: $color2;			/* Celda activa Tabla Dinámica						*/
+$DinamicTableText: $color1;				/* Texto celda normal Tabla Dinámica				*/
+$DinamicTableTextHover: $blanco;		/* Texto celda en hover Tabla Dinámica				*/
+$DinamicTableTextActive: $blanco;		/* Texto celda activa Tabla Dinámica				*/
+/* ======================================================================================
+5. V E N T A N A S   M O D A L E S
+======================================================================================= */
+
+$modalHeaderText: $blanco;			/* Background - Fondo de la cabecera, estado normal	*/
+$modalHeader: $color3;				/* Background - Fondo de la cabecera, estado normal	*/
+$modalButtonText: $blanco;			/* Texto - Texto de la cabecera, estado normal 		*/
+$modalButton: $color3;				/* Background y bordes - Botoneras            		*/
+$modalButtonTextHover: $blanco;		/* Background - Botoneras activas          			*/
+$modalButtonHover: $color1;			/* Background - Botoneras en hover        			*/
+$modalIcon: $color8;				/* Background - Iconos y enlaces de las ventanas modales, estado normal     */
+$modalIconHover: transparentize($color1, 0.3);			/* Background - Iconos y enlaces de las ventanas modales, estado hover      */
+
+
+/* ======================================================================================
+6. T A M A Ñ O S
+======================================================================================= */
+
+$em: em;
+$sizeTextNormal: 1em;
+$sizeTextListaOrdenada: 1em;
+$interLineadoTextNormal: 1.3em;
+$sizeTituloNormal: 1em;
+
+
+
+

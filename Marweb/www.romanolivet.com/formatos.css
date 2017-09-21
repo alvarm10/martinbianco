@@ -1,0 +1,73 @@
+body{
+    background-image: url(img/construction-background.jpg);
+    background-attachment: fixed; 
+    padding-top: 100px;
+}
+
+.navbar-brand {
+    margin-top: 5px;
+    margin-left: 15px !important;
+    margin-bottom: 10px;
+    padding: 0px !important;
+}
+
+nav {
+    min-height: 65px !important;
+}
+.mynavtags{
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+footer{
+    background-color: darkgray;
+    border-radius: 5px 5px 0px 0px;
+    text-decoration: none;
+    font-family: "Play", cursive;
+    text-align: center;
+    color: white;
+}
+
+.jumbotron{
+    background-color: rgba(0, 0, 120, 0.4);
+}
+
+#galeria {
+border: 1px solid #EAEAEA;  /* Borde de la galería */
+padding: 10px;
+padding-bottom: 0;
+background: white;  /* Fondo de la galería */
+width: 600px;  /* Ancho de la galería */
+margin : auto;
+}
+#galeria_miniaturas {
+display: table;
+margin: 0 auto;
+}
+#imgGaleria {
+border: 1px solid #F2F2F2;  /* Borde de la imagen */
+padding: 3px;
+width: 550px; /* Ancho de la imagen */
+height: auto; /* Alto de la imagen */
+}
+.miniatura {
+width:  60px;  /* Ancho de las miniaturas */
+height:  60px;  /* Alto de las miniaturas */
+float: left;
+cursor: pointer;
+padding: 5px;
+margin: 10px 5px;
+}
+.miniatura:hover {
+opacity:.8;   /* Opacidad */
+-moz-opacity:.8;
+-khtml-opacity:.8;
+filter:alpha(opacity=80);
+}
+.miniatura:active {
+opacity:1;
+-moz-opacity:1;
+-khtml-opacity:1;
+filter:alpha(opacity=80);
+}
+

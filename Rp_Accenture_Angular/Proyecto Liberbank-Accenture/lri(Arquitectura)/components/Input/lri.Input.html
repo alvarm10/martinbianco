@@ -1,0 +1,18 @@
+<div class="{{lriInput.classTitle}}">
+	<label>{{lriInput.title}}</label>
+ 	<div>
+	  	<input ng-if="lriInput.typeValidation =='importe'" ng-model="lriInput.model" 
+		  	ng-disabled="{{lriInput.disabled}}"  
+		  	type="{{lriInput.options.type}}" 
+		  	maxlength="{{lriInput.options.size}}" 
+		  	size="{{lriInput.options.size}}"
+		  	ng-change="{{lriInput.options.change}}" 
+		  	ng-blur="lriInput.reformat(this)" />
+		<input ng-if="lriInput.typeValidation !='importe'" ng-model="lriInput.model" 
+		  	ng-disabled="{{lriInput.disabled}}"  
+		  	type="{{lriInput.options.type}}" 
+		  	maxlength="{{lriInput.options.size}}" 
+		  	size="{{lriInput.options.size}}"
+		  	ng-change="{{lriInput.options.change}}" />
+  	</div>
+</div>

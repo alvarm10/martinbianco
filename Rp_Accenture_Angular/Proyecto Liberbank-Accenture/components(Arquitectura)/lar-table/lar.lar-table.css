@@ -1,0 +1,61 @@
+.table-wrapper {
+	padding: 1em;
+	margin: auto;
+	text-align: center;
+}
+.table-wrapper table {
+	overflow-x: auto;
+	max-width: 95%;
+	margin: auto;
+	display: inline-block;
+	text-align: initial;
+}
+.table-wrapper .table-sorting th {
+	cursor: pointer;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */
+}
+/*.table-wrapper th[st-sort]:after {
+	content: '\25B2 \25BC';
+}*/
+.table-wrapper .st-sort-ascent:after {
+	content: '\25B2';
+}
+.table-wrapper .st-sort-descent:after {
+	content: '\25BC';
+}
+.table-wrapper .search-icon {
+	color: #DDD;
+}
+.table-wrapper .superior-header {
+	background-color: #DDD;
+	text-align: center;
+	border: solid 2px grey;
+	border-bottom: none;
+	border-top: none;
+}
+.table-wrapper .st-selected, .table-wrapper .st-selected a {
+	background: #216eff !important;
+	color: white !important;
+}
+.table-wrapper .st-selected input, .table-wrapper .st-selected button {
+	color: black;
+}
+.table-wrapper .totals {
+	font-weight: bold;
+}
+.table-wrapper .totals-sum-row {
+	background-color: #DDD;
+	font-size: 1.4em;
+}
+.table-wrapper .totals-sum {
+	border: dashed 1px grey;
+	float: right;
+	padding: 0 .4em;
+}
+.table-wrapper .action-button {
+	font-size: 0.7em;
+	padding: .4em .6em;
+}

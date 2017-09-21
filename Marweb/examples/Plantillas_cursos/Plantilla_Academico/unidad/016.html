@@ -1,0 +1,339 @@
+<!-- IMPORTANTE
+COPIAR LA FUNCION DE POP OVER PARA QUE FUNCIONEN, data-placement[INDICA LA DIRECCION EN LA QUE SALE EL POP OVER] data-content[ES EL CONTENIDO DEL POP OVER]
+
+PARA LOS BOTONES MODALES, HAY QUE COPIAR LA FUNCION DE JAVASCRIPT CORRESPONDIENTE AL BOTON DESEADO. CUANDO SE HACE RESPONSIVE PUEDE QUE NO SE COLOQUEN DE LA FORMA DESEADA, ASIQUE VIGILAR ESE ASUNTO A LA HORA DE REALIZAR EL DISEÑO DE LA PÁGINA
+
+ -->
+<h4>Modals</h4>
+
+<!--
+
+    INTRODUCIR LAS SIGUIENTES ETIQUETAS SI SE QUIERE INTRODUCIR UN AUDIO PRINCIPAL EN LA DIAPOSITIVA. 
+    
+    <div>
+        <p class="pAudioPrincipal"></p>
+        <audio class="audioinicio" src='audios/p01.mp3' preload="">
+    </div>
+    
+    TENER EN CUENTA QUE SI LA VARIABLE "controlesaudio":
+
+    1. Está en "si": aparecerá la barra de control de audio en la diapositiva y el audio tendrá que ser activado por el usuario.
+    2. Está en no: se reproducirá el audio automáticamente al entrar en la diapositiva en versión escritorio y no aparecerá la barra de audio. En versión movil o tablet si que aparecerá la barra de audio ya que no se puede reproducir automáticamente el audio al entrar en una diapositiva para estas versiones.
+    
+
+    TAMBIÉN SE PUEDEN AÑADIR AUDIOS SECUNDARIOS EN LA DIAPOSITIVA INTRODUCIENDO LA SIGUIENTE ETIQUETA
+
+    <div>
+        <p class="pAudioSecundario"></p>
+        <audio src='audios/p02.mp3' preload="">
+    </div>
+-->
+
+
+<!-- Trigger the modal with a link -->
+<p>Nunc volutpat leo vel <a class="enlace" data-toggle="modal" data-target="#myModal">accumsan congue</a>. Aliquam feugiat justo enim, quis finibus massa imperdiet eget. Quisque a lorem tortor. Quisque mattis tempor nunc, sed aliquam turpis. Etiam sagittis iaculis ultricies. Sed a arcu eu mi varius feugiat sit amet egestas orci. Curabitur ornare blandit fringilla. Phasellus tincidunt leo sit amet pellentesque suscipit. Phasellus vehicula lobortis velit sagittis eleifend. Sed accumsan neque quis est tempus viverra. Aenean vitae libero leo. Nunc ac ligula arcu.</p>
+<br>
+<!-- Trigger the modal with a button -->
+<div class="col-sm-6">
+    <!-- Enlace de modal con icono-->
+    <div class="clickme iconoModal" style="background-color: #efefef; border-radius: 10px; padding: 5px;">
+        <!--poner en data-target el id del modal -->
+        <div class="iconoEjemplo" data-toggle="modal" data-target="#myModal1"></div>
+        <a class="modalEjemplo" data-toggle="modal" data-target="#myModal1">Algunos sitios web responsive</a>
+        <!--poner la clase correspondiente al Icono deseado-->
+        <div class="clearfix"></div>
+    </div>
+    <!-- Fin de enlace de modal con icono-->
+
+    <!-- Enlace de modal con icono-->
+   <div class="clickme iconoModal" style="background-color: #efefef; border-radius: 10px; padding: 5px;">
+        <!--poner en data-target el id del modal -->
+        <div class="iconoDocumento" data-toggle="modal" data-target="#myModal3"></div>
+        <a class="modalDocumento" data-toggle="modal" data-target="#myModal3">Para profundizar en el tema</a>
+        <!--poner la clase correspondiente al Icono deseado-->
+        <div class="clearfix"></div>
+    </div>
+    <!-- Fin de enlace de modal con icono-->
+
+</div>
+
+<div class="col-sm-6">
+
+    <!-- Enlace de modal con icono-->
+    <div class="clickme iconoModal" style="background-color: #efefef; border-radius: 10px; padding: 5px;">
+        <!--poner en data-target el id del modal -->
+        <div class="iconoMasInformacion" data-toggle="modal" data-target="#myModal2"></div>
+        <a class="modalMasInformacion" data-toggle="modal" data-target="#myModal2">Media Querys</a>
+        <!--poner la clase correspondiente al Icono deseado-->
+        <div class="clearfix"></div>
+    </div>
+    <!-- Fin de enlace de modal con icono-->
+
+    <!-- Enlace de modal con icono-->
+    <div class="clickme iconoModal" style="background-color: #efefef; border-radius: 10px; padding: 5px;">
+        <!--poner en data-target el id del modal -->
+        <div class="iconoGrafico" data-toggle="modal" data-target="#myModal4"></div>
+        <a class="modalGrafico" data-toggle="modal" data-target="#myModal4">HTML5</a>
+        <!--poner la clase correspondiente al Icono deseado-->
+        <div class="clearfix"></div>
+    </div>
+    <!-- Fin de enlace de modal con icono-->
+
+</div>
+
+<div class="col-sm-6">
+    <!-- Enlace de modal con icono-->
+    <div class="clickme iconoModal" style="background-color: #efefef; border-radius: 10px; padding: 5px;">
+        <!--poner en data-target el id del modal -->
+        <div class="iconoExample" data-toggle="modal" data-target="#myModal1"></div>
+        <a class="modalExample" data-toggle="modal" data-target="#myModal1">Algunos sitios web responsive</a>
+        <!--poner la clase correspondiente al Icono deseado-->
+        <div class="clearfix"></div>
+    </div>
+    <!-- Fin de enlace de modal con icono-->
+
+    <!-- Enlace de modal con icono-->
+    <div class="clickme iconoModal" style="background-color: #efefef; border-radius: 10px; padding: 5px;">
+        <!--poner en data-target el id del modal -->
+        <div class="iconoDocument" data-toggle="modal" data-target="#myModal3"></div>
+        <a class="modalDocument" data-toggle="modal" data-target="#myModal3">Para profundizar en el tema</a>
+        <!--poner la clase correspondiente al Icono deseado-->
+        <div class="clearfix"></div>
+    </div>
+    <!-- Fin de enlace de modal con icono-->
+
+</div>
+
+<div class="col-sm-6">
+
+    <!-- Enlace de modal con icono-->
+    <div class="clickme iconoModal" style="background-color: #efefef; border-radius: 10px; padding: 5px;">
+        <!--poner en data-target el id del modal -->
+        <div class="iconoMoreInfo" data-toggle="modal" data-target="#myModal2"></div>
+        <a class="modalMoreInfo" data-toggle="modal" data-target="#myModal2">Media Querys</a>
+        <!--poner la clase correspondiente al Icono deseado-->
+        <div class="clearfix"></div>
+    </div>
+    <!-- Fin de enlace de modal con icono-->
+
+    <!-- Enlace de modal con icono-->
+    <div class="clickme iconoModal" style="background-color: #efefef; border-radius: 10px; padding: 5px;">
+        <!--poner en data-target el id del modal -->
+        <div class="iconoChart" data-toggle="modal" data-target="#myModal4"></div>
+        <a class="modalChart" data-toggle="modal" data-target="#myModal4">HTML5</a>
+        <!--poner la clase correspondiente al Icono deseado-->
+        <div class="clearfix"></div>
+    </div>
+    <!-- Fin de enlace de modal con icono-->
+
+</div>
+
+<div class="clearfix"></div>
+<h4>Pop Overs</h4>
+<div class="col-sm-offset-2 col-sm-2">
+    <a data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title="Ventajas" data-content="Google recomienda el diseño web adaptativo.">
+      Popover auto derecha
+    </a>
+</div>
+<div class="col-sm-2">
+    <a data-container="body" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="La experiencia del usuario mejorará considerablemente.">
+      Popover auto arriba
+    </a>
+</div>
+<div class="col-sm-2">
+    <a class="clickme" href="#" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="bottom" title="Prevención" data-content="Se evitan posibles problemas de contenido duplicado.">
+      Popover click abajo
+    </a>
+</div>
+<div class="col-sm-2 hidden-xs">
+    <a class="clickme" href="#" data-container="body" data-toggle="popover" data-trigger="focus" data-placement="left" data-content="https://stackoverflow.com/questions/22218121/popover-for-long-text-without-spaces">
+      Popover click izquierda
+    </a>
+</div>
+<br>
+<br>
+<br>
+<h4>Ejemplo boton largo</h4>
+<button type="button" class="clickme boton boton-modal btn-responsive" data-toggle="modal" data-target="#myModal">Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu</button>
+
+<!-- ............................. V E N T A N A S    M O D A L E S ......................... -->
+
+<!-- Primer Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Encabezado-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Navegadores que soportan Media querys</h4>
+            </div>
+            <!-- Contenido-->
+            <div class="modal-body">
+                <p>En general todos los navegadores modernos lo soportan. Eso quiere decir que Internet Explorer 6, 7 y 8 no lo soportan (Tan raro en IE!). Afortunadamente hay soluciones utilizando Javascript, por ejemplo respond.js. Tal y como podéis ver “respond.js proporciona un script rápido y ligero (3kb minified / 1kb gzip) que permite utilizar diseños web adaptables en navegadores que no soportan CSS3 Media Queries – en concreto Internet Explorer 8 e inferiores”.</p>
+                <!--Añadir etiqueta audio o video si se desea que al pulsar en este elemento suene su audio/video correspondiente-->
+                <!--<video controls>
+                  <source src="videos/video.mp4" type="video/mp4">
+                  <source src="videos/video.ogg" type="video/ogg">
+                  Your browser does not support the video tag.
+                </video>-->
+                <!--<p class="pAudioSecundario"></p>-->
+                <!--<audio src='audios/song.mp3' preload=""></audio>-->
+            </div>
+            <!-- Pié, se puede quitar si no se necesita-->
+
+        </div>
+    </div>
+</div>
+<!-- Fin Primer Modal -->
+<!-- Segundo Modal -->
+<div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Encabezado-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Ejemplos de sitios web responsive</h4>
+            </div>
+            <!-- Contenido-->
+            <div class="modal-body">
+                <ul>
+                    <li>
+                        <a class="enlace" href="http://dulceriacandyshop.com" target="_blank">http://dulceriacandyshop.com</a></li>
+                    <li>
+                        <a class="enlace" href="http://quevibra.mx" target="_blank">http://quevibra.mx</a></li>
+                    <li>
+                        <a class="enlace" href="http://solgraf.cat" target="_blank">http://solgraf.cat</a></li>
+                    <li>
+                        <a class="enlace" href="http://artistasactivos.org.mx" target="_blank">http://artistasactivos.org.mx</a></li>
+                    <li>
+                        <a class="enlace" href="http://multiservicioseri.com" target="_blank">http://multiservicioseri.com</a></li>
+                </ul>
+                <!--Añadir etiqueta audio o video si se desea que al pulsar en este elemento suene su audio/video correspondiente-->
+                <!--<video controls>
+                  <source src="videos/video.mp4" type="video/mp4">
+                  <source src="videos/video.ogg" type="video/ogg">
+                  Your browser does not support the video tag.
+              </video>-->
+                <!--<p class="pAudioSecundario"></p>-->
+                <!--<audio src='audios/song.mp3' preload=""></audio>-->
+            </div>
+            <!-- Pié, se puede quitar si no se necesita-->
+
+        </div>
+    </div>
+</div>
+<!-- Fin Segundo Modal -->
+<!-- Tercer Modal -->
+<div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Encabezado-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Media query</h4>
+            </div>
+            <!-- Contenido-->
+            <div class="modal-body">
+                <p>Ningún diseño escala de manera adecuada cuando cambia el contexto para el que fue pensado. Los Media Queries forman parte de CSS3 e inspeccionan las características físicas del medio que va a mostrar nuestro diseño (no olvidemos que “query” equivale a “pregunta”, es como preguntar: ¿qué medio se está usando?). Si las características del medio utilizado por el usuario están dentro de un condicional establecido con los Media Queries, se aplicarán una serie de instrucciones CSS contenidas dentro del mismo, de esta manera cuando nuestro diseño fluido cambia de tamaño podremos aplicar una serie de instrucciones CSS pensadas en exclusiva para ese nuevo tamaño.</p>
+                <!--Añadir etiqueta audio o video si se desea que al pulsar en este elemento suene su audio/video correspondiente-->
+                <!--<video controls>
+                  <source src="videos/video.mp4" type="video/mp4">
+                  <source src="videos/video.ogg" type="video/ogg">
+                  Your browser does not support the video tag.
+                </video>-->
+                <!--<p class="pAudioSecundario"></p>-->
+                <!--<audio src='audios/song.mp3' preload=""></audio>-->
+            </div>
+            <!-- Pié, se puede quitar si no se necesita-->
+
+        </div>
+    </div>
+</div>
+<!-- Fin Tercer Modal -->
+<!-- Cuarto Modal -->
+<div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Encabezado-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Documento</h4>
+            </div>
+            <!-- Contenido-->
+            <div class="modal-body">
+                <p>El siguiente documento te permitirá profundizar más en el tema del diseño web adaptable.</p>
+                <a class="enlace" href="descargables/rwd.pdf" download>Pulsa aqui para descargar el documento</a>
+                <!--Añadir etiqueta audio o video si se desea que al pulsar en este elemento suene su audio/video correspondiente-->
+                <!--<video controls>
+                  <source src="videos/video.mp4" type="video/mp4">
+                  <source src="videos/video.ogg" type="video/ogg">
+                  Your browser does not support the video tag.
+                </video>-->
+                <!--<p class="pAudioSecundario"></p>-->
+                <!--<audio src='audios/song.mp3' preload=""></audio>-->
+            </div>
+            <!-- Pié, se puede quitar si no se necesita-->
+
+        </div>
+    </div>
+</div>
+<!-- Fin Cuarto Modal -->
+<!-- Quinto Modal -->
+<div class="modal fade" id="myModal4" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content" style="margin-top:70px;">
+            <!-- Encabezado-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Gráfico HTML5</h4>
+            </div>
+            <!-- Contenido-->
+            <div class="modal-body" style="text-align:center;">
+                <img width="70%" src="img/openwebplatform.png" alt="Technologías de la Open Web Platform">
+                <!--Añadir etiqueta audio o video si se desea que al pulsar en este elemento suene su audio/video correspondiente-->
+                <!--<video controls>
+                  <source src="videos/video.mp4" type="video/mp4">
+                  <source src="videos/video.ogg" type="video/ogg">
+                  Your browser does not support the video tag.
+                </video>-->
+                <!--<p class="pAudioSecundario"></p>-->
+                <!--<audio src='audios/song.mp3' preload=""></audio>-->
+            </div>
+            <!-- Pié, se puede quitar si no se necesita-->
+
+        </div>
+    </div>
+</div>
+<!-- Fin Quinto Modal -->
+<!-- Sexto Modal -->
+<div class="modal fade" id="myModal5" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Encabezado-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Elección del Zoom en los navegadores móviles</h4>
+            </div>
+            <!-- Contenido-->
+            <div class="modal-body" style="text-align:center;">
+                <p>Dado que esta claro que han existido antes los navegadores móviles que los diseños adaptados a ellos estos usaron desde el principio herramientas de zoom para poder visualizar webs completas. Si tu entras en una web normal con un móvil no verás la resolución real de tu móvil sino una versión que realiza un zoom para adecuarse a los 960px de ancho.</p>
+                <p>Este es su comportamiento por defecto, sin embargo, también se han creado etiquetas HTML para cambiarlo. De esta forma, si nosotros vamos a adaptarnos un poco a resoluciones móviles podemos simplemente indicarle al móvil que use otro tipo de escalado.</p>
+                <!--Añadir etiqueta audio o video si se desea que al pulsar en este elemento suene su audio/video correspondiente-->
+                <!--<video controls>
+                  <source src="videos/video.mp4" type="video/mp4">
+                  <source src="videos/video.ogg" type="video/ogg">
+                  Your browser does not support the video tag.
+                </video>-->
+                <!--<p class="pAudioSecundario"></p>-->
+                <!--<audio src='audios/song.mp3' preload=""></audio>-->
+            </div>
+            <!-- Pié, se puede quitar si no se necesita-->
+
+        </div>
+    </div>
+</div>
+<!-- Fin Sexto Modal -->
+
+
+<!-- j a v a s c r i p t   d e   l a   p á g i n a  H T M L  -->
+<script src="../assets/js/functions.js"></script>

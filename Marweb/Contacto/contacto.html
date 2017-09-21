@@ -1,0 +1,138 @@
+<!--Diseño elaborado por Alvaro Martin Del Amo. 2016; Todo codigo definido en este documento es propiedad exclusiva del autor,
+si hay referencias o partes de codigo externas, se referenciaran en el apartado de referencias, si encuentra algun problema de copyright,
+dirijase al correo info@in4al.es -->
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta name="google-site-verification" content="DCv7C2wcAwprnhuFujL0s8J1JzGVfO97Erjyzvw3sz0" />
+    <meta charset="UTF-8">
+    <title>In4all.es</title>
+    <link rel="shortcut icon" href="./img/icons/favicon.ico">
+    <meta name="viewport" content="width=device-width. user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+      <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+       
+        <link rel="stylesheet" href="../styles/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Exo|Kanit|Permanent+Marker|Play" rel="stylesheet">
+        <!-- CDN Bootstrap & links propios -->
+     
+    </head>
+
+
+    <body>
+     <!--Navbar -->
+    <header>
+    <div id="navbar"></div> 
+    </header>
+      <!-- NAVBAR-->
+        
+        <!-- CONT PRINCIPAL -->
+        <div class="container"> 
+           
+           <div class="row">
+               <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                   <!-- formulario -->
+                   <div class="formulario">
+                      <br>
+                    <form role="form" action="contact.php" method="post">
+   
+                      <div class="form-group">
+                        <label for="name">Nombre / Empresa</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" name="name" id="name" placeholder="Introduce tu Nombre" required>
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-user form-control-feedback"></i></span>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-group">
+                          <input type="email" class="form-control" id="email" name="email" placeholder="Introduce tu Email" required>
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope form-control-feedback"></i></span>
+                          </div>
+                        </div>
+                        
+                        <div class="form-group">
+                         <label for="subject">Selecci&oacute;na un Asunto:</label>
+                      <select class="form-control" name="subject">
+                        <option value="Informaci&oacute;n">Informaci&oacute;n</option>
+                        <option value="Desarollo y Soluciones WEB">Desarollo y Soluciones WEB</option>
+                        <option value="Reparaciones y Mantenimiento">Reparaciones y Mantenimiento</option>
+                        <option value="Cursos Y Formaci&oacute;n">Cursos Y Formaci&oacute;n</option>
+                        <option value="Soporte y Asesoria">Soporte y Asesoria</option>
+                      </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <div class="input-group">
+                          <textarea name="message" id="message" class="form-control" rows="5" required></textarea>
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-pencil form-control-feedback"></i></span></div>
+                      </div>
+                      <input type="submit" name="submit" id="submit" value="ENVIAR" class="btn btn-warning btn-block">
+
+                  </form>
+                   </div>
+                   <br>
+                   <!-- formulario -->
+                   
+                   
+               </div>
+               <br><br>
+               <div class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
+                         <!-- Thumbnail -->
+                           <div class="thumbnail">
+                            <br><br>
+                             <img src="../img/tellamamos.jpg" class="img-responsive img-rounded" alt="Te llamamos nosotros">
+                             <div class="caption">
+                             
+                              <form role="form" action="procesa.php" method="POST">
+                               <h3>Si lo prefieres.. Te llam&aacute;mos nosotros!</h3>
+                               <p>Introduce tu tel&eacute;fono <i><small>("Territorio español")</small></i> y un agente se pondra en contacto contigo!</p>
+                                           
+                               <div class="form-group"> 
+                                    <input type="text" name="telf" id="telf" class="form-control" placeholder="Introduce tu nº..." required>
+                                    <br>
+                                    <input type="submit" name="submit" id="submit" value="LL&Aacute;MAME" class="btn btn-warning btn-block"> <br>
+                                   <label class="labelcheckbox"> <p> <input type="checkbox" value="" required> Acepto las<a href="#">condiciones de servicio</a></p></label>
+                                </div>
+                             </form>
+                             
+                           </div>
+                        
+                       </div>
+                       <!-- Thumbnail -->
+                       <br><br>
+                       <div class="google-maps">    
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3053.913162028778!2d-3.592575300000003!3d40.055038800000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd420570bfa1dd15%3A0xa7f8055a7c0dad23!2sCalle+%C3%81vila%2C+17%2C+28300%2C+Madrid!5e0!3m2!1ses!2ses!4v1462733744774" style="border:0px;border-radius:5px"></iframe>     
+                  </div>
+                  <br> 
+                  
+               </div>
+                
+           </div>
+            
+       </div>
+         <!--Pie de página -->
+         <footer>
+            <div class="container" >
+                <h4>In4All.es 2016 &copy;</h4>
+            </div>
+           
+        </footer>  
+         <!--Pie de página -->
+                       
+       <!-- Latest compiled and minified JavaScript y PROPIOS-->
+        <script src="http://code.jquery.com/jquery-latest.js">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="../js/navbar.js"></script>
+        <script type="text/javascript" src="../js/myjs.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        
+    </body>
+    
+</html>

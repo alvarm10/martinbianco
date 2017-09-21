@@ -1,0 +1,8 @@
+<ng-form name="ccc.cccForm" novalidate>
+    <div class="form-inline">
+        <div class="form-group" ng-class="{'has-error': ccc.cccForm[ccc.name].$invalid && ccc.cccForm[ccc.name].$dirty, 'has-success': ccc.cccForm[ccc.name].$valid}">
+            <label for="ccc" class="label-control">Teclee cuenta:</label>
+            <input type="text" class="form-control input-md" name="{{ccc.name}}" placeholder="0000.0000000000" maxlength="15" required ng-blur="ccc.autocompleteAccount(); ccc.validateAccount()" ng-keypress="ccc.checkKeyIsValid($event)" ng-model="ccc.cccValue"/>
+        </div>
+    </div>
+</ng-form>

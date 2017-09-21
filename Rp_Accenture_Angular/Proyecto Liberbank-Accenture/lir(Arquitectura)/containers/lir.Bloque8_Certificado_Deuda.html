@@ -1,0 +1,212 @@
+<div class="container">
+	<div ng-if= "currentPage == 1">
+		<form ng-submit="$ctrl.showScope()" >
+
+			<title-component title="Certificado de Deuda" ></title-component>
+			<div class="row">
+				<title-component title="Datos Generales" ></title-component>
+				<div class="row">
+
+					<input-component title="Activo" model="$ctrl.$scope.certificadoDeuda.activo"  disabled="true" type-validation="cliente"></input-component>
+
+					<input-component title="Cuenta Origen" model="$ctrl.$scope.certificadoDeuda.cuentaOrigen" disabled="true" type-validation="cliente"></input-component>
+
+					<input-component title="Cuenta Aval" model="$ctrl.$scope.certificadoDeuda.cuentaAval" disabled="true" ></input-component>
+
+					<input-component title="Fecha de Cierre" model="$ctrl.$scope.certificadoDeuda.fecCierre" disabled="true" type-validation="fecha"></input-component>
+
+					<input-component title="Moneda" model="$ctrl.$scope.certificadoDeuda.moneda" disabled="true"></input-component>
+
+				</div>
+				<title-component title="Titular/es" ></title-component>
+				<div class="row">
+					<p class="col-md-12">tabla titular/es</p>
+				</div>
+
+				<title-component title="Letrado" ></title-component>
+				<div class="row">
+					<p class="col-md-12">tabla letrado</p>
+				</div>	
+
+				<div class="row">
+
+					<input-component title="Código" model="$ctrl.$scope.certificadoDeuda.codigo"></input-component>
+
+					<input-component title="Primer Apoderado" model="$ctrl.$scope.certificadoDeuda.primerApoderado" type-validation="cliente"></input-component>
+
+					<boton-component class-boton="" id="buscar" dataid="buscar" name="Buscar" type="submit" url="/bloque8"></boton-component>		
+
+				</div>
+
+				<div class="row">
+					<p class="col-md-12">tabla apoderados</p>
+				</div>	
+
+				<div class="row">
+					<boton-component class-boton="" id="selApoderado" dataid="selApoderado" name="Seleccionar Apoderado" type="submit" url="/bloque8"></boton-component>		
+				</div>
+			</div>
+
+			<div class="row">
+
+				<input-component title="Código" model="certificadoDeuda.codigo" type-validation="porcentaje"></input-component>
+
+				<input-component title="Fecha Subasta" model="$ctrl.$scope.certificadoDeuda.fecSubasta" disabled = "$ctrl.$scope.certificadoDeuda.disFecSubasta"></input-component>
+
+				<input-component title="Tipo de Interés Moratorio" model="$ctrl.$scope.certificadoDeuda.tipoIntMoratorio" type-validation="porcentaje" disabled = "$ctrl.$scope.certificadoDeuda.disTipoIntMoratorio"></input-component>
+
+				<div ng-if="!$ctrl.$scope.certificadoDeuda.habCalcular">
+					<boton-component class-boton="" id="calcular" dataid="calcular" name="Calcular" type="submit" url="" onaction=$ctrl.calcular() disabled="true"></boton-component>
+				</div>
+
+				<div ng-if="$ctrl.$scope.certificadoDeuda.habCalcular">
+					<boton-component class-boton="" id="calcular" dataid="calcular" name="Calcular" type="submit" url="" onaction=$ctrl.calcular() disabled="false"></boton-component>
+				</div>
+
+				<input-component title="Plazo Transcurrido (Días)" model="$ctrl.$scope.certificadoDeuda.plazoTranscurrido" disabled="true"></input-component>
+			</div>
+
+			<div class="row">
+					<title-component title="Certificación de Deuda" ></title-component>
+					<p class="col-md-12">tabla certif deuda</p>
+			</div>
+
+			<div class="row">
+
+				<input-component title="Interes Moratorio Posteriores al Certificado o de Deuda" model="$ctrl.$scope.certificadoDeuda.intMoratorioPostDeuda" disabled="true"></input-component>
+
+			</div>
+			<div class="row">
+				<input-component title="D.H.R. Interes Moratorios" model="$ctrl.$scope.certificadoDeuda.plazoTranscurrido" disabled="true"></input-component>
+
+			</div>
+
+			<div class="row">
+					<title-component title="Entregas Realizadas al Activo" ></title-component>
+					<p class="col-md-12">tabla entregas</p>
+			</div>
+
+			<div class="row">
+					<title-component title="Total Deuda Financiera a Fecha de Subasta" ></title-component>
+					<p class="col-md-12">tabla entregas</p>
+			</div>
+			<input-component title="Tipo de Interés Moratorio" model="certificadoDeuda.tipoIntMoratorio" type-validatuion="porcentaje"></input-component>
+
+
+			<div class="row">
+				<div ng-if="!$ctrl.$scope.certificadoDeuda.habPrecarta">
+					<boton-component class-boton="" id="precarta" dataid="precarta" name="Precarta" type="submit" url="" onaction=$ctrl.changeCurrentPage(2) disabled="true"></boton-component>
+				</div>
+
+				<div ng-if="$ctrl.$scope.certificadoDeuda.habPrecarta">
+					<boton-component class-boton="" id="precarta" dataid="precarta" name="Precarta" type="submit" url="" onaction=$ctrl.changeCurrentPage(2) disabled="false"></boton-component>
+				</div>
+
+				<boton-component class-boton="" id="cancelar2" dataid="cancelar2" name="Cancelar" type="button" url="" onaction=></boton-component> 
+
+				<!-- Cambios -->
+				<div ng-if="!$ctrl.$scope.certificadoDeuda.habAceptar">
+					<boton-component class-boton="" id="aceptar" dataid="aceptar" name="Aceptar" type="submit" url="" onaction=$ctrl.acept() disabled="true"></boton-component>
+				</div>
+
+				<div ng-if="$ctrl.$scope.certificadoDeuda.habAceptar">
+					<boton-component class-boton="" id="aceptar" dataid="aceptar" name="Aceptar" type="submit" url="" onaction=$ctrl.acept() disabled="false"></boton-component>
+				</div>
+
+				<!-- <boton-component class-boton="" id="aceptar2" dataid="aceptar2" name="Aceptar" type="submit" url="" onaction="$ctrl.acept()"></boton-component>  -->
+				<!-- Cambios -->
+			</div>
+
+		</form>
+	</div>	
+
+	<div ng-if= "currentPage == 2">
+		<div class="row">
+			<textarea rows="4" cols="50">
+				Texto Libre
+			</textarea>	
+		</div>
+		<div class="row">
+
+			<p class="col-md-12">CERTIFICO:</p>
+			<p class="col-md-12">Que en referencia al préstamo con garantía hipotecaria núm. {{precarta.CAC}}, origen {{precarta.CTAORIGEN}} otorgado a D. {{precarta.titular}} como prestatorio, una vez practicada la oportuna liquidación, presenta la siguiente deuda al día {{precarta.DATSUBASTA}}, por los conceptos que se indican a continuación, de conformidad con los datos que obran en nuestros archivos:
+		</div>
+		
+		<div class="row">
+			<checkbox-component class-panel="col-md-12" checks-object=checks></checkbox-component>
+		</div>
+		<div class="row">
+			<textarea rows="4" cols="50">
+				Texto Libre
+			</textarea>	
+		</div>
+
+		<div class="row">
+				<boton-component class-boton="" id="AceptarPrecarta" dataid="AceptarPrecarta" name="Aceptar" type="button" url="" onaction=$ctrl.changeCurrentPage(3)></boton-component>
+
+				<boton-component class-boton="" id="CancelarPrecarta" dataid="CancelarPrecarta" name="Cancelar" type="submit" url="" onaction=$ctrl.cerrarprevisualizacion()></boton-component>
+		</div>
+	</div>
+
+	<div ng-if= "currentPage == 3">
+		<div class="row">
+
+			<p class="col-md-12">Texto introducido locked</p>
+		</div>
+		<div class="row">
+			<p class="col-md-12">CERTIFICO:</p>
+			<p class="col-md-12">Que en referencia al préstamo con garantía hipotecaria núm. {{precarta.CAC}}, origen {{precarta.CTAORIGEN}} otorgado a D. {{precarta.titular}} como prestatorio, una vez practicada la oportuna liquidación, presenta la siguiente deuda al día {{precarta.DATSUBASTA}}, por los conceptos que se indican a continuación, de conformidad con los datos que obran en nuestros archivos:
+		</div>	
+
+		<div class="row col-md-offset-1 col-md-11">
+			<div ng-repeat="selected in checks | filter : 'true'">
+				{{selected.title}}
+				<div class="col-md-offset-1 col-md-11"><p ng-repeat="nameShowed in selected.name">{{nameShowed}}</p></div>
+			</div>
+
+		</div>
+
+	
+
+	
+		<div class="row">
+			<p class="col-md-12">Texto introducido locked</p>
+		</div>
+
+		<div class="row">
+			<boton-component class-boton="" id="GestorDocumental" dataid="GestorDocumental" name="Gestor Documental" type="button" url="" onaction=$ctrl.gestionDocumental() ></boton-component>
+			<div ng-if="activeMail">
+				<boton-component class-boton="" id="EnviarCorreo" dataid="EnviarCorreo" name="Enviar Correo" type="submit" url=""  disabled="true"></boton-component>
+				
+			</div>
+			<div ng-if="!activeMail">
+				<boton-component class-boton="" id="EnviarCorreo" dataid="EnviarCorreo" name="Enviar Correo" type="submit" url="" onaction=$ctrl.abreCorreo()></boton-component>
+				
+			</div>
+			<boton-component class-boton="" id="cerrarprevisualizacion" dataid="cerrarprevisualizacion" name="Cerrar" type="submit" url="" onaction=$ctrl.cerrarprevisualizacion()></boton-component>
+
+		</div>
+	</div>
+
+	<div ng-if= "currentPage == 4">	
+		
+		<div class="row">
+			<input-component title="Para" model="$ctrl.$scope.email.para"  disabled="false" type-validation="cliente"></input-component>
+		</div>
+		<div class="row">
+			<input-component title="Asunto" model="$ctrl.$scope.email.asunto"  disabled="false" type-validation="cliente"></input-component>
+		</div>
+
+		<title-component title="Cuerpo del mensaje" ></title-component>
+		<div class="row">
+			<h1>Text area</h1>
+		</div> 
+
+		<div class="row">
+			<boton-component class-boton="" id="cancelaremail" dataid="cancelaremail" name="Cancelar" type="submit" url="" onaction=$ctrl.changeCurrentPage(3) ></boton-component>
+			<boton-component class-boton="" id="aceptaremail" dataid="aceptaremail" name="Aceptar" type="submit" url="" onaction=$ctrl.changeCurrentPage(3) ></boton-component>
+		</div>
+
+	</div>
+
+</div>

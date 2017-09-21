@@ -1,0 +1,262 @@
+/* F O O T E R
+================================================== */
+
+.espacio{
+  width: 100%;
+  height: 120px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: $bgFooter;
+    z-index: 999999;
+}
+
+.footer-desktop{
+    .botones{
+        margin-top: 15px;
+        height: 40px;
+        .btn-icon-pie{
+            width: 20%;
+            height: 50px;
+            float: left;
+            svg{
+               width: 50%;
+               height: 50%;
+               g{
+                   fill:$iconsFooter;
+               }
+               path{
+                   fill:$iconsFooter; 
+               }
+            }
+        }
+        div svg:hover{
+            g{
+                fill:$iconsFooterHover; 
+                 
+            }
+            path{
+                fill:$iconsFooterHover; 
+            }
+        }
+    }
+    .barra-progreso{
+        margin-top: 20px;
+        .barra{
+          width: 85%;
+          height: 12px;
+          border-radius: 4px;
+          background: $bgProgressBar;
+          .progreso{
+              width: 0%;
+              height: 12px;
+              border-radius: 4px;
+              background: $progressBar;
+              transition: width 1s ease;
+          }
+      }
+    }
+    .paginado{
+        height: 40px;
+        .btn-icon-pie{
+            cursor: pointer;
+            width: 20%;
+            height: 50px;
+            margin-top: 10px;
+            float: left;
+            svg{
+               g{
+                   fill:$iconsFooter; 
+               }
+            }
+            
+        }
+        .btn-next-inactive{
+            svg{
+               g{
+                   fill:$iconsFooterInactive;
+               }
+            }
+            svg:hover{
+               g{
+                   fill:$iconsFooterInactive;
+               }
+            }
+        }
+        div svg:hover{
+            g{
+                fill:$iconsFooterHover; 
+            }
+        }
+        .btn-prev-inactive{
+            svg{
+               g{
+                   fill:$iconsFooterInactive;
+               }
+            }
+            svg:hover{
+               g{
+                   fill:$iconsFooterInactive;
+               }
+            }
+        }
+        .num-pagina{
+            width: 60%;
+            height: 50px;
+            margin-top: 20px;
+            float: left;
+            text-align: center;
+            color: $paged;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none; 
+        }
+    }
+}
+
+.footer-phone{
+    padding: 0;
+    margin-left:-15px;
+    .barra-progreso{
+        position: absolute;
+        top:-3px;
+        width: 100%;
+        float: left;
+        padding: 0;
+        .barra{
+          width: 100%;
+          height: 3px;
+          .progreso{
+              width: 0%;
+              height: 3px;
+              background: $progressBar;
+              transition: width 1s ease;
+          }
+      }
+    }
+    .paginado{
+        height: 45px;
+        background: $bgFooterPrevNextMobile;
+        .btn-icon-pie{
+            cursor: pointer;
+            width: 20%;
+            margin-top: 3px;
+            float: left;
+            svg{
+               g{
+                   fill:$iconsFooter; 
+               }
+            }
+            
+        }
+        .btn-next-inactive{
+            svg{
+               g{
+                   fill:$iconsFooterInactive;
+               }
+            }
+            svg:hover{
+               g{
+                   fill:$iconsFooterInactive;
+               }
+            }
+        }
+        div svg:hover{
+            g{
+                fill:$iconsFooterHover; 
+            }
+        }
+        .btn-prev-inactive{
+            svg{
+               g{
+                   fill:$iconsFooterInactive;
+               }
+            }
+            svg:hover{
+               g{
+                   fill:$iconsFooterInactive;
+               }
+            }
+        }
+        div svg:hover{
+            g{
+                fill:$iconsFooterHover; 
+            }
+        }
+        .num-pagina{
+            width: 60%;
+            height: 50px;
+            margin-top: 12px;
+            float: left;
+            font-weight: lighter;
+            font-size: 1.2em;
+            text-align: center;
+            color: $blanco;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none; 
+        }
+    }
+    .botones{
+        height: 45px;
+        .btn-icon-pie{
+            width: 20%;
+            height: 50px;
+            margin-top: 5px;
+            float: left;
+            svg{
+               width: 60%;
+               height: 60%;
+               g{
+                   fill:$iconsFooter;
+               }
+               path{
+                   fill:$iconsFooter; 
+               }
+            }
+        }
+        div svg:hover{
+            g{
+                fill:$iconsFooterHover; 
+                 
+            }
+            path{
+                fill:$iconsFooterHover; 
+            }
+        }
+        
+        div.btn-next-inactive svg{
+            g{
+                fill:red; 
+                 
+            }
+            path{
+                fill:$iconsFooterHover; 
+            }
+        }
+
+        div.btn-next-inactive svg:hover{
+            g{
+                fill:red; 
+                 
+            }
+            path{
+                fill:$iconsFooterHover; 
+            }
+        }
+        
+    }
+}
+
+.btn-icon-pie + .tooltip > .tooltip-inner{
+    background-image: $tooltip;
+    color: $tooltipText;
+}
+.btn-icon-pie + .tooltip > .tooltip-arrow{ 
+    background-image: $tooltip;; 
+}

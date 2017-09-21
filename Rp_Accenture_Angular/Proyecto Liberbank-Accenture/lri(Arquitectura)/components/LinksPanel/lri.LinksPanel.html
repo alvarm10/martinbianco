@@ -1,0 +1,7 @@
+<label>{{lriLinksPanel.titlePanel}}</label>
+<div class="{{lriLinksPanel.classContainer}}">
+	<a ng-click="lriLinksPanel.linkClicked($index)" class="{{lriLinksPanel.linkClass}}" ng-repeat="urlObject in lriLinksPanel.urlsObject">
+		{{urlObject.name}}
+		<tooltip-component content="urlObject.tooltip"></tooltip-component>
+	</a>
+</div>

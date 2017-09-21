@@ -1,0 +1,60 @@
+<!--Esta es la nueva plantilla de objetivos. SIEMPRE TENDRÁ esta frase introductoria y los objetivos que haya en el diseño instruccional. Va con lista numerada y la diana alineada a la derecha. 
+Ahora el número de flechas de la diana se añade manualmente  con el atributo data-id del div que la contiene.-->
+
+
+<!--
+
+    INTRODUCIR LAS SIGUIENTES ETIQUETAS SI SE QUIERE INTRODUCIR UN AUDIO PRINCIPAL EN LA DIAPOSITIVA. 
+    
+    <div>
+        <p class="pAudioPrincipal"></p>
+        <audio class="audioinicio" src='audios/p01.mp3' preload="">
+    </div>
+    
+    TENER EN CUENTA QUE SI LA VARIABLE "controlesaudio":
+
+    1. Está en "si": aparecerá la barra de control de audio en la diapositiva y el audio tendrá que ser activado por el usuario.
+    2. Está en no: se reproducirá el audio automáticamente al entrar en la diapositiva en versión escritorio y no aparecerá la barra de audio. En versión movil o tablet si que aparecerá la barra de audio ya que no se puede reproducir automáticamente el audio al entrar en una diapositiva para estas versiones.
+    
+
+    TAMBIÉN SE PUEDEN AÑADIR AUDIOS SECUNDARIOS EN LA DIAPOSITIVA INTRODUCIENDO LA SIGUIENTE ETIQUETA
+
+    <div>
+        <p class="pAudioSecundario"></p>
+        <audio src='audios/p02.mp3' preload="">
+	</div>
+-->
+
+<div>
+        <p class="pAudioPrincipal">Click on the audio for further details</p>
+        <audio class="audioinicio" src='audios/p01.mp3' preload="">
+</div>
+
+<div class="row-fluid">
+	<div class="col-xs-12 col-sm-7 col-md-7">
+		<p class="text-justify ">The <strong>objectives</strong> that are intended to achieve at the end of this unit are the following:</p>
+		<ul class="listaOrdenada text-justify ">
+		    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+
+		    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+
+		    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+
+		    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+		        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+
+		    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+
+		</ul>
+	</div>
+
+	<div class="col-xs-12 col-sm-5 col-md-5">
+		<div class="diana" data-id="6">
+		</div>
+	</div>
+	
+</div>
+
+
+<!-- j a v a s c r i p t   d e   l a   p á g i n a  H T M L  -->
+<script src="../assets/js/functions.js"></script> 

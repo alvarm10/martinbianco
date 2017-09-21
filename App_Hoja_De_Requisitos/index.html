@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Hoja de requisitos - BVF</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<body>
+
+
+
+
+	<form class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+		
+	<!-- BLOQUE 1 - DATOS DE CONTACTO -->
+
+		<legend>Datos de contacto</legend>	
+		<div class="form-group">
+			<div class="col-xs-12 col-sm-6 text-center">
+				<label>Cliente Externo</label>
+				<input type="radio" name="tipoCliente" class="marginInput" id="clienteExterno">
+			</div>
+			<div class="col-xs-12 col-sm-6 text-center">
+				<label>Cliente Interno</label>
+				<input type="radio" name="tipoCliente" class="marginInput" id="clienteInterno">
+			</div>		
+			<div class="col-xs-12 col-sm-6">
+				<label>Nombre de empresa</label>
+				<input type="text" class="form-control" placeholder="Bureau Veritas Formación" id="nombreEmpresa">
+	  		</div>
+	  		<div class="col-xs-12 col-sm-6">
+	  			<label>BU:</label>
+	  			<input type="text" class="form-control" id="bu">
+	  		</div>
+	  		<div class="col-xs-12 col-sm-6">
+				<label>Responsable del curso:</label>
+	  			<input type="text" class="form-control" id="responsableCurso">
+	  		</div>
+	  		<div class="col-xs-12 col-sm-6">
+	  			<label>Email de contacto:</label>
+	  			<input type="text" class="form-control" id="email">
+	  		</div>
+	  		<div class="col-xs-12 col-sm-offset-3 col-sm-6">
+	  			<label>Teléfono de contacto:</label>
+	  			<input type="text" class="form-control" id="telefono">
+			</div>
+		</div>
+
+		<div style="clear: both;"></div>
+
+	<!-- BLOQUE 2 - ESTRUCTURA DEL CURSO -->
+
+		<legend>Estructura del curso</legend>
+		<div class="form-group">
+			<div class="col-xs-12">
+				<label>Nombre del curso:</label>
+				<input type="text" class="form-control" id="nombreCurso">
+			</div>
+			<div class="col-xs-12 text-center">
+				<label>Organización en módulos </label>
+				<input type="radio" name="organizacionCurso" class="marginInput" id="organizacionModulos">
+				<label>Organización en unidades</label>
+				<input type="radio" name="organizacionCurso" class="marginInput" id="organizacionUnidades">
+			</div>
+
+			<div class="col-xs-12 text-center">
+			<!-- Trigger the modal with a button -->
+	 			<button type="button" class="btn" data-toggle="modal" data-target="#myModalModulos" id="btnOrganizarMod" style="display: inline-block;">Organizar</button>
+	 			<button type="button" class="btn" data-toggle="modal" data-target="#myModalUnidades" id="btnOrganizarUd" style="display: none">Organizar</button>
+	 		</div>
+			<!-- Modal Modulos -->
+			  <div class="modal fade" id="myModalModulos" role="dialog">
+			    <div class="modal-dialog">
+			    
+			      <!-- Modal content -->
+			      <div class="modal-content">
+			        <div class="modal-header">
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			          <h4 class="modal-title">Opción Módulos</h4>
+			        </div>
+			        <div class="modal-body">
+			         	<div class="table-responsive">
+			          		<table class="table table-hover text-center" width="100%">
+			          			<tr>
+				          			<th>Nombre de módulo</th>
+				          			<th>Nombre de unidad</th>
+				          			<th>&nbsp;</th>
+			          			</tr>
+			          			<tr>
+			          				<td><input type="text" class="form-control" name="" placeholder="nombre de modulo 1"></td>
+			          				<td><input type="text" class="form-control" name="" placeholder="nombre de unidad 1"></td>
+			          				<td><button type="button" class="btn btn-default btn-secundario">Añadir Unidad</button></td>
+			          			</tr>
+			          		</table>
+			          		<button type="button" class="btn btn-default btn-secundario">Añadir Módulo</button>
+			          	</div>
+			        </div>
+			        <div class="modal-footer">
+			          <button type="button" class="btn btn-default btn-secundario" data-dismiss="modal">Salir</button>
+			        </div>
+			      </div>
+			      
+			    </div>
+			  </div>
+
+			<!-- Modal Unidades -->
+			  <div class="modal fade" id="myModalUnidades" role="dialog">
+			    <div class="modal-dialog">
+			    
+			      <!-- Modal content -->
+			      <div class="modal-content">
+			        <div class="modal-header">
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			          <h4 class="modal-title">Opción Unidades</h4>
+			        </div>
+			        <div class="modal-body">
+			         	<div class="table-responsive">
+			          		<table class="table table-hover text-center" width="100%">
+			          			<tr>
+				          			<th>Nombre de unidad</th>
+				          			<th>&nbsp;</th>
+			          			</tr>
+			          			<tr>
+			          				<td><input type="text" class="form-control" name="" placeholder="nombre de unidad 1"></td>
+			          				<td><button type="button" class="btn btn-default btn-secundario">Añadir Unidad</button></td>
+			          			</tr>
+			          		</table>
+			          	</div>
+			        </div>
+			        <div class="modal-footer">
+			          <button type="button" class="btn btn-default btn-secundario" data-dismiss="modal">Salir</button>
+			        </div>
+			      </div>
+			      
+			    </div>
+			  </div>
+
+		</div>
+
+		<div style="clear: both;"></div>
+
+	<!-- BLOQUE 3 - IDIOMAS -->
+
+		<legend>Idiomas</legend>
+		<div class="form-group">
+			<div class="col-xs-12 col-sm-4">
+			  <label for="selIdioma">Idioma 1:</label>
+			  <select class="form-control" id="selIdioma">
+			    <option>1</option>
+			    <option>2</option>
+			    <option>3</option>
+			    <option>4</option>
+			  </select>
+		  	</div>
+		</div>
+		<div class="col-xs-12 text-center">
+			<button type="button" class="btn">Añadir idioma</button>
+		</div>
+
+		<div style="clear: both;"></div>
+
+	<!-- BLOQUE 4 - CONTENIDO DEL CURSO -->
+
+		<legend>Contenido del curso</legend>	
+		<div class="form-group">
+			<div class="col-xs-12 col-sm-6 text-center">
+				<label>Desarrollado por el cliente</label>
+				<input type="radio" name="desarrollo" class="marginInput" id="desarrolloCliente">
+			</div>
+			<div class="col-xs-12 col-sm-6 text-center">
+				<label>Desarrollado por BVF</label>
+				<input type="radio" name="desarrollo" class="marginInput" id="desarrolloBVF">
+			</div>
+		</div>
+
+		<div style="clear: both;"></div>
+
+
+	<!-- BLOQUE 5 - DISEÑO INSTRUCCIONAL -->
+
+		<legend>Diseño instruccional</legend>	
+		<div class="form-group">
+			<div class="col-xs-12">
+				<label>Realizar diseño instruccional</label>
+				<input type="checkbox" value="" class="marginInput" id="realizarDI">
+			</div>
+			<div class="col-xs-12">
+				<label>Añadir autoevaluaciones</label>
+				<input type="checkbox" value="" class="marginInput" id="autoevaluaciones">
+			</div>
+			<div class="col-xs-12">
+				<label>El curso tiene versión en PDF descargable</label>
+				<input type="checkbox" value="" class="marginInput" id="versionPDF">
+			</div>
+		</div>
+
+		<div style="clear: both;"></div>
+
+	<!-- BLOQUE 6 - CONTENIDO AUDIOVISUAL DEL CURSO -->
+
+		<legend>Contenido audiovisual del curso</legend>	
+		<div class="form-group">
+
+		<!-- AUDIOS -->
+
+			<div class="col-xs-12">
+				<label>El curso tiene audios</label>
+				<input type="checkbox" value="" class="marginInput" id="audios">
+			</div>
+			<div class="col-xs-12">
+				<label>El contenido de los audios lo desarrolla:</label>
+			</div>
+			<div class="col-xs-12 col-sm-6 text-center">
+				<label>Cliente</label>
+				<input type="radio" name="contenidoAudios" class="marginInput" id="audiosCliente">
+			</div>
+			<div class="col-xs-12 col-sm-6 text-center">
+				<label>BVF</label>
+				<input type="radio" name="contenidoAudios" class="marginInput" id="audiosBVF">
+			</div>
+			<div class="col-xs-12">
+				<label>Los audios los graba:</label>
+			</div>
+			<div class="col-xs-12 col-sm-6 text-center">
+				<label>Cliente</label>
+				<input type="radio" name="grabarAudios" class="marginInput" id="grabaAudiosCliente">
+			</div>
+			<div class="col-xs-12 col-sm-6 text-center">
+				<label>BVF</label>
+				<input type="radio" name="grabarAudios" class="marginInput" id="grabaAudiosBVF">
+			</div>
+			
+			<div class="col-xs-12">
+				<hr>
+			</div>
+
+		<!-- VIDEOS -->
+
+			<div class="col-xs-12">
+				<label>El curso tiene vídeos</label>
+				<input type="checkbox" value="" class="marginInput" id="videos">
+			</div>
+			<div class="col-xs-12">
+				<label>El contenido de los vídeos lo desarrolla:</label>
+			</div>
+			<div class="col-xs-12 col-sm-6 text-center">
+				<label>Cliente</label>
+				<input type="radio" name="contenidoVideos" class="marginInput" id="videosCliente">
+			</div>
+			<div class="col-xs-12 col-sm-6 text-center">
+				<label>BVF</label>
+				<input type="radio" name="contenidoVideos" class="marginInput" id="videosBVF">
+			</div>
+			<div class="col-xs-12">
+				<label>Los vídeos los graba:</label>
+			</div>
+			<div class="col-xs-12 col-sm-6 text-center">
+				<label>Cliente</label>
+				<input type="radio" name="grabaVideos" class="marginInput" id="grabaVideosCliente">
+			</div>
+			<div class="col-xs-12 col-sm-6 text-center">
+				<label>BVF</label>
+				<input type="radio" name="grabaVideos" class="marginInput" id="grabaVideosBVF">
+			</div>
+
+		</div>
+
+		<div style="clear: both;"></div>
+
+	<!-- BLOQUE 7 - ESTRUCTURA DE EVALUACIONES -->
+
+		<legend>Estructura de evaluaciones</legend>	
+		<div class="form-group">
+			<div class="col-xs-12">
+				<label>No hay Test Final </label>
+				<input type="checkbox" value="" class="marginInput" id="testFinal">
+			</div>
+			<div class="col-xs-12">
+				<label>Test Final después de cada unidad </label>
+				<input type="checkbox" value="" class="marginInput" id="testUnidad">
+			</div>
+			<div class="col-xs-12">
+				<label>Test Final al finalizar todas las unidades </label>
+				<input type="checkbox" value="" class="marginInput" id="testPostUnidades">
+			</div>
+			<div class="col-xs-12">
+				<label>Test Final después de cada unidad y otro al finalizar todas las unidades</label>
+				<input type="checkbox" value="" class="marginInput" id="testFinalTotal">
+			</div>
+		</div>
+
+		<div style="clear: both;"></div>
+
+	<!-- BLOQUE 8 - CONTENIDO DE EVALUACIONES -->
+
+		<legend>Contenido de evaluaciones</legend>	
+		<div class="form-group">
+			<div class="col-xs-12 col-sm-6">
+				<label>Número de preguntas que aparecerán en cada test:</label>
+				<input type="number" class="form-control" id="numPreguntas">
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<label>Número de preguntas totales de cada test:</label>
+				<input type="number" class="form-control" id="numPreguntasTotal">
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<label>Porcentaje de preguntas acertadas necesarias para aprobar el test:</label>
+				<input type="number" class="form-control" id="porcentajeAprobar">
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<label>Número de intentos para aprobar el test:</label>
+				<input type="number" class="form-control" id="intentosAprobar">
+			</div>
+		</div>
+
+		<div style="clear: both;"></div>
+
+	<!-- BLOQUE 9 - DISEÑO GRÁFICO -->
+
+		<legend>Diseño gráfico</legend>	
+		<div class="form-group">
+			<div class="col-xs-12 col-sm-6 text-center">
+				<label>Logotipo BV</label>
+				<input type="radio" name="logotipo" class="marginInput" id="logotipoBV">
+			</div>
+			<div class="col-xs-12 col-sm-6 text-center">
+				<label>Logotipo Cliente</label>
+				<input type="radio" name="logotipo" class="marginInput" id="logotipoCliente">
+			</div>
+			<div class="col-xs-12 col-sm-4">
+				<label>Color corporativo 1:</label>
+	  			<input type="text" class="form-control" id="color1">
+			</div>
+			<div class="col-xs-12 text-center">
+				<button type="button" class="btn">Añadir color</button>
+			</div>
+				<!-- GRÁFICOS -->
+			<div class="col-xs-12">
+				<label>El curso tiene gráficos</label>
+				<input type="checkbox" value="" class="marginInput" id="graficos">
+			</div>
+			<div class="col-xs-12 col-sm-6 text-center">
+				<label>Usar gráficos de cliente</label>
+				<input type="radio" name="graficos" class="marginInput" id="graficosCliente">
+			</div>
+			<div class="col-xs-12 col-sm-6 text-center">
+				<label>Rediseñar gráficos de cliente</label>
+				<input type="radio" name="graficos" class="marginInput" id="graficosBVF">
+			</div>
+			<div class="col-xs-12">
+				<hr>
+			</div>
+				<!-- ESCENARIOS -->
+			<div class="col-xs-12">
+				<label>El curso tiene escenarios</label>
+				<input type="checkbox" value="" class="marginInput" id="escenarios">
+			</div>
+			<div class="col-xs-12 col-sm-offset-3 col-sm-6">
+				<label>Número total de escenarios:</label>
+				<input type="number" class="form-control" id="numEscenarios">
+			</div>
+			<div class="col-xs-12 col-sm-6 text-center">
+				<label>Escenarios reales</label>
+				<input type="radio" name="escenarios" class="marginInput" id="escenariosReal">
+			</div>
+			<div class="col-xs-12 col-sm-6 text-center">
+				<label>Escenarios ilustrados</label>
+				<input type="radio" name="escenarios" class="marginInput" id="escenariosIlustr">
+			</div>
+			<div class="col-xs-12">
+				<label>Escenarios con animación</label>
+				<input type="checkbox" value="" class="marginInput" id="escenariosAnim">
+			</div>
+			<div class="col-xs-12">
+				<hr>
+			</div>
+				<!-- PERSONAJES -->
+			<div class="col-xs-12">
+				<label>El curso tiene personajes</label>
+				<input type="checkbox" value="" class="marginInput" id="personajes">
+			</div>
+			<div class="col-xs-12 col-sm-offset-3 col-sm-6">
+				<label>Número total de personajes:</label>
+				<input type="number" class="form-control" id="numPersonajes">
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<label>Número de personajes varones:</label>
+				<input type="number" class="form-control" id="personajesHombre">
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<label>Número de personajes femeninos:</label>
+				<input type="number" class="form-control" id="personajesMujer">
+			</div>
+		</div>
+
+		<div style="clear: both;"></div>
+
+	<!-- BLOQUE 10 - PLATAFORMA -->
+
+		<legend>Plataforma</legend>	
+		<div class="form-group">
+			<div class="col-xs-12 col-sm-4 text-center">
+				<label>Moodle BV</label>
+				<input type="radio" name="plataforma" class="marginInput" id="moodleBV">
+			</div>
+			<div class="col-xs-12 col-sm-4 text-center">
+				<label>Cornerstone BV</label>
+				<input type="radio" name="plataforma" class="marginInput" id="cornerstoneBV">
+			</div>
+			<div class="col-xs-12 col-sm-4 text-center">
+				<label>Plataforma de cliente*</label>
+				<input type="radio" name="plataforma" class="marginInput" id="otraPlataforma">
+			</div>
+			<div class="col-xs-12 col-sm-6">
+	  			<label>*Plataforma:</label>
+	  			<input type="text" class="form-control" id="nombrePlataforma">
+			</div>
+			<div class="col-xs-12 col-sm-6">
+	  			<label>*URL:</label>
+	  			<input type="text" class="form-control" id="urlPlataforma">
+			</div>
+		</div>
+
+		<div style="clear: both;"></div>
+
+	<!-- BLOQUE 11 - NAVEGACIÓN ENTRE PANTALLAS -->
+
+		<legend>Navegación entre pantallas</legend>	
+		<div class="form-group">
+			<div class="col-xs-12 col-sm-4 text-center">
+				<label>Libre</label>
+				<input type="radio" name="plataforma" class="marginInput" id="navLibre">
+			</div>
+			<div class="col-xs-12 col-sm-4 text-center">
+				<label>Restringida</label>
+				<input type="radio" name="plataforma" class="marginInput" id="navRestringida">
+			</div>
+			<div class="col-xs-12 col-sm-4 text-center">
+				<label>Ultra restringida</label>
+				<input type="radio" name="plataforma" class="marginInput" id="navUltraRestr">
+			</div>
+		</div>
+
+		<div style="clear: both;"></div>
+
+	<!-- BLOQUE 12 - NAVEGACIÓN ENTRE UNIDADES -->
+
+		<legend>Navegación entre unidades</legend>	
+		<div class="form-group">
+			<div class="col-xs-12 col-sm-4 text-center">
+				<label>Libre</label>
+				<input type="radio" name="plataforma" class="marginInput" id="navUdLibre">
+			</div>
+			<div class="col-xs-12 col-sm-4 text-center">
+				<label>Restringida</label>
+				<input type="radio" name="plataforma" class="marginInput" id="navUdRestringida">
+			</div>
+			<div class="col-xs-12 col-sm-4 text-center">
+				<label>Otra*</label>
+				<input type="radio" name="plataforma" class="marginInput" id="navUdOtra">
+			</div>
+			<div class="col-xs-12">
+	  			<label>*Definir navegación:</label>
+	  			<input type="text" class="form-control">
+			</div>
+		</div>
+
+		<div class="col-xs-12 text-center">	
+			<button class="btn" type="submit">Enviar</button>
+		</div>
+
+	</form>
+
+
+<div class="col-xs-12" style="height: 30px;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/script.js" type="text/javascript"></script>
+
+
+</body>
+
+</html>
+
+

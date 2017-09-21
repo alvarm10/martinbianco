@@ -1,0 +1,55 @@
+/* P E R S O N A L I Z A D O
+================================================== */
+
+.diana svg {width: 100%;}
+.img80{width:80%;}
+.img70{width:70%;}
+.img60{width:60%;}
+.img50{width:50%;}
+.img40{width:40%;}
+.img30{width:30%;}
+.img25{width:25%;}
+.negrita{font-weight: bold;}
+.centrado{text-align:center;}
+.subBulletsTop{margin-top:1%;}
+.img-left{float:left;}
+.img-right{float:right;}
+option{word-wrap:break-word;}
+.fraseModal{float:right; text-decoration: underline;cursor: pointer;}
+.table{width:0%;}
+
+/*.oyPuzzleCell table {
+    margin: 20px auto;
+    width: 50% !important;
+}*/
+
+@media only screen and (max-width: 768px) 
+{
+	#mapa-europa{
+	min-height: 500px;
+	min-width:40%;
+
+	}
+}
+@media only screen and (max-height: 1024px) 
+{
+	#mapa-europa{
+	max-height: 650px;
+
+	}
+}
+
+@media only screen and (max-width: 1366px) and (max-height: 768px )
+{
+	.cont-asociargrafico{
+	    width: 50%;
+	    margin: 0 20%;
+	}
+}
+@media only screen and (max-width: 1280px) 
+{
+	#mapa-europa{
+	max-height: 600px;
+
+	}
+}

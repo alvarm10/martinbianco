@@ -1,0 +1,286 @@
+/* F O O T E R
+================================================== */
+
+.espacio{
+  width: 100%;
+  height: 120px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: $color3;
+}
+
+.footer-desktop{
+    .botones{
+        cursor: pointer;
+        margin-top: 15px;
+        height: 40px;
+        .btn-icon-pie{
+            cursor: pointer;
+            width: 100% / $iconsOnFooter;
+            height: 50px;
+            float: left;
+            svg{
+               width: 50%;
+               height: 50%;
+               g{
+                   fill:$iconsFooter;
+               }
+               path{
+                   fill:$iconsFooter; 
+               }
+               rect{
+                    fill:$iconsFooter; 
+               }
+            }
+        }
+        div svg:hover{
+            g{
+                fill:$iconsFooterHover; 
+                 
+            }
+            path{
+                fill:$iconsFooterHover; 
+            }
+            rect{
+                fill:$iconsFooterHover; 
+            }
+        }
+    }
+
+    .banda-footer{
+        width: 100%;
+        height: 10px;
+        background-color:#B0002D
+    }
+    .barra-progreso{
+        margin-top: 20px;
+        .barra{
+          width: 85%;
+          height: 12px;
+          border-radius: 4px;
+          background: $bgProgressBar;
+          .progreso{
+              width: 0%;
+              max-width: 100% !important;
+              height: 12px;
+              border-radius: 4px;
+              background: $progressBar;
+              transition: width 0.5s ease;
+          }
+      }
+    }
+    .paginado{
+        height: 40px;
+        .btn-icon-pie{
+            cursor: pointer;
+            width: 20%;
+            height: 50px;
+            margin-top: 10px;
+            float: left;
+            svg{
+               g{
+                   fill:$iconsFooter; 
+               }
+            }
+            
+        }
+        .btn-next-inactive{
+            svg{
+               g{
+                   fill:$iconsFooterInactive;
+               }
+            }
+            svg:hover{
+               g{
+                   fill:$iconsFooterInactive;
+               }
+            }
+        }
+        div svg:hover{
+            g{
+                fill:$iconsFooterHover; 
+            }
+        }
+        .btn-prev-inactive{
+            svg{
+               g{
+                   fill:$iconsFooterInactive;
+               }
+            }
+            svg:hover{
+               g{
+                   fill:$iconsFooterInactive;
+               }
+            }
+        }
+        .num-pagina{
+            width: 60%;
+            height: 50px;
+            margin-top: 20px;
+            float: left;
+            text-align: center;
+            color: $paged;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none; 
+        }
+    }
+
+    .primerapagina{
+      cursor: default !important;
+    }
+    .ultimapagina{
+      cursor: default !important;
+    }
+}
+
+.footer-phone{
+    padding: 0;
+    margin-left: -15px;
+    @media only screen and (max-width: 767px){
+    margin-left: 0px;
+    }
+    .barra-progreso{
+        position: absolute;
+        top:-3px;
+        width: 100%;
+        float: left;
+        padding: 0;
+        .barra{
+          width: 100%;
+          height: 3px;
+          .progreso{
+              width: 0%;
+              max-width: 100%;
+              height: 3px;
+              background: $progressBar;
+              transition: width 0.5s ease;
+          }
+      }
+    }
+    .paginado{
+        height: 45px;
+        background: $bgFooterPrevNextMobile;
+        .btn-icon-pie{
+          cursor: pointer;
+            width: 48%;
+            margin-top: 3px;
+            float: left;
+            svg{
+               g{
+                   fill:$iconsFooter; 
+               }
+            }
+            
+        }
+        div svg:hover{
+            g{
+                fill:$iconsFooterHover; 
+            }
+        }
+        .num-pagina{
+            width: 60%;
+            height: 50px;
+            margin-top: 12px;
+            float: left;
+            font-weight: lighter;
+            font-size: 1.2em;
+            text-align: center;
+            color: $blanco;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none; 
+        }
+    }
+    .btn-next-inactive{
+            svg{
+               g{
+                   fill:$iconsFooterInactive;
+               }
+            }
+            svg:hover{
+               g{
+                   fill:$iconsFooterInactive;
+               }
+            }
+        }
+    .btn-prev-inactive{
+        svg{
+            g{
+                fill:$iconsFooterInactive;
+            }
+        }
+        svg:hover{
+            g{
+                fill:$iconsFooterInactive;
+            }
+        }
+    }
+    .botones{
+        height: 45px;
+        .btn-icon-pie{
+            cursor: pointer;
+            width: 100% / $iconsOnFooter;
+            height: 50px;
+            margin-top: 5px;
+            float: left;
+            svg{
+               width: 60%;
+               height: 60%;
+               g{
+                   fill:$iconsFooter;
+               }
+               path, rect{
+                   fill:$iconsFooter; 
+               }
+            }
+        }
+        div svg:hover{
+            g{
+                fill:$iconsFooterHover; 
+                 
+            }
+            path, rect{
+                fill:$iconsFooterHover; 
+            }
+        }
+    }
+}
+
+.btn-icon-pie + .tooltip > .tooltip-inner{
+    background-image: $tooltip;
+    color: $tooltipText;
+}
+.btn-icon-pie + .tooltip > .tooltip-arrow{ 
+    background-image: $tooltip;; 
+}
+
+/*PARA OCULTAR LOS ICONOS DEL PIE QUE NO ME INTERESE PONER EN LA PLANTILLA*/
+
+.icon-audio{
+  display:$audioIcon;
+}
+.icon-ayuda{
+  display:$helpIcon;
+}
+.icon-glosario{
+  display:$glosaryIcon;
+}
+.icon-docs{
+  display:$docsIcon;
+}
+.icon-descargas{
+  display:$downlIcon;
+}
+.icon-enlargetext{
+  display:$enlTextIcon;
+}
+.icon-reducetext{
+  display:$redTextIcon;
+}

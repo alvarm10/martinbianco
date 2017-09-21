@@ -1,0 +1,1273 @@
+ /* A C T I V I T I E S 
+================================================== */
+.ejercicio{
+	width: 100%;
+	min-height: 150px;
+	padding: 10px;
+	border: 3px solid rgba($color4, 0.2);
+	.enunciado{
+		width: 100%;
+		margin-bottom: 20px;
+		font-size: 1em;
+		p{
+			font-weight: bold;
+			color: $color8;
+			padding: 0 15px;
+		}
+	}
+	.botonera{
+		height: 44px;
+		margin-top: 20px;
+		.btn{
+			display: inline-block;
+			float: left;
+			width: 46%;
+			margin: 5px;
+			background: rgba($color4, 0.2);
+		}
+	}
+}
+
+.ae-MC{padding: 0 15px !important;}
+    
+.correcto{
+	svg{
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		background: $verde;
+		g path{
+			fill: $verde;
+		}
+		#Shape1{
+			fill: $blanco;
+		}
+	}
+}
+.incorrecto{
+	svg{
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		background: $rojo;
+		g path{
+			fill: $rojo;
+		}
+		#Shape1{
+			fill: $blanco;
+		}
+	}
+}
+
+
+/*     T R U E  /  F A L S E   */
+.ejercicioVF{
+
+	.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	p{
+		text-align: justify;
+		padding: 0 15px;
+	}
+
+	.pregunta{
+		display: inline-block;
+		width: 100%;
+		height: auto;
+		margin-bottom: 5px;
+		padding: 5px 0;
+		.txt{
+		}
+		.opciones{
+			min-height: 30px;
+			padding-right: 0px;
+			padding-left: 0px;
+		    text-align: center;
+		    line-height: 1.8em;
+		    font-size: .9em;
+			.box{
+				display: inline-block;
+				width: 20%;
+				height: 20px;
+				float: left;
+			}
+			.radio{
+				display: inline-block;
+				width: 35%;
+				margin-top: 0;
+			    margin-bottom: 0;
+			    padding-left: 0px !important;
+				min-height: 20px;
+			}
+			.icon-feedback{
+				display: none;
+				width: 20%;
+				cursor: pointer;
+				svg{
+					height: 20px;
+					#feed{
+						fill: $color8;
+					}
+				}
+			}
+			.icon-feedback:hover{
+				width: 20%;
+				svg{
+					height: 20px;
+					#feed{
+						fill: $color1;
+					}
+				}
+			}
+			.resultado{
+				width: 10%;
+			}
+			.correcto{
+				@media only screen and (max-width: 767px){
+					width: 5% !important;
+				    left: 90% !important;
+				    top:19px !important;
+				}
+				svg{
+					width: 20px;
+					height: 20px;
+					float: right;
+					border-radius: 50%;		
+				}
+			}
+			.incorrecto{
+				@media only screen and (max-width: 767px){
+					width: 5% !important;
+				    left: 90% !important;
+				    top:19px !important;
+				}
+				svg{
+					width: 20px;
+					height: 20px;
+					float: right;
+					border-radius: 50%;
+				}
+			}
+			input{
+				position: relative;
+				margin-left: 0px;
+				width: 100%;
+    			height: 1em;
+			}
+		}
+	}
+
+	.opcionesEjercicioVF{
+		margin-bottom: 10px;
+		font-size:18px;
+		.opcion1{
+			float:left;
+			width: 35%;
+			text-align: center;
+			font-weight: bold;
+			color:$color2;
+			@media only screen and (max-width: 767px){
+				display:none;
+			}
+		}
+		.opcion2{
+			float:left;
+			width: 35%;
+			text-align: center;
+			font-weight: bold;
+			color:$color2;
+			@media only screen and (max-width: 767px){
+				display:none;
+			}
+		}
+	}
+	.feedback{
+		display: none;
+		margin-bottom: 10px;
+		padding: 10px;
+		border-radius: 3px;
+		background: rgba($color8, 0.1);
+		line-height: $interLineadoTextNormal;
+		font-size: $sizeTextNormal;
+		color: $txtNormal; 
+	}
+	.modal-content{
+		margin-top: 200px;
+	}
+
+	.contesta{
+			color:$color2;
+			font-weight: bold;
+	}
+
+	.opcionesVF{
+		display: none;
+		@media only screen and (max-width: 767px){
+			display:block;
+			margin-top:0px !important;
+		}
+		.opcionesVFUno{
+			float:left;
+			width:35%;
+			margin:0px 4.5% 0px 10.5%;
+			text-align: right;
+			color:$color2;
+			font-weight: bold;
+		}
+		.opcionesVFDos{
+			float:left;
+			width:35%;
+			margin:0px 10.5% 0px 4.5%;
+			text-align: left;
+			color:$color2;
+			font-weight: bold;
+		}
+	}
+	
+
+
+}
+
+
+
+/*     S I N G L E    C H O I C E   */
+.ejercicioMC{
+
+	.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	p{
+		text-align: justify;
+		margin: 0px !important;
+		margin-bottom:5px !important;
+	}
+
+	.pregunta{
+		display: inline-block;
+		width: 100%;
+		height: auto;
+		margin-bottom: 5px;
+		padding: 5px 0;
+		.txt{
+		}
+		.opciones{
+			min-height: 30px;
+			padding-right: 0px;
+			padding-left: 0px;
+		    text-align: center;
+		    line-height: 1.8em;
+		    font-size: .9em;
+			.box{
+				display: inline-block;
+				width: 20%;
+				height: 20px;
+				float: left;
+			}
+			.radio{
+				display: inline-block;
+				width: 35%;
+				margin-left: 10%;
+				margin-top: 0;
+			    margin-bottom: 0;
+			    padding-left: 0px !important;
+				min-height: 20px;
+			}
+			.icon-feedback{
+				display: none;
+				width: 20%;
+				cursor: pointer;
+				svg{
+					height: 20px;
+					#feed{
+						fill: $color8;
+					}
+				}
+			}
+			.icon-feedback:hover{
+				width: 20%;
+				svg{
+					height: 20px;
+					#feed{
+						fill: $color1;
+					}
+				}
+			}
+			.resultado{
+				width: 10%;
+			}
+			.correcto{
+				@media only screen and (max-width: 767px){
+					width: 20% !important;
+				    left: 90% !important;
+				    top:19px !important;
+				}
+				svg{
+					width: 20px;
+					height: 20px;
+					float: right;
+					border-radius: 50%;		
+				}
+			}
+			.incorrecto{
+				@media only screen and (max-width: 767px){
+					width: 20% !important;
+				    left: 90% !important;
+				    top:19px !important;
+				}
+				svg{
+					width: 20px;
+					height: 20px;
+					float: right;
+					border-radius: 50%;
+				}
+			}
+			input{
+				position: relative;
+				margin-left: 0px;
+				width: 100%;
+    			height: 1em;
+			}
+		}
+	}
+
+	.opcionesEjercicioMC{
+		margin-bottom: 10px;
+		font-size:18px;
+		.opcion1{
+			float:left;
+			width: 35%;
+			text-align: center;
+			font-weight: bold;
+			color:$color2;
+			@media only screen and (max-width: 767px){
+				display:none;
+			}
+		}
+		.opcion2{
+			float:left;
+			width: 35%;
+			text-align: center;
+			font-weight: bold;
+			color:$color2;
+			@media only screen and (max-width: 767px){
+				display:none;
+			}
+		}
+	}
+	.feedback{
+		display: none;
+		margin-bottom: 10px;
+		padding: 10px;
+		border-radius: 3px;
+		background: rgba($color8, 0.1);
+		line-height: $interLineadoTextNormal;
+		font-size: $sizeTextNormal;
+		color: $txtNormal; 
+	}
+	.modal-content{
+		margin-top: 200px;
+	}
+
+	.contesta{
+			color:$color2;
+			font-weight: bold;
+	}
+
+	.opcionesMC{
+		display: none;
+		@media only screen and (max-width: 767px){
+			display:block;
+			margin-top:0px !important;
+		}
+		.opcionesMCUno{
+			float:left;
+			width:35%;
+			margin:0px 4.5% 0px 10.5%;
+			text-align: right;
+			color:$color2;
+			font-weight: bold;
+		}
+		.opcionesMCDos{
+			float:left;
+			width:35%;
+			margin:0px 10.5% 0px 4.5%;
+			text-align: left;
+			color:$color2;
+			font-weight: bold;
+		}
+	}
+	
+
+
+}
+
+
+/*     O R D E N A R   */
+.ejercicioOrdenar{
+	.listaOrdenar{
+		display: inline-block;
+		width: 100%;
+		list-style: none;
+		font-size: 24px;
+		.item{
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 50px;
+			margin-top: 5px;
+			border-radius: 5px;
+			border: 3px solid $color8;
+			background: $grisClaro;
+			text-align: center;
+			line-height: 50px;
+			cursor: move;
+			p{
+				margin:10px;
+			}	
+		}
+		.correcto{
+			svg{
+				position: absolute;
+				top: 20%;
+				right: 10px;
+			}
+		}
+		.incorrecto{
+			svg{
+				position: absolute;
+				top: 20%;
+				right: 10px;
+			}
+		}
+		.item-hover{
+			border: 3px dashed rgba($color4, 0.2);
+			color: rgba($color4, 0.2);
+		}
+	}
+
+	.contesta-ordenar{
+		color: #B0002D;
+    	font-weight: bold;
+	}
+}
+
+
+/*     A S O C I A R   */
+.ejercicioAsociarGrafico{
+	width: 100%;
+	height: auto;
+	display: inline-block;
+	div .listaAsociar{
+		li{
+			width: 100%;
+			min-height: 50px;
+			margin-bottom: 10px;
+			h6{
+				width: 50px;
+				height: 50px;
+				float: left;
+				margin-right: 10px;
+				border-radius: 8px;
+				border: 4px solid rgba($color8, 0.9);
+				background: $blanco;
+				font-size: 30px;
+				line-height: 1.4em;
+				text-align: center;
+				color: rgba($color8, 0.9);
+				cursor: pointer;
+			}
+			h6:hover{
+				border: 4px solid rgba($color8, 0.4);
+				background: $blanco;
+				color: rgba($color8, 0.4);
+			}
+			.activo{
+				border: 4px solid $color2;
+				background: $blanco;
+				color: $color2;
+			}
+			.activo:hover{
+				border: 4px solid $color2;
+				background: $blanco;
+				color: $color2;
+			}
+			.asignado{
+				border: 4px solid $color4;
+				background: $blanco;
+				color: $color4;
+				cursor: default;
+			}
+			.asignado:hover{
+				border: 4px solid $color4;
+				background: $blanco;
+				color: $color4;
+			}
+			div{
+				height: 40px;
+				padding: 0;
+			}
+		}
+	}
+	div .contenedorImg{
+		position: relative;
+		width: 100%;
+		float: right;	
+		img{
+			width: 80%;
+			height: 80%;
+			margin: 10%;
+		}
+		div{
+			position: absolute;
+			width: 80px;
+			h6{
+				position: relative;
+				width: 50px;
+				height: 50px;
+				float: left;
+				border-radius: 8px;
+				border: 4px solid rgba($color4, 0.2);
+				background: $blanco;
+				font-size: 30px;
+				line-height: 1.4em;
+				text-align: center;
+				color: rgba($color4, 0.2);
+				cursor: pointer;
+			}
+			.h6-hover:hover{
+				border: 4px solid rgba($color4, 0.5);
+				background: $blanco;
+				color: rgba($color4, 0.5);
+			}
+			.activo-hover:hover{
+				border: 4px solid $color2;
+				background: $blanco;
+				color: $color2;
+			}
+			.asignado{
+				border: 4px solid $color4;
+				background: $blanco;
+				color: $color4;
+				cursor: default;
+			}
+			.asignado:hover{
+				border: 4px solid $color4;
+				background: $blanco;
+				color: $color4;
+			}
+			.resultado{
+				position: relative;
+				width: 30px;
+				height: 30px;
+				margin-top: 10px;
+				float: right;
+			}
+			.correcto{
+				svg{
+					margin-top: 3px;
+				}
+			}
+			.incorrecto{
+				svg{
+					margin-top: 3px;
+					margin-left: 2px;
+				}
+			}
+		}
+		.box-1{
+			top: 0;
+			left: 46%;
+		}
+		.box-2{
+			top: 46%;
+			left: 0;
+		}
+		.box-3{
+			top: 46%;
+			right: 0;
+		}
+		.box-4{
+			bottom: 0;
+			left: 46%;
+		}
+	}
+}
+
+.ejercicioAsociarGrafico{
+	.pregunta div .modo-phone{
+		position: relative;
+		width: 100%;
+		float: right;	
+		img{
+			width: 80%;
+			height: 80%;
+			margin: 10%;
+		}
+		div{
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			.resultado{
+				position: relative;
+				width: 30px;
+				height: 30px;
+				margin-top: 10px;
+				float: right;
+			}
+			.correcto{
+				svg{
+					margin-top: 3px;
+				}
+			}
+			.incorrecto{
+				svg{
+					margin-top: 3px;
+					margin-left: 2px;
+				}
+			}
+		}
+		.box-1{
+			top: 0;
+			left: 46%;
+		}
+		.box-2{
+			top: 46%;
+			left: 0;
+		}
+		.box-3{
+			top: 46%;
+			right: 0;
+		}
+		.box-4{
+			bottom: 0;
+			left: 46%;
+		}
+	}
+}
+
+
+.ejercicioAsociar{
+	width: 100%;
+	height: auto;
+	display: inline-block;
+	.hidden-phone{
+			display:block !important;
+		@media only screen and (max-width: 767px){
+			display:none !important;
+		}
+	}
+	.visible-phone{
+		display:none !important;
+		@media only screen and (max-width: 767px){
+			display:block !important;
+		}
+	}
+
+	.botonera .btn-solucion.asociar{
+		@media only screen and (min-width: 767px) and (max-width: 769px){
+			    width: 49% !important;
+    			margin-top: 8px !important;
+		}
+	}
+
+	.listaAsociar{
+		width: 100%;
+		li{
+			height: 58px;
+			h6{
+				width: 50px;
+				height: 50px;
+				border-radius: 8px;
+				border: 4px solid rgba($color8, 0.9);
+				background: $blanco;
+				font-size: 30px;
+				line-height: 1.4em;
+				text-align: center;
+				color: rgba($color8, 0.4);
+				cursor: pointer;
+			}
+		}
+	}
+	.ejercicioSelect{
+		border:none;
+	}
+	.btn-reiniciar{
+		@media only screen and (max-width: 767px){
+			display:none !important;
+		}
+	}
+	.btn-reiniciar.asociargrafico{
+		@media only screen and (max-width: 767px){
+			display:block !important;
+		}
+	}
+	.contesta{
+			color:$color2;
+			font-weight: bold;
+	}
+	.opciones-1{
+		li{
+			margin-bottom: 60px;
+			h6{
+				margin-left: 10px;
+				float: right;
+				color: $color8;
+			}
+			h6:hover{
+				border: 4px solid rgba($color8, 0.4);
+				background: $blanco;
+				color: rgba($color8, 0.4);
+			}
+			.activo{
+				border: 4px solid $color2 !important;
+				background: $blanco;
+				color: $color2;
+			}
+			.activo:hover{
+				border: 4px solid $color2;
+				background: $blanco;
+				color: $color2;
+			}
+			.asignado{
+				border: 4px solid $color4 !important; 
+				background: $blanco;
+				color: $color4;
+				cursor: default;
+			}
+			.asignado:hover{
+				border: 4px solid $color4;
+				background: $blanco;
+				color: $color4;
+			}
+			div{
+				
+				margin-right: 64px;
+				text-align: right;
+				width: 82%;
+				@media only screen and (min-width:769px) and (max-width: 1050px){
+					width: 78%;
+				}
+				
+				@media only screen and (max-width: 1150px){
+					font-size:14px;
+				}
+			}
+		}
+	}
+	.opciones-2{
+		li{	
+			position: relative;
+			margin-bottom: 60px;
+			h6{
+				margin-right: 10px;
+				float: left;
+				border: 4px solid rgba($color4, 0.2);
+				background: $blanco;
+				color: rgba($color4, 0.2);
+			}
+			.h6-hover:hover{
+				border: 4px solid rgba($color4, 0.5);
+				background: $blanco;
+				color: rgba($color4, 0.5);
+			}
+			.activo-hover:hover{
+				border: 4px solid $color2;
+				background: $blanco;
+				color: $color2;
+			}
+			.asignado{
+				border: 4px solid $color4 !important;
+				background: $blanco;
+				color: $color4;
+				cursor: default;
+			}
+			.asignado:hover{
+				border: 4px solid $color4;
+				background: $blanco;
+				color: $color4;
+			}
+			div{
+				text-align: justify;
+			}
+			.columnaDerecha{
+				width: 70%;
+				margin-right: 50px;
+				margin-left:64px;
+				@media only screen and (max-width: 1150px){
+					font-size:14px;
+				}
+    
+			}
+			.resultado{
+				display: none;
+			    position: absolute;
+    			right: -15px;
+    			top: 0px;
+				width: 30px;
+				height: 30px;
+				float: left;
+				margin-left: 10px;
+				svg{
+					margin-right: 0px;
+	    			margin-left: 0px;
+				}
+			}
+
+		}
+		
+	}
+	
+	.icon-feedback{
+		display: none !important
+	}
+	.resultado{
+		@media only screen and (max-width: 767px){
+			left:48% !important;
+		}
+	}
+	.btn-escritorio{
+		@media only screen and (max-width: 767px){
+			display:none;
+		}
+	}
+	.asociar{
+		@media only screen and (max-width: 767px){
+			display:none !important;
+		}
+	}
+
+	.asociar.asociargrafico{
+		@media only screen and (max-width: 767px){
+			display:block;
+			width: 49% !important;
+    		margin-top: 5px !important;
+		}
+	}
+
+	.btn-corregir.asociargrafico{
+		@media only screen and (max-width: 767px){
+			display:block !important;
+		}
+	}
+
+	.btn-corregir.select-asociar{
+		display:none !important;
+		@media only screen and (max-width: 767px){
+			display:block !important;
+		}
+	}
+	.btn-solucion.select-asociar{
+		@media only screen and (max-width: 767px){
+			display:none;
+		}
+	}
+
+	.contesta-asociar{
+		color:$color2;
+		font-weight: bold;
+		@media only screen and (max-width: 767px){
+			display:none;
+		}
+	}
+	
+	.contesta-asociar.contesta-asociargrafico{
+		@media only screen and (max-width: 767px){
+			display:block;
+		}
+	}
+
+	.contesta{
+		display:none;
+		@media only screen and (max-width: 767px){
+			display:block;
+		}
+	}
+
+	
+}
+
+
+
+/*     S E L E C T   */
+
+.ejercicioSelect{
+	
+	.select-ae{
+		width:50%;
+		margin: 0px 0px 7px 18px;
+		@media only screen and (max-width: 767px){
+			width:94%;
+			
+		}
+	}
+
+	.cajas-select{
+		margin-bottom: 25px;
+		.pregunta-select{
+			margin-left:18px !important;
+			font-size: 1em;
+			line-height: 1.4em;
+		}
+	}
+
+	p{
+		text-align: justify;
+		margin-bottom: 5px;
+		color:$color1;
+	}
+
+	.solucion{
+		display:block;
+		position: relative;
+		.correcto{
+			position: absolute;
+			top: -23px;
+    		left: 85%;
+    		@media only screen and (max-width: 767px){
+		    	top:15px;
+		    	left:37%;
+		    }
+		}
+		.incorrecto{
+			position: absolute;
+		    top: -23px;
+		    left: 85%;
+		    @media only screen and (max-width: 767px){
+		    	top:15px;
+		    	left:37%;
+		    }
+		}
+	}
+
+	.ae-select {
+		height:0px !important;
+		svg{
+		    position: absolute;
+		    top: -20px;
+		    left: 92%;
+		    width: 35px;
+		    @media only screen and (max-width: 767px){
+		    	top:18px;
+		    	left:53%;
+		    }
+		}
+	}
+
+	.opciones{
+		min-height: 0px !important;
+		@media only screen and (max-width: 767px){
+			display:block !important;
+			background:none !important;
+		}
+	}
+
+	.botonera .btn {
+		@media only screen and (max-width: 767px){
+			width:49%;
+			margin:5px 0.5% !important;
+		}
+	}
+
+	.contesta{
+		color:$color2;
+		font-weight: bold;
+	}
+}
+
+
+/* A S O C I A R    G R Á F I C O */
+
+.ejercicioAsociar.grafico{
+	.opciones-1{
+		li{
+			height: auto;
+			margin-bottom: 5px;
+			padding-left: 0px;
+			padding-right: 0px;
+			h6{
+				float:left;
+				width:30px;
+				height: 30px;
+				font-size: 19px;
+				border: solid 3px !important;
+				border-radius: 6px;
+			}
+			.activo{
+				border: solid 3px !important;
+			}
+			div{
+				width: auto;
+				margin-left: 45px;
+				margin-right: 0px;
+    			text-align: left;
+    			padding-top: 6px;
+			}
+		}
+	}
+	.opciones-2{
+		li{
+			position: absolute;
+			width:30px;
+			height: 30px;
+			margin-bottom: 0px;
+			h6{
+				float:left;
+				width:30px;
+				height: 30px;
+				font-size: 19px;
+				border: solid 3px;
+				border-radius: 6px;
+			}
+			.asignado, .h6-hover{
+				border: solid 3px !important;
+			}
+			div{
+				margin-left: 52px;
+				margin-right: 0px;
+    			text-align: left;
+    			padding-top: 6px;
+			}
+			.resultado{
+				left: 4px !important;
+				top: 27px !important;
+				margin-left: 0px;
+    			margin-right: 0px;
+				svg{
+					margin-right: 0px;
+	    			margin-left: 0px;
+	    			width: 22px;
+    				height: 22px;
+				}
+			}
+		}
+	}
+	.cont-asociargrafico{
+		position: relative;
+		margin-top:10px;
+		margin-bottom: 10px;
+		img{
+			width:100%;
+		}
+	}
+
+	.contesta-asociargrafico{
+		margin-top:25px;
+	}
+}
+
+
+
+
+/*     M U L T I P L E    C H O I C E   */
+.ejercicioMultChoice{
+
+	.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	p{
+		text-align: justify;
+		margin: 0px !important;
+		margin-bottom:5px !important;
+	}
+
+	.pregunta{
+		display: inline-block;
+		width: 100%;
+		height: auto;
+		margin-bottom: 5px;
+		padding: 5px 0;
+		.txt{
+		}
+		.opciones{
+			min-height: 30px;
+			padding-right: 0px;
+			padding-left: 0px;
+		    text-align: center;
+		    line-height: 1.8em;
+		    font-size: .9em;
+			.box{
+				display: inline-block;
+				width: 20%;
+				height: 20px;
+				float: left;
+			}
+			.checkbox{
+				display: inline-block;
+				width: 35%;
+				margin-left: 10%;
+				margin-top: 0;
+			    margin-bottom: 0;
+			    padding-left: 0px !important;
+				min-height: 20px;
+			}
+			.icon-feedback{
+				display: none;
+				width: 20%;
+				cursor: pointer;
+				svg{
+					height: 20px;
+					#feed{
+						fill: $color8;
+					}
+				}
+			}
+			.icon-feedback:hover{
+				width: 20%;
+				svg{
+					height: 20px;
+					#feed{
+						fill: $color1;
+					}
+				}
+			}
+			.resultado{
+				width: 10%;
+			}
+			.correcto{
+				@media only screen and (max-width: 767px){
+					width: 20% !important;
+				    left: 90% !important;
+				    top:19px !important;
+				}
+				svg{
+					width: 20px;
+					height: 20px;
+					float: right;
+					border-radius: 50%;		
+				}
+			}
+			.incorrecto{
+				@media only screen and (max-width: 767px){
+					width: 20% !important;
+				    left: 90% !important;
+				    top:19px !important;
+				}
+				svg{
+					width: 20px;
+					height: 20px;
+					float: right;
+					border-radius: 50%;
+				}
+			}
+			input{
+				position: relative;
+				margin-left: 0px;
+				width: 100%;
+    			height: 1em;
+			}
+		}
+	}
+
+	.opcionesEjercicioMC{
+		margin-bottom: 10px;
+		font-size:18px;
+		.opcion1{
+			float:left;
+			width: 35%;
+			text-align: center;
+			font-weight: bold;
+			color:$color2;
+			@media only screen and (max-width: 767px){
+				display:none;
+			}
+		}
+		.opcion2{
+			float:left;
+			width: 35%;
+			text-align: center;
+			font-weight: bold;
+			color:$color2;
+			@media only screen and (max-width: 767px){
+				display:none;
+			}
+		}
+	}
+	.feedback{
+		display: none;
+		margin-bottom: 10px;
+		padding: 10px;
+		border-radius: 3px;
+		background: rgba($color8, 0.1);
+		line-height: $interLineadoTextNormal;
+		font-size: $sizeTextNormal;
+		color: $txtNormal; 
+	}
+	.modal-content{
+		margin-top: 200px;
+	}
+
+	.contesta{
+			color:$color2;
+			font-weight: bold;
+	}
+
+	.opcionesMC{
+		display: none;
+		@media only screen and (max-width: 767px){
+			display:block;
+			margin-top:0px !important;
+		}
+		.opcionesMCUno{
+			float:left;
+			width:35%;
+			margin:0px 4.5% 0px 10.5%;
+			text-align: right;
+			color:$color2;
+			font-weight: bold;
+		}
+		.opcionesMCDos{
+			float:left;
+			width:35%;
+			margin:0px 10.5% 0px 4.5%;
+			text-align: left;
+			color:$color2;
+			font-weight: bold;
+		}
+	}
+	
+
+
+}
+
+/*     H O T S P O T   */
+
+.ejercicioHotspot{
+	.contesta-asociar {
+	    color: #B0002D;
+	    font-weight: bold;
+	}
+
+	.contenedor-hotspot{
+		svg{
+			g{
+				path{
+					fill-opacity: 1;
+				}
+			}
+			/*clase para las áreas clicables*/
+			.areaclicable{
+				path, rect{
+					fill-opacity: 1;
+					cursor: pointer;
+				}
+			}
+			.area-active{
+				path{
+					fill-opacity: 1;
+				}
+			}
+		}
+	}
+
+	/*estilo de los íconos de feedback y los botones*/
+	.hs-icono-correcto>path:first-child {fill:green !important;}
+	.hs-icono-incorrecto>path:first-child {fill:red !important;}
+	.hs-icono-feedback>path:first-child {fill:#0088CE !important;}
+}

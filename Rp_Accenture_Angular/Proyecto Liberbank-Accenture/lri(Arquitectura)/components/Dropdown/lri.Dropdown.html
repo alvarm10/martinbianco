@@ -1,0 +1,12 @@
+<div class="{{lriDropdown.classTitle}}">
+	<label>{{lriDropdown.title}}</label>
+	<div class="dropdown">
+	  <button class="btn btn-default dropdown-toggle" type="button" id="dropdown{{lriDropdown.titleWithoutSpace}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+	    {{lriDropdown.value}}
+	    <span class="caret"></span>
+	  </button>
+	  <ul class="dropdown-menu" aria-labelledby="dropdown{{lriDropdown.titleWithoutSpace}}">
+	    <li ng-repeat="item in lriDropdown.items" ng-click="lriDropdown.value = item" role="menuitem"><a href="#">{{item}}</a></li>
+	  </ul>
+	</div>
+</div>

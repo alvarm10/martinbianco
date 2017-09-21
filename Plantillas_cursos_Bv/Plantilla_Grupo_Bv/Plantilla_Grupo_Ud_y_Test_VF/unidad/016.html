@@ -1,0 +1,57 @@
+<!--
+
+    INTRODUCIR LAS SIGUIENTES ETIQUETAS SI SE QUIERE INTRODUCIR UN AUDIO PRINCIPAL EN LA DIAPOSITIVA. 
+    
+    <div>
+        <p class="pAudioPrincipal"></p>
+        <audio class="audioinicio" src='audios/p01.mp3' preload="">
+    </div>
+    
+    TENER EN CUENTA QUE SI LA VARIABLE "controlesaudio":
+
+    1. Está en "si": aparecerá la barra de control de audio en la diapositiva y el audio tendrá que ser activado por el usuario.
+    2. Está en no: se reproducirá el audio automáticamente al entrar en la diapositiva en versión escritorio y no aparecerá la barra de audio. En versión movil o tablet si que aparecerá la barra de audio ya que no se puede reproducir automáticamente el audio al entrar en una diapositiva para estas versiones.
+    
+
+    TAMBIÉN SE PUEDEN AÑADIR AUDIOS SECUNDARIOS EN LA DIAPOSITIVA INTRODUCIENDO LA SIGUIENTE ETIQUETA
+
+    <div>
+        <p class="pAudioSecundario"></p>
+        <audio src='audios/p02.mp3' preload="">
+    </div>
+-->
+
+
+<!-- SI PONES EL data-lightbox="image-1" TODAS CON EL MISMO NOMBRE, TE LO MONTARA EN UN  CARROUSEL, SINO LO MONTARA INDIVUALMENTE
+EN EL  data-title PONEMOS EL PIE DE FOTO 
+ -->
+<h4>LIGHT BOX</h4>
+<p class="pAudio">Click on the images below.</p>
+<div class="row-fluid">
+	<div class="col-xs-6 col-sm-3 text-center">
+		<a href="img/img-din_01.jpg" data-title="" data-lightbox="image-1">
+	<img  src="img/img-din_01.jpg" width="150px" class="img-rounded" >
+</a>
+	</div>
+	<div class="col-xs-6 col-sm-3 text-center">
+		<a  href="img/img-din_02.jpg" data-title="Prueba foto2" data-lightbox="image-1">
+	<img  src="img/img-din_02.jpg" width="150px" class="img-rounded">
+</a>
+	</div>
+	<div class="col-xs-6 col-sm-3 text-center">
+		<a  href="img/img-din_03.jpg" data-title="Prueba foto3" data-lightbox="image-1">
+	<img  src="img/img-din_03.jpg" width="150px" class="img-rounded">
+</a>
+	</div>
+	<div class="col-xs-6 col-sm-3 text-center">
+		<a  href="img/carousel_01.jpg" data-title="Prueba foto4" data-lightbox="image-1">
+	<img  src="img/carousel_01.jpg" width="150px" class="img-rounded">
+</a>
+	</div>
+
+</div>
+
+
+
+<!-- j a v a s c r i p t   d e   l a   p á g i n a  H T M L  -->
+<script src="../assets/js/functions.js"></script> 

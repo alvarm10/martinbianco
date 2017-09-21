@@ -1,0 +1,66 @@
+<div class="container">
+	<form ng-submit="$ctrl.showScope()" >
+		<title-component title="Informe Propuesta de Litigio" ></title-component>
+
+		<title-component title="Titulares" ></title-component>
+		<div class="row">
+			<p class="col-md-12">tabla titulares</p>
+		</div>
+
+		<title-component title="Avalistas" ></title-component>
+		<div class="row">
+			<p class="col-md-12">tabla avalistas</p>
+		</div>
+
+		<title-component title="Operaciones" ></title-component>
+		<div class="row">
+			<p class="col-md-12">tabla operaciones</p>
+		</div>
+
+		<title-component title="Bienes e intervinientes" ></title-component>
+		<div class="row">
+			<p class="col-md-12">tabla bienes e intervinientes</p>
+		</div>
+
+		<div class="row">
+			<boton-component class-boton="" id="calcular" dataid="calcular" name="Calcular" type="submit" url="/bloque8" disabled="false"></boton-component>
+		</div>
+
+
+		<title-component title="Tipo procedimiento / Estrategia judicial" ></title-component>
+
+		<div class="row">
+			<input-component title="Deuda a fecha informe (€)" model="$ctrl.$scope.propuestaLitigio.deudaFecha" disabled="true" type-validation="importe" required="true"></input-component>
+
+			<input-component title="Importe estimado Adj. (€)" model="$ctrl.$scope.propuestaLitigio.importeEstimado" disabled="true" type-validation="phone"></input-component>
+
+			<input-component title="Deuda estimada en demanda (€)" model="$ctrl.$scope.propuestaLitigio.deudaEstimada" disabled="true" type-validation="phone"></input-component>
+
+		  	<dropdown-component items=$ctrl.$scope.propuestaLitigio.dacionPagos title="Dación en pago" value='$ctrl.$scope.propuestaLitigio.dacionPago'></dropdown-component>
+
+		  	<dropdown-component items=$ctrl.$scope.propuestaLitigio.estrategiaJudicialPropuestas title="Estrategia judicial propuesta" value='$ctrl.$scope.propuestaLitigio.estrategiaJudicialPropuesta'></dropdown-component>
+
+			<input-component title="Centro gestor destino" model="$ctrl.$scope.propuestaLitigio.centroGestorDestino" disabled="false" type-validation="phone"></input-component>
+
+			<dropdown-component items=$ctrl.$scope.propuestaLitigio.sobrantes title="Sobrante" value='$ctrl.$scope.propuestaLitigio.sobrante'></dropdown-component>
+		</div>
+
+		<div class="row">
+			<input-component title="Justificación de la propuesta de litigio" model="$ctrl.$scope.propuestaLitigio.justiPro"></input-component>
+		</div>
+
+		<div class="row">
+
+			<boton-component class-boton="" id="cancelar2" dataid="cancelar2" name="Cancelar" type="button" url="/bloque8" onaction=$ctrl.cancel() disabled="false"></boton-component>
+
+			<div ng-if="$ctrl.$scope.propuestaLitigio.switchBoton">
+				<boton-component class-boton="" id="aceptar2" dataid="aceptar2" name="Aceptar" type="submit" url="/bloque8" onaction=$ctrl.aceptar() disabled="true"></boton-component>
+			</div>
+			
+			<div ng-if="!$ctrl.$scope.propuestaLitigio.switchBoton">
+				<boton-component class-boton="" id="aceptar2" dataid="aceptar2" name="Aceptar" type="submit" url="/bloque8" onaction=$ctrl.aceptar() disabled="false"></boton-component>
+			</div>
+
+		</div>
+	</form>
+</div>

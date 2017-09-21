@@ -1,0 +1,24 @@
+<section id="ltf" ng-controller="IndexCtrl" ng-cloak>
+
+
+	<section>
+		<div>
+			<uib-tabset active="0" vertical=false>
+			    <uib-tab index="0" heading="Bloque 8 Certificado" disable="false" ng-click="openTab('bloque8Cer')">
+			    	<section  ui-view="init1" id="bloque8Cer" ng-cloak ng-controller="lriBloque8Certificado"><lri-bloque8-certificado></lri-bloque8-certificado></section>
+			    </uib-tab>			    
+			    <uib-tab index="1" heading="Bloque 8 Ficha" disable="false" ng-click="openTab('bloque8Ficha')">
+			    	<section  ui-view="init2" id="Bloque8Ficha" ng-cloak ng-controller="lriBloque8Litigio" ><lri-bloque8-litigio></lri-bloque8-litigio></section>
+			    </uib-tab>
+			 </uib-tabset>
+		</div>
+	</section>
+
+</section>
+
+
+
+
+
+
+ 

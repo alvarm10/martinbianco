@@ -1,0 +1,107 @@
+
+<h4>Content carousel</h4>
+
+<!--
+
+    INTRODUCIR LAS SIGUIENTES ETIQUETAS SI SE QUIERE INTRODUCIR UN AUDIO PRINCIPAL EN LA DIAPOSITIVA. 
+    
+    <div>
+        <p class="pAudioPrincipal"></p>
+        <audio class="audioinicio" src='audios/p01.mp3' preload="">
+    </div>
+    
+    TENER EN CUENTA QUE SI LA VARIABLE "controlesaudio":
+
+    1. Está en "si": aparecerá la barra de control de audio en la diapositiva y el audio tendrá que ser activado por el usuario.
+    2. Está en no: se reproducirá el audio automáticamente al entrar en la diapositiva en versión escritorio y no aparecerá la barra de audio. En versión movil o tablet si que aparecerá la barra de audio ya que no se puede reproducir automáticamente el audio al entrar en una diapositiva para estas versiones.
+    
+
+    TAMBIÉN SE PUEDEN AÑADIR AUDIOS SECUNDARIOS EN LA DIAPOSITIVA INTRODUCIENDO LA SIGUIENTE ETIQUETA
+
+    <div>
+        <p class="pAudioSecundario"></p>
+        <audio src='audios/p02.mp3' preload="">
+    </div>
+-->
+
+<div id="carousel-example-generic" class="carousel carousel-grande carousel-contenido slide" data-ride="carousel" data-interval="false">
+	<!-- Bolitas indicadores -->
+	<ol class="carousel-indicators">
+		<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+		<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+	</ol>
+	<!-- Contenido de las imágenes -->
+	<div class="carousel-inner" role="listbox">
+		<div class="item active">
+			<img src="img/carrousel-cont_01.jpg" alt="...">
+			<div class="carousel-caption">
+				<h3>Lorem ipsum dolor</h3>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. </p>
+
+				<!-- ETIQUETA AUDIO, SOLO FUNCIONA PARA VERSIÓN ESCRITORIO EN EL CARRUSEL, SI ESTE CURSO SE VA A VER EN VERSIÓN MOVIL NO SE DEBE AÑADIR ESTA ETIQUETA -->
+
+				<!-- agregar etiqueta audio aquí si se desea. Ej: <audio src='audios/p03.mp3' preload=""></audio>, se introducirá la clase "audioinicio" si este es el primer audio del carrusel, Ej: <audio class="audioinicio" src='audios/p01.mp3' preload=""></audio>-->
+
+			</div>
+		</div>
+		<div class="item">
+			<img src="img/carrousel-cont_02.jpg" alt="...">
+			<div class="carousel-caption">
+				<h3>Lorem ipsum dolor 2</h3>
+				<p>Etiam sagittis iaculis ultricies</p>
+
+				<!-- ETIQUETA AUDIO, SOLO FUNCIONA PARA VERSIÓN ESCRITORIO EN EL CARRUSEL, SI ESTE CURSO SE VA A VER EN VERSIÓN MOVIL NO SE DEBE AÑADIR ESTA ETIQUETA -->
+
+				<!-- agregar etiqueta audio aquí si se desea. Ej: <audio src='audios/p03.mp3' preload=""></audio>, se introducirá la clase "audioinicio" si este es el primer audio del carrusel, Ej: <audio class="audioinicio" src='audios/p01.mp3' preload=""></audio>-->
+			</div>
+		</div>
+		<div class="item">
+			<img src="img/carrousel-cont_03.jpg" alt="...">
+			<div class="carousel-caption">
+				<h3>Lorem ipsum dolor 3</h3>
+				<p>Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.</p>
+
+				<!-- ETIQUETA AUDIO, SOLO FUNCIONA PARA VERSIÓN ESCRITORIO EN EL CARRUSEL, SI ESTE CURSO SE VA A VER EN VERSIÓN MOVIL NO SE DEBE AÑADIR ESTA ETIQUETA -->
+
+				<!-- agregar etiqueta audio aquí si se desea. Ej: <audio src='audios/p03.mp3' preload=""></audio>, se introducirá la clase "audioinicio" si este es el primer audio del carrusel, Ej: <audio class="audioinicio" src='audios/p01.mp3' preload=""></audio>-->
+			</div>
+		</div>
+		<div class="item">
+			<img src="img/carrousel-cont_04.jpg" alt="...">
+			<div class="carousel-caption">
+				<h3>Lorem ipsum dolor 4</h3>
+				<p>Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.</p>
+
+				<!-- ETIQUETA AUDIO, SOLO FUNCIONA PARA VERSIÓN ESCRITORIO EN EL CARRUSEL, SI ESTE CURSO SE VA A VER EN VERSIÓN MOVIL NO SE DEBE AÑADIR ESTA ETIQUETA -->
+
+				<!-- agregar etiqueta audio aquí si se desea. Ej: <audio src='audios/p03.mp3' preload=""></audio>, se introducirá la clase "audioinicio" si este es el primer audio del carrusel, Ej: <audio class="audioinicio" src='audios/p01.mp3' preload=""></audio>-->
+			</div>
+		</div>
+		<div class="item">
+			<img src="img/carrousel-cont_05.jpg" alt="...">
+			<div class="carousel-caption">
+				<h3>Lorem ipsum dolor 5</h3>
+				<p>Phasellus volutpat, metus eget egestas mollis, lacus lacus blandit dui, id egestas quam mauris ut lacus. Fusce vel dui. Sed in libero ut nibh placerat accumsan. Proin faucibus arcu quis ante. In consectetuer turpis ut velit. Nulla sit amet est. Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus. Cras risus ipsum, faucibus ut, ullamcorper id, varius ac, leo. Suspendisse feugiat. Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi. Praesent nec nisl a purus blandit viverra. Praesent ac massa at ligula laoreet iaculis.</p>
+
+				<!-- ETIQUETA AUDIO, SOLO FUNCIONA PARA VERSIÓN ESCRITORIO EN EL CARRUSEL, SI ESTE CURSO SE VA A VER EN VERSIÓN MOVIL NO SE DEBE AÑADIR ESTA ETIQUETA -->
+
+				<!-- agregar etiqueta audio aquí si se desea. Ej: <audio src='audios/p03.mp3' preload=""></audio>, se introducirá la clase "audioinicio" si este es el primer audio del carrusel, Ej: <audio class="audioinicio" src='audios/p01.mp3' preload=""></audio>-->
+			</div>
+		</div>
+	</div>
+	<!-- Controles -->
+	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		<span class="carousel-prev" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		<span class="carousel-next" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+</div>
+
+<!-- j a v a s c r i p t   d e   l a   p á g i n a  H T M L  -->
+<script src="../assets/js/functions.js"></script>

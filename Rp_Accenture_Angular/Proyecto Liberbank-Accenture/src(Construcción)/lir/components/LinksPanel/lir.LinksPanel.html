@@ -1,0 +1,7 @@
+<label>{{$ctrl.titlePanel}}</label>
+<div class="{{$ctrl.classContainer}}">
+	<a ng-click="$ctrl.linkClicked($index)" class="{{$ctrl.linkClass}}" ng-repeat="urlObject in $ctrl.urlsObject">
+		{{urlObject.name}}
+		<tooltip-component content="urlObject.tooltip"></tooltip-component>
+	</a>
+</div>

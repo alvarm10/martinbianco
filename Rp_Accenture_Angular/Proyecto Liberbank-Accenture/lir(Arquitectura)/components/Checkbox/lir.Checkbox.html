@@ -1,0 +1,7 @@
+<div class="{{$ctrl.classPanel}}">
+	<div ng-repeat="checkObject in $ctrl.checksObject">
+		<input class="{{$ctrl.classCheckBox}}" type="checkbox" ng-model="checkObject.activo">
+		{{checkObject.title}}
+		<div class="col-md-offset-1 col-md-11"><p ng-repeat="nameShowed in checkObject.name">{{nameShowed}}</p></div>
+	</div>
+</div>

@@ -1,0 +1,410 @@
+/* B U T T O N S 
+================================================== */
+
+/*BOTONERAS---------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+/*------------------------------------------------------------*/
+
+
+/*BOTONES VERTICALES*/
+
+.tabla-dinamica {
+  text-align:center; 
+  background: none !important;
+  border: none;
+  margin: 0px;
+  float: left;
+  padding: 0 ;
+}
+
+.tabla-dinamica>li {
+  margin: 0px ;
+  padding: 0 ;
+  
+}
+.tabla-dinamica a {
+  background-color: $navPills;
+  color: $color6;
+  height: 30px;
+  border: 3px solid $navPills;
+  font-size: 20px;
+  margin:5px 0;
+  width: 30px;   
+  padding: 0px !important;
+}
+
+.tabla-dinamica a:hover {
+  background-color: $navPillsHover !important;
+  border-color:$navPillsHover;
+}
+  
+.tabla-dinamica a:hover {
+  color: $NavPillsTextHover;
+
+}
+
+.tabla-dinamica>li.active>a, .tabla-dinamica>li.active>a:focus, .tabla-dinamica>li.active>a:hover {
+  color: $NavPillsTextActive;
+  background-color: $navPillsActive;
+  border-color:$navPillsActive;
+}
+.tabla-dinamica>li.active>a:hover{
+  border-color:$navPillsHover !important;
+}
+
+.paneltd {
+  width: calc(100% - 40px);   
+  padding: 20px 20px 10px 20px;
+  border: 3px solid rgba(183, 177, 169, 0.5);
+  float: right;
+  border-radius: 10px 10px 10px 10px;
+}
+
+ /*PROCESO VERTICAL*/
+
+.proceso-dinamico {
+  text-align:center; 
+  background: none !important;
+  border: none;
+  margin: 0px 0 0 0;
+  float: left;
+  padding: 0 !important;
+}
+
+.proceso-dinamico a {
+  background-color: $navPills;
+  color: $color6;
+  height: 30px;
+  border: 3px solid $navPills !important;
+  border-radius: 4px !important;
+  font-size: 20px;
+  margin: 0;
+  width: 30px;   
+  padding: 0px !important;
+}
+
+.proceso-dinamico a:hover{
+  background-color:$navPillsHover !important;
+    border-color:$navPillsHover !important;
+
+}
+.proceso-dinamico a.active{
+border-color:$navPills !important;
+}
+ 
+.proceso-dinamico>li {
+  padding: 0;
+  text-align: center;
+}
+  
+.proceso-dinamico a:hover {
+  color: $NavPillsTextHover !important;
+    border-color:$navPillsHover;
+
+}
+
+.proceso-dinamico>li.active>a, .proceso-dinamico>li.active>a:focus, .proceso-dinamico>li.active>a:hover {
+  color: $NavPillsTextActive;
+  background-color: $navPillsActive;
+  border-color:$navPillsActive !important;
+  
+}
+.proceso-dinamico>li.active>a:hover{
+    border-color:$navPillsHover !important;
+}
+
+
+/*BOTONES HORIZONTALES*/
+
+.botonescontenido>ul>li.active>a, .botonescontenido>ul>li.active>a:focus, .botonescontenido>ul>li.active>a:hover {
+  color: $NavPillsTextActive;
+  background-color: $navPillsActive;
+  padding: 10px 0;   
+}
+
+.botonescontenido>ul>li.active, .botonescontenido>ul>li.active:focus, .botonescontenido>ul>li.active:hover {
+  color: $NavPillsTextActive;
+  background-color: $navPillsActive;
+  width: 100%;    
+}
+
+.botonescontenido>ul>li {
+  color: $color6;
+  background-color: $navPills;
+  border: 0px solid $navPills;
+  border-radius: 4px;
+  padding: 0 10px;
+  text-align: center;
+  display: table-cell; 
+  float:none;  
+  width: 100%;  
+}
+.botonescontenido>ul>li.active {
+  border: 0px solid $navPillsActive;
+}
+
+.botonescontenido>ul>li>a {
+  color: $color6;
+  padding: 10px 0;    
+}
+
+.botonescontenido>ul>li>a:hover, .botonescontenido>ul>li:hover {
+  background-color: $navPillsHover;
+  color: $NavPillsTextHover;
+  border-color:$navPillsHover;
+
+}
+
+.botonescontenido>ul {
+  background: none;
+  width: 100%;
+  padding:0;   
+  float:none;
+  display: table-row ;
+}
+
+.botonescontenido {
+  border-spacing: 5px;
+  table-layout: fixed;
+  display: table ; 
+  width: 100%;
+  float: none;
+  margin: 0% -1% -20px -1%;
+}
+
+.panelboton {
+  margin: 20px 0 0 0;
+  padding: 20px 20px 10px 20px;
+  border: 3px solid rgba(183, 177, 169, 0.5);
+  border-radius: 10px 10px 10px 10px;
+}
+
+/*PROCESO HORIZONTAL*/
+
+.proceso>ul>li.active>a, .proceso>ul>li.active>a:focus, .proceso>ul>li.active>a:hover {
+  color: $NavPillsTextActive;
+  background-color: $navPillsActive;
+  padding: 10px 0;
+  font-size: 1em; 
+  border-color:$navPillsHover;
+}
+
+.proceso>ul>li.active, .proceso>ul>li.active:focus, .proceso>ul>li.active:hover {
+  color: $NavPillsTextActive;
+  background-color: $navPillsActive;
+  width: 100%;  
+  border-color:$navPillsActive;  
+}
+
+.proceso>ul>li {
+  color: $color6;
+  background-color: $navPills;
+  border: 0px solid $navPills;
+  border-radius: 4px;
+  padding: 0 10px;
+  text-align: center;
+  display: table-cell; 
+  float:none;  
+  width: 100%;  
+}
+
+.proceso>ul>li>a {
+  color: $color6;
+  padding: 10px 0;
+  font-size: 1em;     
+}
+
+.proceso>ul>li>a:hover, .proceso>ul>li:hover {
+  background-color: $navPillsHover;
+  color: $NavPillsTextHover;
+  border-color:$navPillsHover;
+
+}
+
+.proceso>ul {
+  background: none;
+  width: 100%;
+  padding:0;   
+  float:none;
+  display: table-row ;
+}
+
+.proceso {
+  border-spacing: 0px;
+  table-layout: fixed;
+  display: table ; 
+  width: 98%;
+  float:none;
+  margin-bottom: -15px;
+}
+
+.proceso>ul>li.icono, .proceso>ul>li.icono:focus, .proceso>ul>li.icono:hover {
+  color: $NavPillsTextHover;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: center;
+  float:none;  
+  width: 17px;
+  vertical-align: middle;
+  border-color:$navPillsHover;
+}
+
+
+/*PROCESO CIRCULAR*/
+
+
+.proceso-circular {
+  display: table;
+  text-align:center; 
+  background: none !important;
+  border: none;
+  margin: 0px 0 0 0;
+  float: left;
+  padding: 0 !important;
+}
+
+.proceso-circular a {
+  background-color: $navPills;
+  color: $color6;
+  height: 30px;
+  border: 3px solid $navPills !important;
+  border-radius: 4px !important;
+  font-size: 20px;
+  margin: 0;
+  width: 30px !important;   
+  padding: 1px 6px !important;
+}
+.proceso-circular img {
+  vertical-align: middle; 
+  padding: 0 2px 4px 2px;
+}
+
+.proceso-circular>div {
+  display: table-row; 
+}
+ 
+.proceso-circular>div>li {
+  display: table-cell; 
+  padding: 0;
+  text-align: center;
+}
+  
+.proceso-circular a:hover {
+  color: $NavPillsTextActive !important;
+  text-decoration: none;
+  background-color: $navPillsHover !important;
+  border-color: $navPillsHover !important;
+}
+
+.proceso-circular .active>a, .proceso-circular .active>a:focus, .proceso-circular .active>a:hover {
+  color: $NavPillsTextActive;
+  background-color: $navPillsActive;
+  text-decoration: none;
+  border-color: $navPillsActive !important;
+}
+.proceso-circular .active>a:hover {
+  background-color: $navPillsHover;
+  border-color: $navPillsHover !important;
+  color: $NavPillsTextActive !important;
+}
+.panelpc {
+  width: calc(100% - 85px);   
+  padding: 10px;
+  border: 3px solid rgba(183, 177, 169, 0.5);
+  border-radius: 10px 10px 10px 10px;
+  float: right;
+}
+
+.pcimpar {
+  position: relative;
+  bottom:25px;
+}
+
+#pcflechaizq {
+  position: relative;
+  top:12px;
+}
+#pcflechader {
+  position: relative;
+  bottom:13px;
+}
+
+/*--------MODALS--------*/
+
+.modal {
+    position: fixed;
+    bottom: 55px;
+    left: 0;
+    padding-left: 0px !important;
+    z-index: 1050;
+    outline: 0;
+    @media only screen and (max-width: 991px){
+        right: 0px;
+        bottom:90px;
+    }
+}
+
+.modal-header {
+    padding: 15px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    background-color: $modalHeader;
+    margin: auto;
+    .close{
+        color: #FFF;
+        opacity:1;
+    }
+}
+
+.modal-title{
+    color:$modalHeaderText;
+}
+
+.modal-dialog{
+  width:54%;
+  @media only screen and (max-width: 991px){
+        width:100%;
+        margin:0px;
+    }
+}
+
+.modal-content{
+    margin-top: 159px;
+    margin-left: 9%;
+    @media only screen and (max-width: 991px){
+         margin-top: 118px;
+         width: 90%;
+         margin-left: 5%;
+         margin-right: 5%;
+    }
+}
+
+
+
+.boton-modal {
+  padding:5px;
+  color: $modalButtonText;
+  background-color: $modalButton;
+  border: 3px solid $modalButton;
+  border-radius: 4px;
+  
+}
+
+.boton-modal:hover {
+  color: $modalButtonTextHover;
+  background-color: $modalButtonHover; 
+  border-color: $color1;
+}
+
+.boton-modal:active {
+    box-shadow: 0 5px #666;
+}
+
+
+.boton-modal .btn.focus, .btn:focus, .btn:hover{
+   color: $modalButtonText;
+}
+button{white-space: normal !important;}

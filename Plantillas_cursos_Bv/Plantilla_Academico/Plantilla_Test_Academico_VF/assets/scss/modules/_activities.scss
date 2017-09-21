@@ -1,0 +1,282 @@
+/* A C T I V I T I E S 
+================================================== */
+.ejercicio{
+	width: 100%;
+	min-height: 150px;
+	padding: 10px;
+	border: 3px solid rgba($color4, 0.2);
+	.enunciado{
+		width: 100%;
+		margin-bottom: 20px;
+		font-size: 1.1em;
+		p{
+			font-weight: bold;
+			color: $color8;
+		}
+	}
+	.botonera{
+		height: 44px;
+		margin-top: 20px;
+		.btn{
+			display: inline-block;
+			float: left;
+			margin: 5px;
+			background: rgba($color4, 0.2);
+		}
+	}
+}
+
+
+/*     T R U E  /  F A L S E   */
+.ejercicioVF{
+	.pregunta{
+		display: inline-block;
+		width: 100%;
+		height: auto;
+		margin-bottom: 5px;
+		padding: 5px 0;
+		.txt{
+		}
+		.opciones{
+			min-height: 30px;
+		    text-align: right;
+		    line-height: 1.8em;
+		    font-size: .9em;
+			.box{
+				display: inline-block;
+				width: 20%;
+				height: 20px;
+				float: left;
+			}
+			.radio{
+				display: inline-block;
+				width: 30%;
+				margin-top: 0;
+			    margin-bottom: 0;
+				min-height: 20px;
+    			padding-right: 20px;
+			}
+			.icon-feedback{
+				width: 25%;
+				cursor: pointer;
+				svg{
+					height: 20px;
+					#feed{
+						fill: $color8;
+					}
+				}
+			}
+			.icon-feedback:hover{
+				width: 25%;
+				svg{
+					height: 20px;
+					#feed{
+						fill: $color1;
+					}
+				}
+			}
+			.resultado{
+				width: 15%;
+			}
+			.correcto{
+				svg{
+					width: 20px;
+					height: 20px;
+					float: right;
+					border-radius: 50%;
+					background: $verde;
+					g path{
+						fill: $verde;
+					}
+					#Shape1{
+						fill: $blanco;
+					}
+				}
+			}
+			.incorrecto{
+				svg{
+					width: 20px;
+					height: 20px;
+					float: right;
+					border-radius: 50%;
+					background: $rojo;
+					g path{
+						fill: $rojo;
+					}
+					#Shape1{
+						fill: $blanco;
+					}
+				}
+			}
+		}
+	}
+	.feedback{
+		display: none;
+		margin-bottom: 10px;
+		padding: 10px;
+		border-radius: 3px;
+		background: rgba($color8, 0.1);
+		line-height: $interLineadoTextNormal;
+		font-size: $sizeTextNormal;
+		color: $txtNormal; 
+	}
+	.modal-content{
+		margin-top: 200px;
+	}
+}
+
+
+/*     O R D E N A R   */
+.listaOrdenar{
+	display: block;
+	margin: 0 auto 50px auto;
+	list-style: none;
+	width:300px;
+	font-size: 2em;
+	.item{
+		position: relative;
+		text-align: center;
+		display: block;
+		margin-top: 5px;
+		background: $color4;
+		width: 100%;
+		height: 50px;
+		line-height: 50px;
+		cursor: move;
+		border: 3px solid $color4;
+	}
+	.correcto{
+		svg{
+			position: absolute;
+			top: 20%;
+			right: 10px;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background: $verde;
+			g path{
+				fill: $verde;
+			}
+			#Shape1{
+				fill: $blanco;
+			}
+		}
+	}
+	.incorrecto{
+		svg{
+			position: absolute;
+			top: 20%;
+			right: 10px;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background: $rojo;
+			g path{
+				fill: $rojo;
+			}
+			#Shape1{
+				fill: $blanco;
+			}
+		}
+	}
+	.item-hover{
+		border: 3px dashed $color6;
+	}
+}
+
+
+/*     A S O C I A R   */
+.ejercicioAsociar{
+	width: 100%;
+	height: auto;
+	div .listaAsociar{
+		li{
+			width: 100%;
+			min-height: 50px;
+			margin-bottom: 10px;
+			h6{
+				width: 50px;
+				height: 50px;
+				float: left;
+				margin-right: 10px;
+				border-radius: 8px;
+				border: 4px solid rgba($color8, 0.9);
+				background: $blanco;
+				font-size: 2em;
+				line-height: 1.4em;
+				text-align: center;
+				color: rgba($color8, 0.9);
+				cursor: pointer;
+			}
+			h6:hover{
+				border: 4px solid rgba($color8, 0.4);
+				background: $blanco;
+				color: rgba($color8, 0.4);
+			}
+			.activo{	
+				border: 4px solid $color2;
+				background: $blanco;
+				color: $color2;
+			}
+			div{
+				height: 40px;
+				padding: 0;
+			}
+		}
+	}
+	div .contenedorImg{
+		position: relative;
+		width: 100%;
+		float: right;	
+		img{
+			width: 80%;
+			height: 80%;
+			margin: 10%;
+		}
+		div{
+			h6{
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				border-radius: 8px;
+				border: 4px solid rgba($color4, 0.2);
+				background: $blanco;
+				font-size: 2em;
+				line-height: 1.4em;
+				text-align: center;
+				color: rgba($color4, 0.2);
+				cursor: pointer;
+			}
+			h6:hover{
+				border: 4px solid rgba($color4, 0.5);
+				background: $blanco;
+				color: rgba($color4, 0.5);
+			}
+			.resultado{
+				width: 30px;
+				height: 30px;
+				background: $color4;
+			}
+		}
+		.box-1{
+			top: 0;
+			left: 46%;
+		}
+		.box-2{
+			top: 46%;
+			left: 0;
+		}
+		.box-3{
+			top: 46%;
+			right: 0;
+		}
+		.box-4{
+			bottom: 0;
+			left: 46%;
+		}
+	}
+}
+
+
+
+

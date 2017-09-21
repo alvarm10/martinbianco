@@ -1,0 +1,23 @@
+<div class="tree-view-container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <input class="search-box" type="text" ng-model="larTreeView.searchTerm"/>
+        </div>
+
+        <div class="col-xs-12 col-sm-8">
+            <button ng-click="larTreeView.search()" ng-disabled="larTreeView.searchTerm == null || larTreeView.searchTerm.length === 0" class="btn btn-primary">Buscar</button>
+            <button ng-click="larTreeView.nextCoincidence()" ng-disabled="larTreeView.searchTerm == null || larTreeView.searchTerm.length === 0 || larTreeView.sharedProperties.selectedNode == null" class="btn btn-primary">Siguiente registro</button>
+        </div>
+    </div>
+
+    <div class="tree">
+        <ul>
+            <lar-tree-node ng-repeat="node in larTreeView.data" node="node" data="larTreeView.data" shared-properties="larTreeView.sharedProperties"></lar-tree-node>
+        </ul>
+    </div>
+
+    <div class="text-right">
+        <button ng-click="larTreeView.okModal()" class="btn btn-success">Aceptar</button>
+        <button ng-click="larTreeView.closeModal()" class="btn btn-danger">Cerrar</button>
+    </div>
+</div>

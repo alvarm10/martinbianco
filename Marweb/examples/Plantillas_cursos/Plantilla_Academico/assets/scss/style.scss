@@ -1,0 +1,46 @@
+/*
+Sitio:
+Autor: 
+Web:
+E-mail: 
+Fecha: 00/00/0000
+Version: 0.0.0
+*/
+
+
+
+
+/* !BASE - Base styles, variables, mixins, etc
+================================================== */
+
+@import 'base/_variables.scss';
+@import 'base/_typography.scss';
+@import 'base/_mixins.scss';
+@import 'base/_normalize.scss';
+@import 'base/_base.scss';
+
+
+/* !MODULES - Individual site components
+================================================== */
+
+@import 'modules/_activities.scss';
+@import 'modules/_buttons.scss';
+@import 'modules/_sections.scss';
+@import 'modules/_components.scss';
+
+
+/* !LAYOUTS - Page layout styles
+================================================== */
+
+@import 'layouts/_header.scss';
+@import 'layouts/_nav.scss';
+@import 'layouts/_content.scss';
+@import 'layouts/_footer.scss';
+@import 'modules/_media-queries.scss';
+
+/* CARPETA UNIDAD - Hoja de estilos personalizada
+================================================== */
+
+@import '../../unidad/_personalizado.scss';
+
+

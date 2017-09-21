@@ -1,0 +1,230 @@
+/* H E A D E R
+================================================== */
+
+header{
+    width: 100%;
+}
+
+.header{
+    .banda1{
+        width: 100%;
+        background: $bgHeader1;
+        height: auto; 
+        margin-top: 0px;
+        @if $banda1imagen == si {
+          background: $urlimagen;
+          background-size: 100%;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+          @media only screen and (max-width: 767px){
+              background-size: 130%;
+          }
+          @media only screen and (max-width: 480px){
+              background-size: 165%;
+          }
+        }
+        h1{
+            float: left;
+            margin-top: 10px;
+            margin-left: 20px;
+            line-height: 1em;
+            color: $tituloUnit;
+        }
+        .icon-cerrar{
+            position: absolute;
+            top: 0;
+            right: 0;
+            svg{
+               width: 100%;
+               height: 100%;
+               g{
+                   fill: $iconClose;
+               }
+               #Shape{
+                   fill: $blanco;
+               }
+            }
+            svg:hover{
+               width: 100%;
+               height: 100%;
+               g{
+                   fill: $iconCloseHover;
+               }
+               #Shape{
+                   fill: $blanco;
+               }
+            }
+        }
+        .row-fluid{
+          padding: 0 10px; 
+          @if $posicionlogo == derecha {text-align: right}
+          @else if $posicionlogo == izquierda {text-align: left} 
+          @else if $posicionlogo == centrado {text-align: center}
+        }
+    }
+    .banda2{
+        width: 100%;
+        height: 10px;
+        background: $bgHeader2;
+        @if $banda2imagen == si {
+          background: $urlimagen2;
+          background-size: 100%;
+          background-position: 50% 50%;
+          background-repeat: no-repeat;
+        }
+    }
+    .banda3{
+        .row-fluid{
+            h2{
+                line-height: 1em;
+                font-weight: bold;
+                color: $titleTheme;
+            }
+            h3{
+                line-height: 1em;
+                font-weight: bold;
+                color: $titleSubtheme;
+            }
+        }
+    }
+}
+
+.header-desktop{
+    height: 150px;
+    .banda1{
+        .logo{
+            width: 140px;
+            height: 140px;
+            float: left;
+        }
+        h1{
+            position: absolute;
+            left: 140px;
+            top: 6px;
+            margin-right: 20px;
+            font-size: 1.4em;
+            font-weight: 500;
+        }
+        .icon-cerrar{
+            right: 10px;
+            width: 35px;
+            height: 35px;
+        }
+
+    }
+    .banda3{
+        width: 100%;
+        .row-fluid{
+            h2{
+                margin: 14px 0 5px 160px;
+                font-size: 1.3em;
+            }
+            h3{
+                margin-left: 160px;
+                font-size: 1.1em;
+            }
+        }
+    }
+}
+
+.header-phone{
+    .banda1{
+        margin-top: 0px;
+        .logo{
+            float:none; 
+            background:none; 
+            height: 75px; 
+            margin-top: 5px;
+        }
+        h1{
+            position: absolute;
+            top: 7px;
+            left: 90px;
+            margin-right: 60px;
+            font-size: 1.2em;
+            font-weight: 400;
+            @media only screen and (max-width: 767px){
+              left: 70px;
+            }
+            @media only screen and (max-width: 480px){
+              font-size: 1.1em;
+            }
+        }
+        .icon-cerrar{
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            width: 34px;
+            height: 34px;
+            svg{
+               width: 100%;
+               height: 100%;
+               g{
+                   fill: $iconClose;
+               }
+               #Shape{
+                   fill: $iconClose;
+               }
+            }
+            svg:hover{
+               width: 100%;
+               height: 100%;
+               g{
+                   fill: $iconCloseHover;
+               }
+               #Shape{
+                   fill: $iconCloseHover;
+               }
+            }
+        }
+        .icon-nav{
+            position: absolute;
+            top: 26px;
+            float: right;
+            padding: 5px;
+            cursor:pointer;
+            @if $posicionsumario == derecha {right: 10px}
+            @else if $posicionsumario == izquierda {left: 10px} 
+            svg{
+                #menu{
+                    fill: $iconNav;
+                }
+            }
+        }
+        .icon-nav:hover{
+            svg{
+                #menu{
+                    fill: $iconNavHover;
+                }
+            }
+        } 
+    }
+    .banda3{
+        .row-fluid{
+            h2{
+                margin: 20px 0 5px 20px;
+                font-size: 1.15em;
+            }
+            h3{
+                margin-left: 20px;
+                font-size: 1em;
+            }
+        }
+
+    }
+    
+}
+
+.header-titulo-phone{
+  margin-bottom: 20px;
+  h2{
+      line-height: 1em;
+      font-weight: bold;
+      color: $titleTheme;
+  }
+  h3{
+      line-height: 1em;
+      font-weight: bold;
+      color: $titleSubtheme;
+  }
+}

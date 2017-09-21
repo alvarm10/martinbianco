@@ -1,0 +1,19 @@
+/* C O M P O N E N T S
+================================================== */
+
+/*      H O T S P O T      */
+#mapa-europa{
+	width: 70%;
+	margin: 0 15%;
+	#mapa path{
+		fill: rgba($color4, 0.4);
+	}
+	#portugal path, #espana path, #francia path, #alemania path, #italia path, #reinounido path{
+		fill: rgba($color4, 0.7);
+		cursor: pointer;
+	}
+	#portugal path:hover, #espana path:hover, #francia path:hover, #alemania path:hover, #italia path:hover, #reinounido path:hover{
+		fill: $color2;
+		cursor: pointer;
+	}
+}

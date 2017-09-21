@@ -1,0 +1,181 @@
+<link href="../assets/css/crucigrama.css" rel="stylesheet" media="screen">  
+
+
+
+<div id="ejercicioCrucigrama" style="display:none" game="5">
+    
+    <!-- instrucciones del crucigrama -->
+    <div class="instrucciones">
+        Lee las frases y escribe la respuesta correctamente. Cuando termines, haz
+        clic en el botón de “Finalizar”.
+    </div>
+    
+    <!-- cronómetro del crucigrama -->
+    <div class="contenedor-puntuacion" style="display:none; text-align:center">
+        <span class="cronometrocrucigrama">00:00</span>
+    </div>
+
+    <!-- contenedor completo -->
+    <div id="oygContext">
+        
+        <div id="bloqueocrucigrama"></div>
+         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div id="datos">
+                <div class="oyListCell" id="oygListH"></div>
+                <div class="oyListCell" id="oygListV"></div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <div class="oyFrame">
+                <table class="oyFrame" style="display: none">
+                    <tr class="oyHeader">
+                        <td class="oyHeader">
+                            <div id="oygHeader"></div>
+                        </td>
+                        <td>
+                            <div id="oygHeaderMenu"></div>
+                        </td>
+                    </tr>
+                </table>
+
+                <div class="oyPuzzleCell">
+                    <div class="oyPuzzle" id="oygPuzzle"></div>
+                    <div class="oyPuzzleFooter" id="oygPuzzleFooter">
+                    </div>
+                    <div id="oygState"></div>
+                </div>
+            </div>
+        </div>
+        <div id="oygStatic" style="display: none;"></div>
+        <div id="oygFooter" style="display: none;"></div>
+    </div>
+
+</div>
+
+
+
+
+<!-- Modal Instrucciones-->
+    <div class="modal fade" id="instruccionesCrucigrama" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+              <!-- Encabezado-->
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Crucigrama</h4>
+              </div>
+              <!-- Contenido-->
+              <div class="modal-body">
+               
+              </div>
+          </div>      
+        </div>
+    </div>
+<!-- Modal Instrucciones-->
+
+
+
+<style>
+
+.oyPuzzleCell table{
+    margin: 20px auto;
+    width: 60%; 
+}
+
+@media screen and (max-width: 767px) {
+    .oyPuzzleCell table{
+        width: 70%;  
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .oyPuzzleCell table{
+        width: 90%; 
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .oyCellInput{
+        width:9px;
+        height:9px;
+    }
+}
+
+
+    
+</style>
+
+<!-- archivos javascript. conservar orden -->
+
+<script type="text/javascript" src="../assets/js/crucigrama/oyPrologue.js"></script>
+
+<script type="text/javascript" src="../assets/js/crucigrama/oyJsrAjax.js"></script>
+
+<script type="text/javascript" src="../assets/js/crucigrama/oyClue.js"></script>
+
+<script type="text/javascript" src="../assets/js/crucigrama/oyMenu.js"></script>
+
+<script type="text/javascript" src="../assets/js/crucigrama/oyPuzzle.js"></script>
+
+<script type="text/javascript" src="../assets/js/crucigrama/oyServer.js"></script>
+
+<script type="text/javascript" src="../assets/js/crucigrama/oySign.js"></script>
+
+<script type="text/javascript" src="../assets/js/crucigrama/oyMisc.js"></script>
+
+
+
+<!-- Mio -->
+
+<script type="text/javascript">
+
+    var oygCrosswordPuzzle = new oyCrosswordPuzzle(
+            "5748185539682739085",
+            "../assets/img/crucigrama",
+            "/a/a",
+            "Crucigrama",
+            "Instrucciones",
+            [
+                /*
+                oyCrosswordClue(
+                    len,// length of the word in symnbols, i.e. for the word "Abstract" this will be 8
+                    clue,// the text of the word clue given to the user, i.e. for the word "Abstract" this will be "This factory creates an instance of several families of classes"
+                    answer,// thw word itself, i.e. "Abstract"; maybe be ommited, thus disabling the reveal function
+                    sign,// MD5 signature of the word itself with puzzle uid, i.e. for the word "Abstract" and uid "5748185539682739085" this will be "26f265b96e01081a5ef26a432eda9cff"
+                    dir,// word direction; 0 for horizontal and 1 for vertical
+                    xpos,// zero-based coordinate of the word on X axis, zero on the left, i.e. for the word "Abstract" this will be 12
+                    ypos// zero-based coordinate of the word on Y axis, zero at the top, i.e. for the word "Abstract" this will be 6
+                )
+                */
+                //Colocar dentro de clue <span data-palabra='texto'>___________</span> si se quiere que se escriba la respuesta. También activar en oyMenu.js línea 537 a 552 (pistaCorrespondiente)
+                new oyCrosswordClue(5, "Pieza de una máquina que sirve para transformar el movimiento rectilíneo en movimiento de rotación, o viceversa.", "biela", "", 1, 10, 5),
+                new oyCrosswordClue(4, "Es un tubo generalmente de aluminio o acero que une el sillín de la bicicleta con el tubo del asiento del cuadro de la bicicleta.", "tija", "", 1, 7, 1),
+                new oyCrosswordClue(6, "Es la pieza básica de una bicicleta, en la cual se fijan los otros componentes como la horquilla, las ruedas, el sillín, el manillar, etc.", "cuadro", "", 1, 5, 4),
+                new oyCrosswordClue(9, "Es una pieza de la bicicleta o motocicleta formada por el tubo de dirección y unos brazos que sujetan el buje de la rueda delantera.", "horquilla", "", 0, 3, 8),
+                new oyCrosswordClue(8, "Une el manillar al cuadro de la bicicleta a través del tubo de dirección de la horquilla. La forma y el tamaño de la potencia determinan la posición del manillar.", "potencia", "", 0, 0, 4),
+                new oyCrosswordClue(8, "Es una pieza toroidal de caucho que se coloca en las ruedas de diversos vehículos y máquinas. Su función principal es permitir un contacto adecuado por adherencia y fricción con el pavimento, posibilitando el arranque, el frenado y la guía.", "cubierta", "", 0, 1, 1),
+                new oyCrosswordClue(6, "Es la pieza normalmente metálica sobre la que se asienta un neumático y que forma parte de la rueda, compuesta esta última por neumático, llanta y disco.", "llanta", "", 0, 3, 6),
+               
+            ],
+            13,//Al final se configura el tamaño de la cuadrícula
+            11
+        );
+
+    //INTENTOS QUE QUIERO QUE TENGA ESTA ACTIVIDAD
+    intentosCrucigrama = 3;
+
+    //INICIO CUENTA ATRÁS
+    cuentaatrascrucigrama= "00:10";
+
+    //PUNTOS DE ESTA ACTIVIDAD
+    puntoscrucigrama = 1000;
+
+</script>
+
+<!-- here we instantiate the puzzle and bind it to the HTML template above and show it to the user -->
+
+<script type="text/javascript" src="../assets/js/crucigrama.js"></script>
+
+<script type="text/javascript" src="../assets/js/crucigrama/oyEpilogue.js"></script>
+
+<script type="text/javascript" src="../assets/js/crucigrama/oyResize.js"></script>

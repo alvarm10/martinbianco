@@ -1,0 +1,430 @@
+.oyPanelDiv{
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+.oyPuzzleFooter{
+    font-family: 'Roboto', sans-serif;
+}
+div#datos{
+    float: left;
+    /*max-width: 500px;*/
+    text-align: left;
+    display: inline-block;
+    transition: opacity 0.7s ease;
+}
+.oyPuzzleFooter{
+    margin: 15px 0;
+}
+.oyListNormal:nth-child(odd) {
+    background-color: rgba(255,255,255,1);
+}
+/*Para el feedback del crucigrama*/
+#oygState{
+    font-family: 'Roboto', sans-serif;
+	max-width: 100%;
+	text-align: left;
+	color: #B0002D;
+	font-weight: bold;
+	font-size: 16px;
+}
+.oyPuzzleFooter a{
+    display: inline-block;
+    width: calc(50% - 10px);
+    text-align: center;
+    margin: 0 5px;
+}
+.oyPanelDiv span{
+    font-weight: bold;
+}
+.oyPanelDiv span.bien{
+    background-image: url('../img/crucigrama/palomita.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 16px;/* ancho de la imagen más un poco */
+    margin-left: 10px;
+}
+.oyPanelDiv span.mal{
+    background-image: url('../img/crucigrama/tache.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 16px;/* ancho de la imagen más un poco */
+    margin-left: 10px;
+    opacity: 0.75;
+}
+
+.tituloOrientacion{
+    font-weight: bold;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 5px;
+    font-size:16px;
+}
+.instrucciones{
+    margin: 10px;
+    font-weight: bold;
+    color: #0088CE !important;
+    padding: 0 15px;
+}
+
+#oygListH{
+	width: 49%;
+	float: left;
+}
+#oygListV{
+	width: 49%;
+	float: right;
+}
+
+@media screen and (max-width: 900px) {
+    div#datos{
+        float: none;
+        max-width: inherit;
+    }
+}
+@media screen and (max-width: 515px) {
+    #oygListH{
+        width: 100%;
+        float: none;
+    }
+    #oygListV{
+        width: 100%;
+        float: none;
+    }
+}
+div#oygContext{
+    display: inline-block;
+}
+
+.oyPuzzleCell {	
+	background-color: #FFFFFF;
+} 
+.oyPuzzle {
+	/*padding: 8px;*/
+	border-collapse: collapse;
+        transition: opacity 0.7s ease;	
+}
+.ousStateOk {
+	text-align: left;		
+	font-family: 'Roboto', sans-serif;
+	font-size: medium;
+	color: #008000;
+}
+.ousStateBusy {
+	text-align: left;		
+	font-family: 'Roboto', sans-serif;
+	font-size: medium;
+	color: #0000FF;
+}
+.ousStateError {
+	text-align: left;		
+	font-family: 'Roboto', sans-serif;
+	font-size: medium;
+	color: #FF0000;
+}		
+.oyHeader{
+	padding: 8px;
+	color: #FFFFFF;
+	background-color: #CC003D;
+}
+.oyHeaderTitle{
+	font-family: 'Roboto', sans-serif;
+	font-size: 125%; 
+	font-weight: bold;
+}
+.oyHeaderDesc{
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	font-size: 90%;
+}	
+.oyFooter{ 
+	background-color: #F7F7FF;
+	padding: 1px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 70%;
+}
+.oyFrame {
+	border-collapse: collapse;
+    /*float:left;*/
+    display: inline-block;
+}	
+.oyCopyright{
+	padding-top: 4px;
+	font-size: 60%;
+}
+.oyOuterFrame {
+	padding: 12px;
+	background-color: #FFFFFF;
+	border:2px #EAEAEA; border-style:solid;
+    -moz-border-radius: 10px 0px 10px 0px;
+    -webkit-border-radius: 10px 0px 10px 0px;
+    -o-border-radius: 10px 0px 10px 0px;
+    border-radius: 10px 0px 10px 0px;
+    margin-top:30px;
+}
+A.oysTextLink{
+	color: #4282B5;
+	text-decoration: none;
+}
+A.oysTextLink:hover{
+	color: #808080;
+	text-decoration: underline;
+}
+.oyMenuAction {		
+	padding: 6px 12px;
+	background-color: rgba(183, 177, 169, 0.2);
+	font-size: 14px;
+	border: 1px solid transparent;
+    border-radius: 4px;
+    color:#68655C;
+} 
+.oyMenuActionDis {		
+	padding-left: 4px;
+	padding-right: 4px;
+	color: #808080; 
+	background-color: #E0E0E0;
+	font-size: medium;
+	border: solid 1px #808080;	
+} 	
+.oyMenuActionNone{
+	color: #000000; 
+	font-size: 14px;
+    padding: 10px;
+    /*max-width: 320px;*/
+    display: block;
+}
+A.oyMenuAction {
+	text-decoration: none;
+}	
+A.oyMenuActionDis {
+	text-decoration: none;
+}		
+A.oyMenuAction:hover {
+	color:#fff;
+}	
+.oyListCell { 
+}	
+.oyListCellDot {
+	background-color: #F7F7FF;
+	color: #F9F9F9;	
+}
+.oyPanelDiv {
+	padding: 1px;
+}	
+.oyPanelDivHidden {
+	width: 2px;
+	background-color: #FFFFFF;
+}	
+.oyList {
+	cursor: pointer;
+	font-size: 90%;
+	/*width: 100%;*/
+} 	
+.oyListSpacer{
+	background-color: #E0E0E0;
+	height: 1px; 
+}	
+.oyListNormal {
+	padding: 2px;
+	color: #737573;
+	font-size: 14px;
+	background: #fff;
+}
+.oyListNormal:hover {
+    color: #fff;
+    background-color: rgba(176, 0, 45, 1);
+}
+.oyListNormal:hover b{
+    color: #fff;
+}
+.oyListSel {
+	padding: 2px;
+	background-color: #E0E0E0;
+}		 
+.oyCellInput {     
+	border: none;	
+	background-color: transparent;
+	
+	font-size: 9.5px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-align: center;
+
+	width: 18px !important;
+	height: 18px !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 200;
+}
+.oyCellEmpty {
+	/*border: solid 1px #f6f6f6;*/
+	background-color: #fff;
+
+	font-size: 12px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-align: center;
+
+	width: 16px;
+	height: 16px;
+}
+.oyCellFull{
+	border: solid 1px #68655c;
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+	font-size: 12px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	width: 16px;
+	height: 16px;
+    position: relative;
+}
+.oyCellRevealed {
+	border: solid 1px #003366;
+	background-color: #FFC0C0;
+
+	font-size: 12px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-align: center;
+
+	width: 16px;
+	height: 16px;
+}
+.oyCellGuessed {
+	border: solid 1px #003366;
+	background-color: rgba(176, 0, 45, 1);
+	color: #fff;
+	font-size: 12px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-align: center;
+
+	width: 16px;
+	height: 16px;
+}
+.oyCellFocused {
+	border: solid 1px #68655c;
+	background-color: rgba(176, 0, 45, 1);
+	color: #fff;
+	background-repeat: no-repeat;
+	font-size: 12px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	width: 16px;
+	height: 16px;
+    position: relative;
+}
+.oyCellActive {
+
+	background-color: #b7b1a9;
+    color: #fff;
+	border: solid 1px #68655C;
+	font-size: 12px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+    position: relative;
+}
+#retroalimentacion{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+    color: #23314e;
+    text-align: center;
+}
+
+/* PARA CONTROLAR LA ANCHURA DEL CRUCIGRAMA*/
+
+#oygContext, .oyFrame{
+	width:100%;
+}
+
+
+@media screen and (max-width: 480px) {
+    .oyCellInput, .oyCellFocused, .oyCellFull{
+		font-size: 6px;
+                width: 12px !important;
+                height: 12px !important;
+	}    
+} 
+
+.oyPuzzle table{
+	border: none;
+} 
+
+.oyListNormal, .oyListSel{
+    font-size:16px;
+}
+
+
+@media screen and (max-width: 1150px) {
+  .oyListNormal, .oyListSel, .tituloOrientacion{
+    font-size:15px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .oyListNormal, .oyListSel, .tituloOrientacion{
+    font-size:14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .oyListNormal, .oyListSel, .tituloOrientacion{
+    font-size:13px;
+  }
+}
+
+/*Para que se muestre la actividad de crucigrama con una corta animación*/
+#ejercicioCrucigrama{
+opacity:0;
+transition:opacity 0.5s ease;
+}
+/* Para los bullets de las ventanas emergentes*/
+#instruccionesCrucigrama .modal-body>.lista span{
+  color:#B0002D;
+}
+
+/*Para ocultar el botón de finalizar la primera vez que se pulsa en el y que no vuelva a aparecer*/
+
+.ocultarfinalizar{
+	display: none !important;
+}
+
+
+/*Div que bloquea el contenido y que aparece en el momento en el que se termina el tiempo en la actividad o cuando se da al botón de finalizar*/
+
+#bloqueocrucigrama{
+	display: none;
+	width: 100px;
+    background: #fff;
+    position: absolute;
+    opacity: 0;
+    z-index: 1000;
+    transition: opacity 0.7s ease;
+    margin-left: -3px;
+}
+
+.cronometrocrucigrama{
+	color: #B0002D;
+    font-weight: bold;
+    font-size: 16px;
+    transition: opacity 0.7s ease;
+}
+
+#oygState{
+	margin-top: 40px;
+}
+
+
+/* Para que funcione el scroll en las ventanas modales en Safari */
+.modal {
+    /* ... */
+    -webkit-overflow-scrolling:auto
+}

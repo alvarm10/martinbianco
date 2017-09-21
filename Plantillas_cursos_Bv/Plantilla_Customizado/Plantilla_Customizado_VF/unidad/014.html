@@ -1,0 +1,382 @@
+<h4>Circular Process</h4>
+
+<!--
+
+    INTRODUCIR LAS SIGUIENTES ETIQUETAS SI SE QUIERE INTRODUCIR UN AUDIO PRINCIPAL EN LA DIAPOSITIVA. 
+    
+    <div>
+        <p class="pAudioPrincipal"></p>
+        <audio class="audioinicio" src='audios/p01.mp3' preload="">
+    </div>
+    
+    TENER EN CUENTA QUE SI LA VARIABLE "controlesaudio":
+
+    1. Está en "si": aparecerá la barra de control de audio en la diapositiva y el audio tendrá que ser activado por el usuario.
+    2. Está en no: se reproducirá el audio automáticamente al entrar en la diapositiva en versión escritorio y no aparecerá la barra de audio. En versión movil o tablet si que aparecerá la barra de audio ya que no se puede reproducir automáticamente el audio al entrar en una diapositiva para estas versiones.
+    
+
+    TAMBIÉN SE PUEDEN AÑADIR AUDIOS SECUNDARIOS EN LA DIAPOSITIVA INTRODUCIENDO LA SIGUIENTE ETIQUETA
+
+    <div>
+        <p class="pAudioSecundario"></p>
+        <audio src='audios/p02.mp3' preload="">
+    </div>
+-->
+
+<p class="pAyuda"></p>
+
+<!---\\\\\\\\\\\\\\\\\\\\\\\PARA EL CASO DE UN PROCESO CIRCULAR CON UN NUMERO PAR DE PASOS\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+
+<!--BOTONES DE LA IZQUIERDA, ESTAN DISTRIBUIDOS EN UNA TABLA. USAR SOLO UN CARACTER-->
+<ul class="nav nav-pills nav-stacked proceso-circular">
+  <!--PRIMERA FILA-->
+  <div>
+  <!--PRIMER BOTÓN (activo)-->
+    <li class="active">
+        <a href="#cp_1" aria-controls="" role="tab" data-toggle="tab">
+          1
+        </a>
+    </li>
+    <!--FLECHA IZQUIERDA-->
+    <li><img height=16px width=13px src="../assets/img/FlechaIzqM.svg"></li>
+    <!--SEXTO BOTÓN-->
+    <li>
+        <a href="#cp_6" aria-controls="" role="tab" data-toggle="tab">
+          6
+        </a>
+    </li>
+  </div>
+  <!--SEGUNDA FILA-->
+  <div>
+    <!--FLECHA ABAJO-->
+    <li><img height=16px width=13px src="../assets/img/FlechaAbajoM.svg"></li>
+    <!--CELDA EN BLANCO-->
+    <li></li>
+    <!--FLECHA ARRIBA-->
+    <li><img height=16px width=13px src="../assets/img/FlechaArribaM.svg"></li>
+  </div>
+  <!--TERCERA FILA-->
+  <div>  
+    <!--SEGUNDO BOTÓN--> 
+    <li>
+        <a href="#cp_2" aria-controls="" role="tab" data-toggle="tab">
+          2
+        </a>
+    </li>
+    <!--CELDA EN BLANCO-->
+    <li></li>
+    <!--QUINTO BOTÓN-->  
+    <li>
+        <a href="#cp_5" aria-controls="" role="tab" data-toggle="tab">
+          5
+        </a>
+    </li>
+  </div>
+  <!--CUARTA FILA-->
+  <div>
+    <!--FLECHA ABAJO-->
+    <li><img height=16px width=13px src="../assets/img/FlechaAbajoM.svg"></li>
+    <!--CELDA EN BLANCO-->
+    <li></li>
+    <!--FLECHA ARRIBA-->
+    <li><img height=16px width=13px src="../assets/img/FlechaArribaM.svg"></li>
+  </div>
+
+  <!--PARA AGREGAR DOS BOTONES MAS COPIAR AQUI LA TERCERA Y CUARTA FILA Y REORDENAR LOS NUMEROS Y HREF-->  
+
+  <!--QUINTA FILA-->
+  <div>
+    <!--TERCER BOTÓN-->  
+    <li>
+        <a href="#cp_3" aria-controls="" role="tab" data-toggle="tab">
+          3
+        </a>
+    </li>
+    <!--FLECHA DERECHA-->
+    <li><img height=16px width=13px src="../assets/img/FlechaderechaM.svg"></li>
+    <!--CUARTO BOTÓN-->  
+    <li>
+        <a href="#cp_4" aria-controls="" role="tab" data-toggle="tab">
+          4
+        </a>
+    </li> 
+  </div>
+</ul>
+
+<!--FIN DE LOS BOTONES-->
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <!--PRIMERA TAB-->
+  <div role="tabpanel" class="tab-pane fade in active" id="cp_1">
+      <div id="collapse1" class="panel-collapse panelpc"> 
+        <h5>Title of section 1</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
+        <!--Añadir etiqueta audio o video si se desea que al pulsar en este elemento suene su audio/video correspondiente-->
+        <!--<video controls>
+            <source src="videos/video.mp4" type="video/mp4">
+            <source src="videos/video.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>-->
+        <!--<p class="pAudioSecundario"></p>-->
+        <!--<audio src='audios/song.mp3' preload=""></audio>-->
+      </div>
+    </div>
+  
+  <!--SEGUNDA TAB-->
+  <div role="tabpanel" class="tab-pane fade" id="cp_2">   
+      <div id="collapse1" class="panel-collapse tab1 collapse in  panelpc">
+        <h5>Title of section 2</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
+        <!--Añadir etiqueta audio o video si se desea que al pulsar en este elemento suene su audio/video correspondiente-->
+        <!--<video controls>
+            <source src="videos/video.mp4" type="video/mp4">
+            <source src="videos/video.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>-->
+        <!--<p class="pAudioSecundario"></p>-->
+        <!--<audio src='audios/song.mp3' preload=""></audio>-->
+      </div>
+    </div>
+
+  <!--TERCERA TAB-->
+  <div role="tabpanel" class="tab-pane fade " id="cp_3">   
+      <div id="collapse1" class="panel-collapse tab1 collapse in  panelpc">
+        <h5>Title of section 3</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p> 
+        <!--Añadir etiqueta audio o video si se desea que al pulsar en este elemento suene su audio/video correspondiente-->
+        <!--<video controls>
+            <source src="videos/video.mp4" type="video/mp4">
+            <source src="videos/video.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>-->
+        <!--<p class="pAudioSecundario"></p>-->
+        <!--<audio src='audios/song.mp3' preload=""></audio>-->
+      </div>
+  </div>
+
+  <!--CUARTA TAB-->
+  <div role="tabpanel" class="tab-pane fade" id="cp_4">   
+      <div id="collapse1" class="panel-collapse tab1 collapse in  panelpc">
+        <h5>Title of section 4</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
+        <!--Añadir etiqueta audio o video si se desea que al pulsar en este elemento suene su audio/video correspondiente-->
+        <!--<video controls>
+            <source src="videos/video.mp4" type="video/mp4">
+            <source src="videos/video.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>-->
+        <!--<p class="pAudioSecundario"></p>-->
+        <!--<audio src='audios/song.mp3' preload=""></audio>-->
+      </div>
+  </div>
+  
+  <!--QUINTA TAB-->
+  <div role="tabpanel" class="tab-pane fade " id="cp_5">   
+      <div id="collapse1" class="panel-collapse tab1 collapse in  panelpc">
+        <h5>Title of section 5</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p> 
+        <!--Añadir etiqueta audio o video si se desea que al pulsar en este elemento suene su audio/video correspondiente-->
+        <!--<video controls>
+            <source src="videos/video.mp4" type="video/mp4">
+            <source src="videos/video.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>-->
+        <!--<p class="pAudioSecundario"></p>-->
+        <!--<audio src='audios/song.mp3' preload=""></audio>-->
+      </div>
+  </div>
+
+  <!--SEXTA TAB-->
+  <div role="tabpanel" class="tab-pane fade" id="cp_6">   
+      <div id="collapse1" class="panel-collapse tab1 collapse in  panelpc">
+        <h5>Title of section 6</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
+        <!--Añadir etiqueta audio o video si se desea que al pulsar en este elemento suene su audio/video correspondiente-->
+        <!--<video controls>
+            <source src="videos/video.mp4" type="video/mp4">
+            <source src="videos/video.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>-->
+        <!--<p class="pAudioSecundario"></p>-->
+        <!--<audio src='audios/song.mp3' preload=""></audio>-->
+      </div>
+  </div>
+<!--AGREGAR AQUI LA SIGUIENTE TAB RECORDANDO DE HACER COINCIDIR EL ID CON EL HREF DEL BOTON CORRESPONDIENTE-->
+
+</div>
+
+<div class="clearfix"><br></div>
+
+<!---\\\\\\\\\\\\\\\\\\\\\\\PARA EL CASO DE UN PROCESO CIRCULAR CON UN NUMERO IMPAR DE PASOS\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+<p class="pAyuda"></p>
+<!--BOTONES DE LA IZQUIERDA, ESTAN DISTRIBUIDOS EN UNA TABLA. USAR SOLO UN CARACTER-->
+<ul class="nav nav-pills nav-stacked proceso-circular">
+  <!--PRIMERA FILA-->
+  <div>
+  <!--PRIMER BOTÓN (activo)-->
+    <li class="active">
+        <a href="#cp2_1" aria-controls="" role="tab" data-toggle="tab">
+          1
+        </a>
+    </li>
+    <!--FLECHA IZQUIERDA-->
+    <li id="pcflechaizq"><img height=16px width=13px src="../assets/img/FlechaIzqM.svg"></li>
+    <!--SEXTO BOTÓN-->
+    <li class="pcimpar">
+        
+    </li>
+  </div>
+  <!--SEGUNDA FILA-->
+  <div>
+    <!--FLECHA ABAJO-->
+    <li><img height=16px width=13px src="../assets/img/FlechaAbajoM.svg"></li>
+    <!--CELDA EN BLANCO-->
+    <li></li>
+    <!--FLECHA ARRIBA-->
+    <li class="pcimpar"></li>
+  </div>
+  <!--TERCERA FILA-->
+  <div>  
+    <!--SEGUNDO BOTÓN--> 
+    <li>
+        <a href="#cp2_2" aria-controls="" role="tab" data-toggle="tab">
+          2
+        </a>
+    </li>
+    <!--CELDA EN BLANCO-->
+    <li></li>
+    <!--QUINTO BOTÓN-->  
+    <li class="pcimpar">
+        <a href="#cp2_5" aria-controls="" role="tab" data-toggle="tab">
+          5
+        </a>
+    </li>
+  </div>
+  <!--CUARTA FILA-->
+  <div>
+    <!--FLECHA ABAJO-->
+    <li><img height=16px width=13px src="../assets/img/FlechaAbajoM.svg"></li>
+    <!--CELDA EN BLANCO-->
+    <li></li>
+    <!--FLECHA ARRIBA-->
+    <li class="pcimpar"><img height=16px width=13px src="../assets/img/FlechaArribaM.svg"></li>
+  </div>
+
+  <!--PARA AGREGAR DOS BOTONES MAS COPIAR AQUI LA TERCERA Y CUARTA FILA Y REORDENAR LOS NUMEROS Y HREF-->  
+
+  <!--QUINTA FILA-->
+  <div>
+    <!--TERCER BOTÓN-->  
+    <li>
+        <a href="#cp2_3" aria-controls="" role="tab" data-toggle="tab">
+          3
+        </a>
+    </li>
+    <!--FLECHA DERECHA-->
+    <li id="pcflechader"><img height=16px width=13px src="../assets/img/FlechaderechaM.svg"></li>
+    <!--CUARTO BOTÓN-->  
+    <li class="pcimpar">
+        <a href="#cp2_4" aria-controls="" role="tab" data-toggle="tab">
+          4
+        </a>
+    </li>   
+  </div>
+</ul>
+
+<!-- FIN DE LOS BOTONES-->  
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <!--PRIMERA TAB-->
+  <div role="tabpanel" class="tab-pane fade in active" id="cp2_1">
+      <div id="collapse1" class="panel-collapse panelpc"> 
+        <h5>Title of section 1</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
+        <!--Añadir etiqueta audio o video si se desea que al pulsar en este elemento suene su audio/video correspondiente-->
+        <!--<video controls>
+            <source src="videos/video.mp4" type="video/mp4">
+            <source src="videos/video.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>-->
+        <!--<p class="pAudioSecundario"></p>-->
+        <!--<audio src='audios/song.mp3' preload=""></audio>-->
+      </div>
+    </div>
+  
+  <!--SEGUNDA TAB-->
+  <div role="tabpanel" class="tab-pane fade" id="cp2_2">   
+      <div id="collapse1" class="panel-collapse tab1 collapse in  panelpc">
+        <h5>Title of section 2</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>  
+        <!--Añadir etiqueta audio o video si se desea que al pulsar en este elemento suene su audio/video correspondiente-->
+        <!--<video controls>
+            <source src="videos/video.mp4" type="video/mp4">
+            <source src="videos/video.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>-->
+        <!--<p class="pAudioSecundario"></p>-->
+        <!--<audio src='audios/song.mp3' preload=""></audio>-->
+      </div>
+    </div>
+
+  <!--TERCERA TAB-->
+  <div role="tabpanel" class="tab-pane fade " id="cp2_3">   
+      <div id="collapse1" class="panel-collapse tab1 collapse in  panelpc">
+        <h5>Title of section 3</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p> 
+        <!--Añadir etiqueta audio o video si se desea que al pulsar en este elemento suene su audio/video correspondiente-->
+        <!--<video controls>
+            <source src="videos/video.mp4" type="video/mp4">
+            <source src="videos/video.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>-->
+        <!--<p class="pAudioSecundario"></p>-->
+        <!--<audio src='audios/song.mp3' preload=""></audio>-->
+      </div>
+  </div>
+
+  <!--CUARTA TAB-->
+  <div role="tabpanel" class="tab-pane fade" id="cp2_4">   
+      <div id="collapse1" class="panel-collapse tab1 collapse in  panelpc">
+        <h5>Title of section 4</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
+        <!--Añadir etiqueta audio o video si se desea que al pulsar en este elemento suene su audio/video correspondiente-->
+        <!--<video controls>
+            <source src="videos/video.mp4" type="video/mp4">
+            <source src="videos/video.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>-->
+        <!--<p class="pAudioSecundario"></p>-->
+        <!--<audio src='audios/song.mp3' preload=""></audio>-->
+      </div>
+  </div>
+
+  <!--QUINTA TAB-->
+  <div role="tabpanel" class="tab-pane fade " id="cp2_5">   
+      <div id="collapse1" class="panel-collapse tab1 collapse in  panelpc">
+        <h5>Title of section 5</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p> 
+        <!--Añadir etiqueta audio o video si se desea que al pulsar en este elemento suene su audio/video correspondiente-->
+        <!--<video controls>
+            <source src="videos/video.mp4" type="video/mp4">
+            <source src="videos/video.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>-->
+        <!--<p class="pAudioSecundario"></p>-->
+        <!--<audio src='audios/song.mp3' preload=""></audio>-->
+      </div>
+  </div>
+
+ 
+<!--AGREGAR AQUI LA SIGUIENTE TAB RECORDANDO DE HACER COINCIDIR EL ID CON EL HREF DEL BOTON CORRESPONDIENTE-->
+
+</div>
+
+<div class="clearfix"><br></div>
+
+
+
+<!-- j a v a s c r i p t   d e   l a   p á g i n a  H T M L  -->
+<script src="../assets/js/functions.js"></script>
+

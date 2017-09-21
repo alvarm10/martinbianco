@@ -1,0 +1,42 @@
+<div class="container">
+	<form ng-submit="bloque8Lit.showScope()" >
+		<lri-title title="Informe Propuesta de Litigio" ></lri-title>
+		<lri-title title="Titulares" ></lri-title>
+		<div class="row">
+			<p class="col-md-12">tabla titulares</p>
+		</div>
+		<lri-title title="Avalistas" ></lri-title>
+		<div class="row">
+			<p class="col-md-12">tabla avalistas</p>
+		</div>
+		<lri-title title="Operaciones" ></lri-title>
+		<div class="row">
+			<p class="col-md-12">tabla operaciones</p>
+		</div>
+		<lri-title title="Bienes E Intervinientes" ></lri-title>
+		<div class="row">
+			<p class="col-md-12">tabla bienes e intervinientes</p>
+		</div>
+		<div class="row">
+			<lri-button class-boton="" id="calcular" dataid="calcular" name="Calcular" type="submit" url="/bloque8"></lri-button>
+		</div>
+		<lri-title title="Tipo Procedimiento / Estrategia Judicial" ></lri-title>
+		<div class="row">
+			<lri-input title="Deuda a fecha informe (€)" model="ppropuestaLitigio.deudaFecha" disabled="false" type-validation="importe"></lri-input>
+			<lri-input title="Importe estimado Adj. (€)" model="ppropuestaLitigio.importeEstimado" disabled="true" type-validation="phone"></lri-input>
+			<lri-input title="Deuda estimada en demanda (€)" model="ppropuestaLitigio.deudaEstimada" disabled="true" type-validation="phone"></lri-input>
+		  	<lri-dropdown items=lriDropdown.ppropuestaLitigio.dacionPagos title="Dación en pago" value=lriDropdown.ppropuestaLitigio.dacionPago></lri-dropdown>
+		  	<lri-dropdown items=lriDropdown.ppropuestaLitigio.estrategiaJudicialPropuestas title="Estrategia Judicial Propuesta" value=lriDropdown.ppropuestaLitigio.estrategiaJudicialPropuesta></lri-dropdown>
+			<lri-input title="Centro Gestor Destino" model="ppropuestaLitigio.centroGestorDestino" disabled="false" type-validation="phone"></lri-input>
+			<lri-dropdown items=lriDropdown.ppropuestaLitigio.sobrantes title="Sobrante" value=lriDropdown.ppropuestaLitigio.sobrante></lri-dropdown>
+		</div>
+		<div class="row">
+			<lri-input title="Justificación de la Propuesta de Litigio" model="ppropuestaLitigio.justiPro"></lri-input>
+		</div>
+		<div class="row">
+			<lri-button class-boton="" id="precarta" dataid="precarta" name="Precarta" type="submit" url="/bloque8"></lri-button>
+			<lri-button class-boton="" id="cancelar2" dataid="cancelar2" name="Cancelar" type="button" url="/bloque8" onaction=bloque8Lit.cancel()></lri-button>
+			<lri-button class-boton="" id="aceptar2" dataid="aceptar2" name="Aceptar" type="submit" url="/bloque8"></lri-button>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" identifier="SingleCourseManifest" version="1.1" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd                               http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd                               http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <organizations default="B0">
+    <organization identifier="B0">
+      <title>HTML5 Template V4</title>
+      <item identifier="B100" identifierref="RES-D0101BEC-A628-AEA4-DF25-2B3EE02C187D" isvisible="true">
+        <title>Contenido</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES-D0101BEC-A628-AEA4-DF25-2B3EE02C187D" type="webcontent" adlcp:scormtype="sco" href="unidad/index.html">
+      <file href="unidad/index.html" />
+    </resource>
+  </resources>
+</manifest>
+

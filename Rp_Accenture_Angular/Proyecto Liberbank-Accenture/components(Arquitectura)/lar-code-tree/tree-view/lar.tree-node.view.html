@@ -1,0 +1,11 @@
+<li class="node">
+  <span ng-click="node.opened = !node.opened"><i ng-class="{true: 'glyphicon-folder-open', false: 'glyphicon-folder-close'}[node.opened === true]" class="glyphicon mini-icon" aria-hidden="true"></i>{{node.tableName}}</span>
+
+  <ul ng-if="node.opened">
+    <lar-tree-node ng-repeat="child in node.entry" ng-if="child.tableName != null" node="child" data="data" shared-properties="sharedProperties"></lar-tree-node>
+
+    <li ng-repeat="child in node.entry" ng-if="child.tableName == null" ng-class="{true: 'selected', false: ''}[child === sharedProperties.selectedNode]" ng-click="sharedProperties.selectedNode = child" ng-dblclick="sharedProperties.okModal()" class="child">
+      <span><i class="glyphicon glyphicon-file mini-icon-leaf" aria-hidden="true"></i>{{child.description}}</span>
+    </li>
+  </ul>
+</li>

@@ -1,0 +1,183 @@
+<div class="container">
+	<div ng-if= "currentPage == 1">
+
+		<div class="row col-md-12">
+			<title-component title="Comportamental de propensión al pago - Lista de contratos impagados del cliente" ></title-component>
+		</div>
+
+		<div class="row col-md-12">
+			<input-component title="Titular" model="listaContratos.titular" disabled="true" type-validation="cliente"></input-component>
+			<input-component title="CIF" model="listaContratos.cif" disabled="true" type-validation="tipos"></input-component>
+			<input-component title="Teléfono" model="listaContratos.telefono" disabled="true" type-validation="phone"></input-component>
+			<input-component title="Correo" model="listaContratos.correo" disabled="true" type-validation="fecha"></input-component>
+
+		</div>
+
+		<title-component title="Porcentaje de compromiso de pago(%)" ></title-component>
+		<div class="row col-md-12">
+			<div class="row col-md-12">
+				<input-component title="Cumplidos totalmete" model="listaContratos.cumplidosTotalmente" disabled="true" type-validation="porcentaje"></input-component>
+				<input-component title="Cumplidos parcialmente" model="listaContratos.CumplidosParcialmente" disabled="true" type-validation="porcentaje"></input-component>
+				<input-component title="Incumplidos" model="listaContratos.incumplidos" disabled="true" type-validation="porcentaje"></input-component>
+				<input-component title="De casos en los que, A pesar de indicar que mo pagaría, el cliente pagó" model="listaContratos.pago" disabled="true" type-validation="porcentaje"></input-component>
+			</div>
+		</div>
+
+		<title-component title="Comportamental de propensi´pn al pago de contratos impagados" ></title-component>
+		<div class="row col-md-12">
+			<h1>Tabla</h1>
+			
+			<boton-component class-boton="" id="editar" dataid="editar" name="Editar" type="button" url="" ></boton-component>	
+			<boton-component class-boton="" id="consultaContactos" dataid="consultaContactos" name="Consulta contactos" type="button" url="" onaction=$ctrl.consultaContactos()></boton-component>	
+			<boton-component class-boton="" id="replicar" dataid="replicar" name="Replicar" type="button" url="" onaction=$ctrl.replicar()></boton-component><boton-component class-boton="" id="consultaDeAcuerdos" dataid="consultaDeAcuerdos" name="Consulta De Acuerdos" type="button" url="" onaction=$ctrl.consultaAcuerdos()></boton-component>
+			<boton-component class-boton="" id="pagoTotal" dataid="pagoTotal" name="Pago total" type="button" url="" onaction=$ctrl.pagoTotal()></boton-component>
+			
+		</div>
+
+		<title-component title="Comportamental de propensión al pago contrato seleccionado" ></title-component>
+		<div class="row col-md-12">
+			<div class="row col-md-12">
+				<input-component title="Contrato" model="listaContratos.contrato" disabled="true" type-validation="contratocuenta"></input-component>
+				<input-component title="Deuda Total" model="listaContratos.deudatotal" disabled="true" type-validation="importe"></input-component>
+				<input-component title="Importe impagado" model="listaContratos.importeimpagado" disabled="true" type-validation="importe"></input-component>
+				<dropdown-component items=$ctrl.$scope.tipoDeContrato title="Tipo de contrato" value=tipoDeContrato></dropdown-component>
+				<input-component title="Fecha de contacto" model="listaContratos.fechaContacto" disabled="true" type-validation="fecha"></input-component>
+				<dropdown-component items=$ctrl.$scope.localizable title="Localizable" value=Cliente localizable></dropdown-component>
+				<dropdown-component items=$ctrl.$scope.reconoceDeuda title="Reconoce la deuda" value=reconoceDeuda></dropdown-component>
+			
+			</div>
+
+			<div class="row col-md-12">
+				<dropdown-component items=$ctrl.$scope.quierePagar title="Quiere Pagar" value=quierePagar></dropdown-component>
+				<input-component title="Fecha de compromiso" model="listaContratos.fechaCompromiso" disabled="true" type-validation="fecha"></input-component>
+				<input-component title="Importe comprometido" model="listaContratos.importeCompromiso" disabled="false" type-validation="importe"></input-component>
+				<input-component title="Resultado Encuesta" model="listaContratos.resultadoEncuesta" disabled="true" type-validation="cliente"></input-component>
+
+				<dropdown-component items=$ctrl.$scope.detalle title="Detalle" value=detalle></dropdown-component>
+			</div>
+
+			
+			<div class="row col-md-12">
+				<title-component title="Observaciones" ></title-component>
+				<h2>TEXT AREA</h2>
+			</div>
+
+			<div class="row col-md-12">
+				<boton-component class-boton="" id="aceptar" dataid="aceptar" name="Aceptar" type="button" url="" onaction=></boton-component>
+				<boton-component cl
+				ass-boton="" id="cancelar" dataid="cancelar" name="cancelar" type="button" url="" onaction=></boton-component>	
+			</div>
+		</div>
+
+
+		<title-component title="Pago Total" ></title-component>
+
+		<div class="row col-md-12"  ng-if="activaPagoTotal">
+				<title-component title="i se va a generar un plan de pago por el total de la deuda para todos los contratos Impagados del cliente se va a generar un plan de pago por el total de la deuda para todos los contratos Impagados del cliente." ></title-component>
+				<input-component title="Fecha de compromiso" model="listaContratos.fechaCompromiso" type-validation="fecha"></input-component>
+				<boton-component class-boton="" id="aceptarPagoTotal" dataid="aceptarPagoTotal" name="Aceptar" type="button" url="" onaction=></boton-component>
+				<boton-component class-boton="" id="cancelarPagoTotal" dataid="cancelarPagoTotal" name="cancelar" type="button" url="" onaction=$ctrl.cancelarpagoTotal()></boton-component>	
+		</div>	
+
+		<div class="row col-md-12"  ng-if="!activaPagoTotal">
+				<title-component title="i se va a generar un plan de pago por el total de la deuda para todos los contratos Impagados del cliente se va a generar un plan de pago por el total de la deuda para todos los contratos Impagados del cliente." ></title-component>
+				<input-component title="Fecha de compromiso" model="listaContratos.fechaCompromiso" disabled="true" type-validation="fecha"></input-component>
+				<boton-component class-boton="" id="aceptarPagoTotal" dataid="aceptarPagoTotal" name="Aceptar" type="button" url="" disabled="disabled" onaction=></boton-component>
+				<boton-component class-boton="" id="cancelarPagoTotal" dataid="cancelarPagoTotal" name="cancelar" type="button"  disabled="disabled" url="" onaction=$ctrl.cancelarpagoTotal()></boton-component>	
+		</div>	
+		<div class="row col-md-12">
+			<boton-component class-boton="" id="cerrarvista" dataid="cerrarvista" name="cerrar" type="button" url="" onaction=></boton-component>	
+		</div>	
+
+	</div>
+
+	<div ng-if="currentPage == 2">
+		<title-component title="Ciclos de impago y contacto de cada ciclo" ></title-component>
+
+		<div class="row col-md-12">
+			<input-component title="Titular" model="consultaContacto.titular" disabled="true" type-validation="cliente"></input-component>
+			<input-component title="CIF" model="consultaContacto.cif" disabled="true" type-validation="tipos"></input-component>
+			<input-component title="Contrato" model="consultaContacto.contrato" disabled="true" type-validation="contratocuenta"></input-component>
+			<input-component title="Deuda total" model="consultaContacto.deudaTotal" disabled="true" type-validation="importe"></input-component>
+			<input-component title="Importe impagado" model="consultaContacto.importeImpagado" disabled="true" type-validation="importe"></input-component>
+		</div>
+
+		<title-component title="Ciclos de impago del contrato seleccionado" ></title-component>
+		<div class="row col-md-12">
+			<h2>Tabla</h2>
+			<boton-component class-boton="" id="consultaContactos" dataid="consultaContactos" name="Consulta de Contactos" type="button" url="" onaction=></boton-component>
+		</div>
+
+		<title-component title="Contactos del Ciclo  de Impago Seleccionado" ></title-component>
+		<div class="row col-md-12">
+			<h2>Tabla<h2>
+		</div>
+
+		<div class="row col-md-12">
+			<boton-component class-boton="" id="cerrarvista" dataid="cerrarvista" name="cerrar" type="button" url="" onaction=$ctrl.changeCurrentPage(1)></boton-component>	
+		</div>	
+	</div>
+
+	<div ng-if="currentPage == 3">
+		<title-component title="Comportamental de propensión al pago de contratos impagados.Replicar ionformación" ></title-component>
+
+		<title-component title="Replicar de" ></title-component>
+		<div class="row col-md-12">
+
+			<div class="row col-md-12">
+				<title-component title="i Información" ></title-component>
+				<textarea rows="4" cols="50">
+				 Se aplica los datos origen del contrato previamente seleccionado (Localizable,Reconoce Deuda, quiere paga, resultado encuesta, tipo de contacto y fecha contacto) a los contratos seleccionados en la tabla comportamental de propension al pago de contratos impagados. Recuerde rellenar a parte los datos obligatorios de la columna "Fecha Compromiso".
+				 </textarea>
+			</div>
+
+			<div class="row col-md-12"> 
+				<input-component title="Contrato" model="replicarInformacion.contrato" disabled="true" type-validation="contratocuenta"></input-component>
+				<input-component title="Localizable" model="replicarInformacion.localizable" disabled="true" type-validation="variostamanio2"></input-component>
+				<input-component title="Reconoce Deuda" model="replicarInformacion.reconoceDeuda" disabled="true" type-validation="variostamanio2"></input-component>
+				<input-component title="Quiere Pagar" model="replicarInformacion.quierePagar" disabled="true" type-validation="variostamanio2"></input-component>
+				<input-component title="Resuelto Encuesta" model="replicarInformacion.resultadoEncuesta" disabled="true" type-validation="cliente"></input-component>
+				<input-component title="Tipo de contacto" model="replicarInformacion.tipoContacto" disabled="true" type-validation="tipos"></input-component>
+				<input-component title="Fecha contacto" model="replicarInformacion.fechaContacto" disabled="true" type-validation="fecha"></input-component>
+			</div>
+		</div>
+
+
+		<title-component title="Replicar a" ></title-component>
+		<div class="row col-md-12">
+			<h2>Tabla</h2>
+		</div>
+
+		<div class="row col-md-12">
+			<boton-component class-boton="" id="aceptarReplicarInformacion" dataid="aceptarReplicarInformacion" name="Aceptar" type="button" url="" onaction=></boton-component>	
+			<boton-component class-boton="" id="cancelarReplicarInformacion" dataid="cancelarReplicarInformacion" name="Cancelar" type="button" url="" onaction=$ctrl.changeCurrentPage(1)></boton-component>	
+		</div>	
+	</div>
+
+	<div ng-if="currentPage == 4">
+		<title-component title="Acuerdos de pago" ></title-component>
+
+		<div class="row col-md-12"> 
+			<input-component title="Titular" model="acuerdosPago.titular" disabled="true" type-validation="cliente"></input-component>
+			<input-component title="CIF" model="acuerdosPago.cif" disabled="true" type-validation="tipos"></input-component>
+			<input-component title="Contrato" model="acuerdosPago.contrato" disabled="true" type-validation="contratocuenta"></input-component>
+			<input-component title="Deuda Total" model="acuerdosPago.deudaTotal" disabled="true" type-validation="importe"></input-component>
+			<input-component title="Importe Impagado" model="acuerdosPago.importeImpagado" disabled="true" type-validation="importe"></input-component>
+			<input-component title="Días Impago" model="acuerdosPago.diasImpago" disabled="true" type-validation="variostamanio2"></input-component>
+			<input-component title="Fecha último impago" model="acurdosPago.fechaUltimoImpago" disabled="true" type-validation="fecha"></input-component>
+		</div>
+
+		<title-component title="Acuerdos pago" ></title-component>
+		<div class="row col-md-12">
+			<h2>Tabla</h2>
+		</div>
+
+		<div class="row col-md-12">
+			<boton-component class-boton="" id="cerrarAcuerdosPago" dataid="cerrarAcuerdosPago" name="Cerrar" type="button" url="" onaction=$ctrl.changeCurrentPage(1)></boton-component>	
+		</div>	
+
+
+
+
+	</div>
+</div>

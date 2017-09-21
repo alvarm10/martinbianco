@@ -1,0 +1,109 @@
+<div class="table-wrapper" st-table="larTable.tableDataActual" st-safe-src="larTable.tableData" >
+  <ng-form name="lar-table">
+    <table class="table table-striped table-condensed table-sorting table-hover table-responsive">
+        <thead>
+            <!-- Superior headers -->
+            <tr ng-if="larTable.superiorHeaders.length > 0" class="superior-header-row">
+                <th>
+                  <!-- Empty cell in selection column -->
+                </th>
+
+                <th ng-repeat="superiorHeader in larTable.superiorHeaders" ng-class="{'superior-header': superiorHeader.colspan}" colspan="{{superiorHeader.colspan}}">
+                    {{superiorHeader.text}}
+                </th>
+
+                <th>
+                  <!-- Empty cell in actions column -->
+                </th>
+            </tr>
+
+            <!-- Headers -->
+            <tr>
+                <th>
+                    <input type="checkbox" ng-if="larTable.allowMultipleSelection" ng-model="larTable.mainCheckbox" ng-click="larTable.toggleAllCheckboxes()" />
+                </th>
+
+                <th ng-repeat="header in larTable.headers" st-sort="larTable.getters.sorting(header)" st-skip-natural="true" ng-class="{true: 'st-sort-ascent'}[larTable.headerClicked[$index]]" ng-click="larTable.headerClicked = null; larTable.headerClicked[$index] = true">
+                    {{header.text}}
+                </th>
+
+                <th>
+                    Acciones
+                </th>
+            </tr>
+
+            <!-- Search fields -->
+            <tr ng-if="larTable.showFilters">
+                <th>
+                  <!-- Empty cell in selection column -->
+                </th>
+
+                <th ng-repeat="column in larTable.headers">
+                    <div class="form-group has-feedback">
+                        <input name="{{column.key}}" st-search="{{column.key}}" class="form-control input-sm" type="search"/>
+                        <i class="glyphicon glyphicon-search form-control-feedback search-icon"></i>
+                    </div>
+                </th>
+
+                <th>
+                  <!-- Empty cell in actions column -->
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- Data rows -->
+            <tr ng-repeat="row in larTable.tableDataActual" st-select-row="row" st-select-mode="{{larTable.allowMultipleSelection ? 'multiple' : 'single'}}"  >
+                <td>
+                    <input type="checkbox" ng-if="larTable.allowMultipleSelection" ng-checked="row.isSelected" />
+                </td>
+
+                <td ng-repeat="column in larTable.headers" ng-click="larTable.rowClicked(row)">
+                    <span ng-if="!row.editing">
+                        {{larTable.parseValue(column.type, row[column.key])}}
+                    </span>
+
+                    <input ng-if="row.editing" ng-model="larTable.editingCells[column.key]" ng-init="larTable.parseValueOnEdit(column.type, row[column.key], column.key)"  type="{{column.type}}" class="form-control input-sm" ng-disabled="!column.editable" ng-required="column.obligatory" name="{{column.key}}" placeholder="{{column.obligatory ? 'El campo es obligatorio' : ''}}" />
+                </td>
+
+                <!-- Actions -->
+                <td>
+                  <button ng-if="!row.editing" ng-click="larTable.editRow(row)" class="btn action-button"><i class="glyphicon glyphicon-edit"></i></button>
+
+                  <a ng-if="row.editing" ng-click="larTable.doneEditingRow(row)">Aceptar</a>
+                  <a ng-if="row.editing" ng-click="larTable.cancelEditingRow(row)">Cancelar</a>
+                </td>
+            </tr>
+
+            <!-- Totals row -->
+            <tr ng-if="larTable.showTotals" class="totals">
+                <td>
+                    Total:
+                </td>
+
+                <td ng-repeat="column in larTable.headers">
+                    <span ng-if="column.haveTotal">
+                        {{larTable.totals[$index] | number}}
+                    </span>
+                </td>
+
+                <td>
+                    <!-- Empty cell in actions column -->
+                </td>
+            </tr>
+
+            <!-- Sum of totals row -->
+            <tr>
+                <td colspan="100" ng-if="larTable.showTotalsSum" class="totals-sum-row">
+                    Total general:
+                    <div class="totals-sum">
+                        {{larTable.totalSum | number}}
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+  </ng-form>
+
+  <div class="pagination col-sm-12" ng-if="larTable.itemsByPage > 0" st-pagination="" st-items-by-page="larTable.itemsByPage" st-displayed-pages="3" st-template="/lar/components/lar-table/lar.lar-table-pagination.view.html"></div>
+</div>

@@ -1,0 +1,82 @@
+.code-box, .search-box, .name-box {
+  border-radius: .3em;
+  border: solid .1em lightgrey;
+  padding: .4em;
+}
+.code-box {
+  width: 5em;
+}
+.name-box {
+  width: 20em;
+}
+.tree {
+  margin: 1em 0;
+  max-height: 30em;
+  overflow-y: auto;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;
+}
+.tree > ul > tree-node > li.node {
+  border-left: none;
+}
+.tree-view-container {
+  margin: 1em;
+  padding: 1em;
+  border-radius: .5em;
+  border: solid 1px rgba(0,0,0,.2);
+}
+.tree .mini-icon {
+  margin-right: .5em;
+}
+.tree .mini-icon-leaf {
+  margin-right: 1em;
+  font-size: .75em;
+}
+.tree li {
+  list-style: none;
+  margin-left: -2em;
+  border-left: solid 1px lightgrey;
+}
+.tree .selected {
+  background-color: rgba(0,0,255,.7) !important;
+  border-radius: .3em;
+  padding-left: 1em;
+}
+.tree .selected > span {
+  color: white !important;
+}
+
+.tree .node {
+  cursor: pointer;
+  font-weight: bold;
+
+}
+.tree .node > span {
+  display: block;
+  padding-left: .5em;
+  border-radius: .3em;
+}
+.tree .node > span:hover {
+  background-color: rgba(0,0,0,.05);
+  color: black;
+}
+
+.tree .child {
+  cursor: default;
+  font-weight: normal;
+  color: grey;
+}
+.tree .child:hover {
+  background-color: rgba(0,0,0,.05);
+  border-radius: .3em;
+}
+.tree .child > span {
+  padding-left: .5em;
+  border-radius: .3em;
+  display: block;
+}
+.tree .child > span:hover {
+  color: black;
+}

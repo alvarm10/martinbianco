@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Alvaro Martin Del Amo">
+    <meta name="description" content="Programming Exercise UIDevelopers">
+
+    <title>Programming Exercise UIDevelopers</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- EXERCISE CSS -->
+    <link rel="stylesheet" href="lib/styles/style.css">
+
+</head>
+
+<body onload="runPage()">
+
+    <div class="wrapper container" style="margin-top: 50px !important;">
+        <div class="container row">
+            <div class="col-md-6 col-md-offset-3">
+                <form class="form-horizontal">
+                    <div class="form-group ">
+                        <div class="input-group">
+                            <label class="control-label requiredField" for="date">
+                                 Date: (Before August 2017)
+                                </label>
+                            <input class="form-control" id="date" name="date" placeholder="Example: 2008-01-01" type="text" size="100" required/>
+                        </div>
+                        <div class="input-group">
+                            <label class="control-label requiredField" for="days">Number Of Days:</label>
+                            <input class="form-control" id="days" name="days" placeholder="Example: 17" type="text" size="100" required/>
+                        </div>
+                        <div class="input-group">
+                            <label class="control-label requiredField" for="country">Country Code:</label>
+                            <input class="form-control" id="country" name="country" placeholder="Example: US" type="text" size="100" required/>
+                        </div>
+                    </div>
+                    <div class="form-group center">
+                        <button class="calculate btn btn-block btn-primary" type="button" onclick="getData()">
+                            Submit
+                            </button>
+                        <i>*(For refresh, is necesary to click 2 times)</i>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+                    <p class="output"></p>
+                    <ul class="output2"></ul>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-8 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+                                <table class="table-responsive table-condensed table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="7">
+                                                <span class="btn-group">
+                                                <!-- <a class="btn" onclick="prevMonth()"><i class="glyphicon glyphicon-menu-left"></i></a> -->
+                                                <a class="month center btn active"></a>
+                                                <!-- <a class="btn" onclick="nextMonth()"><i class="glyphicon glyphicon-menu-right"></i></a> -->
+                                            </span>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th>Su</th>
+                                            <th>Mo</th>
+                                            <th>Tu</th>
+                                            <th>We</th>
+                                            <th>Th</th>
+                                            <th>Fr</th>
+                                            <th>Sa</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="invalid"></td>
+                                            <td class="invalid"></td>
+                                            <td class="invalid"></td>
+                                            <td class="work">1</td>
+                                            <td class="work">2</td>
+                                            <td class="work">3</td>
+                                            <td class="wknd">4</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="wknd">5</td>
+                                            <td class="work">6</td>
+                                            <td class="holiday">7</td>
+                                            <td class="work">8</td>
+                                            <td class="work">9</td>
+                                            <td class="work">10</td>
+                                            <td class="wknd">11</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="wknd">12</td>
+                                            <td class="work">13</td>
+                                            <td class="holiday">14</td>
+                                            <td class="holiday">15</td>
+                                            <td class="work">16</td>
+                                            <td class="work">17</td>
+                                            <td class="wknd">18</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="wknd">19</td>
+                                            <td class="work">20</td>
+                                            <td class="work">21</td>
+                                            <td class="holiday">22</td>
+                                            <td class="work">23</td>
+                                            <td class="work">24</td>
+                                            <td class="wknd">25</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="wknd">26</td>
+                                            <td class="work">27</td>
+                                            <td class="holiday">28</td>
+                                            <td class="work">29</td>
+                                            <td class="invalid"></td>
+                                            <td class="invalid"></td>
+                                            <td class="invalid"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <br>
+
+
+
+    </div>
+
+
+    <footer>
+        <div>
+            <a href="https://www.linkedin.com/in/alvaro-martin-193093126">
+                <h4 class="center">By: Alvaro Martin Del Amo <img src="lib/linkedin.png" alt="linkedin url"></h4>
+            </a>
+        </div>
+    </footer>
+
+
+    <script src="lib/js/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <script>
+        $(document).ready(function() {
+            var date_input = $('input[name="date"]'); //our date input has the name "date"
+            var container = $('form').length > 0 ? $('form').parent() : "body";
+            date_input.datepicker({
+                format: 'yyyy-mm-dd',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+            })
+        })
+    </script>
+    <script src="lib/js/scripts.js"></script>
+
+</body>
+
+</html>

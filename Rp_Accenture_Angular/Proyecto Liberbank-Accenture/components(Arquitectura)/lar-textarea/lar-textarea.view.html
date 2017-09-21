@@ -1,0 +1,26 @@
+<ng-form name="larTextareaForm" novalidate class="lar-textarea">
+  <label for="{{larTextarea.name}}" class="label-control">{{larTextarea.label}}</label>
+	<textarea
+		name="{{larTextarea.name}}"
+		ng-model="larTextarea.textValue"
+		ng-model-options="{allowInvalid: true}"
+		maxlength="{{larTextarea.maxlength}}"
+		ng-minlength="larTextarea.minlength"
+		ng-keydown="larTextarea.active = true"
+		ng-keyup="larTextarea.changeRemainingCharacters()"
+		ng-blur="larTextarea.active = false"
+		uib-tooltip="El cuerpo del mensaje es demasiado corto"
+		tooltip-placement="right-top"
+		tooltip-is-open="!larTextarea.active"
+		tooltip-trigger="none"
+		tooltip-enable="larTextareaForm[larTextarea.name].$error.minlength && !larTextarea.active">
+	</textarea>
+
+	<p ng-if="!larTextarea.charactersCount">
+		{{larTextarea.textValue.length}}/{{larTextarea.maxlength}}
+	</p>
+
+	<p ng-if="larTextarea.charactersCount">
+		Le quedan {{larTextarea.remainingCharacters}} caracteres
+	</p>
+</ng-form>

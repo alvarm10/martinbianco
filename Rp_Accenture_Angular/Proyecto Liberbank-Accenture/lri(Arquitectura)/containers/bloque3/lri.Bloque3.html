@@ -1,0 +1,172 @@
+<div class="container">
+	<div ng-if= "currentPage == 1">
+		<div class="row col-md-12">
+			<lri-alert class-alert="col-md-10" alerts-object=alerts></lri-alert>
+		</div>
+		<form ng-submit="$ctrl.showScope()" >
+			<lri-title title="Información relevante" ></lri-title>
+			<div class="row col-md-12">
+				<lri-input title="Situación concursal cliente/grupo " model="" disabled="true" type-validation="cliente"></lri-input>
+				<lri-input title="Situación concursal" model="" disabled="true" type-validation="cliente"></lri-input>
+				<lri-input title="Fecha concursal" model="" disabled="true" type-validation="fecha"></lri-input>
+				<lri-input title="Antiguedad cliente" model="i" disabled="true" type-validation="fecha"></lri-input>
+
+				<lri-title title="	Contador contactos por:" ></lri-title>
+				<div class="col-md-12">
+					  <lri-input title="Telefónico" model="" disabled="true" type-validation="variostamanio1"></lri-input>
+					  <lri-input title="Correo" model="" disabled="true" type-validation="variostamanio2"  ></lri-input>
+					  <lri-input title="Presencial" model="" disabled="true"  type-validation="variostamanio2"></lri-input>	 
+				</div>
+
+				<lri-input title="Cliente refinanciado" model="" disabled="true" type-validation="variostamanio2"></lri-input>	
+				<lri-input title="Grupo económico" model="" disabled="true" type-validation="variostamanio2"></lri-input>			
+
+				<lri-button class-boton="" id="Consultar" dataid="Consultar" name="Consutar" type="button" url="" onaction=$ctrl.changeCurrentPage(3) ></lri-button>
+			</div>
+		</form>	
+		<lri-title title="Posición Agregada"></lri-title>
+		<div class="row col-md-12">
+		<lri-title title="Resumen posiciones 31/12/2015 (Datos o D-1)"></lri-title>
+			<div class="col-md-12">
+			<h1> Tabla Activo</h1>
+			<h1> Tabla Pasivo</h1>	
+			</div>
+		<lri-title title="Resumen Calificaciones de deuda (Datos A D-1)"></lri-title>
+		<h1> Tabla </h1>
+		<lri-title title="Pool bancario (Top 4) 31/12/2015 (Datos A D-1)"></lri-title>	
+		<h1> Tabla</h1>
+		<lri-input title="Fecha" model="" disabled="true" type-validation="fecha"></lri-input>	
+		<lri-input title="Total CIRBE" model="" disabled="true" type-validation="Importe"></lri-input>	
+		<lri-input title="Cuota CIRBE" model="" disabled="true" type-validation="porcentaje"></lri-input>					
+		</div>
+		<lri-title title="Relación contratos (Datos a fecha 99/99/9999)" ></lri-title>
+		<div class="row col-md-12">
+			<lri-title title="Relación de contratos como titular, irregulares"></lri-title>
+			<div class="row">
+			<h1 class="col-md-12">tabla</h1>
+			</div>
+
+			<lri-title title="Relación de contratos como titualar, regulares"></lri-title>
+			<div class="row">
+			<h1 class="col-md-12">tabla</h1>
+			</div>
+			<lri-title title="Relación de Contratos como garante/avalista, irregulares"></lri-title>
+			<div class="row">
+			<h1 class="col-md-12">tabla</h1>
+			</div>
+			<lri-title title="Relación de contratos como garante/avalista, regulares"></lri-title>
+			<div class="row">
+			<h1 class="col-md-12">tabla</h1>
+			</div>
+			<lri-title title="Contratos irregulares seleccionados"></lri-title>
+			<div class="row">
+			<h1 class="col-md-12">tabla</h1>
+			</div>
+			<lri-title title="Contratos regulares seleccionados"></lri-title>
+			<div class="row">
+			<h1 class="col-md-12">tabla</h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<lri-links-panel link-panel=true link-class="col-md-3" urls-object=urlsDetalleCliente title-panel="Acceso información"></lri-links-panel>
+		</div>
+	</div>
+	<div ng-if="currentPage == 2">
+		<lri-title title="Información relevante" ></lri-title>
+		<div class="row col-md-12">
+			<lri-title title="Resultado comportamental" ></lri-title>
+			<div class="col-md-12">
+				  <lri-input title="Fecha" model="infRelevante[0][0]" disabled="true" type-validation="fecha"></lri-input>
+				  <lri-input title="Observación" model="infRelevante[0][1]" disabled="true" type-validation="cliente"  ></lri-input>
+				  <lri-input title="Tipo de contacto" model="infRelevante[0][2]" disabled="true"  type-validation="cliente"></lri-input>
+				  <lri-input title="Importe pactado" model="infRelevante[0][3]" disabled="true" type-validation="importe"></lri-input>
+			</div>
+			<lri-input title="Fecha último impago (Impago actual)" model="infRelevante[1]" disabled="true" type-validation="fecha"></lri-input>
+			<lri-input title="Categorización" model="infRelevante[2]" disabled="true" type-validation="cliente"></lri-input>
+			<lri-input title="Contrato refinanciado" model="infRelevante[3]" disabled="true" type-validation="variostamanio2"></lri-input>
+			<lri-input title="Situación financiera" model="infRelevante[4]" disabled="true" type-validation="cliente"></lri-input>
+			<lri-input title="Resultado de estrategia recuperatoria" model="infRelevante[5]" disabled="true" type-validation="cliente"></lri-input>			
+		</div>
+		<lri-title title="Detalle de Contrato" ></lri-title>
+		<div class="col-md-12 row"cliente>
+			<lri-input title="Ind. Active." model="" disabled="true" type-validation="cliente"></lri-input>
+			<lri-input title="Des. producto" model="" disabled="true" type-validation="cliente"></lri-input>
+			<lri-input title="Contrato" model="" disabled="true" type-validation="contratocuenta"></lri-input>
+			<lri-title class-container="row col-md-12" title="Activo" ></lri-title>
+			<div class="col-md-12">
+				<lri-title title="Importes (Miles €)" ></lri-title>
+				<div class="col-md-12">
+					 <lri-input title="Importe Concedido" model="lriInput.propuestaLitigio.deudaFecha" disabled="true" type-validation="importe"  ></lri-input>
+				 	 <lri-input title="Límite actual" model="lriInput.propuestaLitigio.importeEstimado" disabled="true" type-validation="importe"  ></lri-input>
+				 	 <lri-input title="Saldo Dpto." model="lriInput.propuestaLitigio.deudaEstimada" disabled="true" type-validation="importe"  ></lri-input>
+				 	 <lri-input title="Saldo disponible" model="lriInput.propuestaLitigio.deudaEstimada" disabled="true" type-validation="importe"  ></lri-input>
+			  	  	 <lri-input title="Imp. exceso" model="lriInput.propuestaLitigio.deudaFecha" disabled="true" type-validation="importe"  ></lri-input>
+				 	 <lri-input title="Imp. Provis." model="lriInput.propuestaLitigio.importeEstimado" disabled="true" type-validation="importe"  ></lri-input>
+				</div>
+				<lri-title title="Fechas" ></lri-title>
+				<div class="col-md-12">
+					 <lri-input title="Formal." model="lriInput.propuestaLitigio.deudaFecha" disabled="true" type-validation="fecha"  ></lri-input>
+				 	 <lri-input title="Vencimiento operación" model="lriInput.propuestaLitigio.importeEstimado" disabled="true" type-validation="fecha"  ></lri-input>
+				 	 <lri-input title="Vencimiento Carenc." model="lriInput.propuestaLitigio.deudaEstimada" disabled="true" type-validation="fecha"  ></lri-input>
+				 	 <lri-input title="Primer impago" model="lriInput.propuestaLitigio.deudaEstimada" disabled="true" type-validation=""  ></lri-input>
+			  	  	 <lri-input title="Clasificación contable" model="lriInput.propuestaLitigio.deudaFecha" disabled="true" type-validation="fecha"  ></lri-input>
+				</div>
+				<lri-title title="Liquidaciones" ></lri-title>
+				<div class="rcol-md-12">
+					 <lri-input title="Refer." model="lriInput.propuestaLitigio.deudaFecha" disabled="true" type-validation="importe"  ></lri-input>
+				 	 <lri-input title="%Difer." model="lriInput.propuestaLitigio.importeEstimado" disabled="true" type-validation="porcentaje"  ></lri-input>
+				 	 <lri-input title="%Int. " model="lriInput.propuestaLitigio.deudaEstimada" disabled="true" type-validation="porcentaje"  ></lri-input>
+				 	 <lri-input title="Liq. Int." model="lriInput.propuestaLitigio.deudaEstimada" disabled="true" type-validation="importe"  ></lri-input>
+			  	  	 <lri-input title="Amort. capital" model="lriInput.propuestaLitigio.deudaFecha" disabled="true" type-validation="importe"  ></lri-input>
+			  	  	 <lri-input title="Prox. cuota" model="lriInput.propuestaLitigio.deudaFecha" disabled="true" type-validation="importe"  ></lri-input>
+				</div>
+				<lri-title title="Garantías" ></lri-title>
+				<div class="col-md-12">
+					 <lri-input title="Tasación" model="lriInput.propuestaLitigio.deudaFecha" disabled="true" type-validation="importe"  ></lri-input>
+				 	 <lri-input title="Fecha tasación" model="lriInput.propuestaLitigio.importeEstimado" disabled="true" type-validation=""  ></lri-input>
+				 	 <lri-input title="%LTV" model="lriInput.propuestaLitigio.deudaEstimada" disabled="true" type-validation="porcentaje"  ></lri-input>
+				 	 <lri-input title="Garantía" model="lriInput.propuestaLitigio.deudaEstimada" disabled="true" type-validation=""  ></lri-input>
+			  	  	 <lri-input title="Área geográfica" model="lriInput.propuestaLitigio.deudaFecha" disabled="true" type-validation=""  ></lri-input>
+			  	  	 <lri-input title="Nº Viv." model="lriInput.propuestaLitigio.deudaFecha" disabled="true" type-validation=""  ></lri-input>
+			  	  	 <lri-input title="Nº Vtas." model="lriInput.propuestaLitigio.deudaFecha" disabled="true" type-validation=""  ></lri-input>
+				 	 <lri-input title="%Ejec." model="lriInput.propuestaLitigio.importeEstimado" disabled="true" type-validation="porcentaje"  ></lri-input>
+				 	 <lri-input title="%Ret." model="lriInput.propuestaLitigio.deudaEstimada" disabled="true" type-validation="porcentaje"  ></lri-input>
+				 	 <lri-input title="EPA" model="lriInput.propuestaLitigio.deudaEstimada" disabled="true" type-validation="variostamanio1"  ></lri-input>  	
+				</div>
+				<lri-input title="DRC" model="lriInput.propuestaLitigio.deudaEstimada" disabled="true" type-validation="variostamanio2"  ></lri-input>
+			</div>
+		</div>
+		<lri-title title="Pasivo" ></lri-title>
+		<div class="row">
+			<lri-input title="Limitación actividad" model="lriInput.propuestaLitigio.deudaFecha" disabled="true" type-validation="importe"  ></lri-input>
+			<lri-input title="Saldo actual" model="lriInput.propuestaLitigio.importeEstimado" disabled="true" type-validation="importe"  ></lri-input>
+			<lri-input title="Saldo medio mes" model="lriInput.propuestaLitigio.deudaEstimada" disabled="true" type-validation="importe"  ></lri-input>
+			<lri-input title="Apertura" model="lriInput.propuestaLitigio.deudaEstimada" disabled="true" type-validation="importe"  ></lri-input>
+		</div>
+		<lri-title title="Últimos informes" ></lri-title> <lri-links-panel link-panel=true link-class="col-md-3" urls-object=link title-panel="Acceso información"></lri-links-panel>
+		<div class="row">
+			<p class="col-md-12">tabla</p>
+		</div>
+
+		<div class="row">
+			<lri-links-panel link-panel=true link-class="col-md-3" urls-object=urls title-panel="Acceso información"></lri-links-panel>
+		</div>
+		<div class="row">
+			<lri-button class-boton="" id="cerrrar2" dataid="cerrrar2" name="Cerrar" type="button" url="" onaction=$ctrl.changeCurrentPage(1)></lri-button>		
+		</div>
+	</div>
+	<div ng-if="currentPage == 3">
+		<form ng-submit="$ctrl.showScope()" >	
+			<div class="row">
+				<lri-input title="Identigicación del grupo económico" model="lriInput.propuestaLitigio.deudaEstimada" disabled="true" type-validation="entidad"></lri-input>
+				<lri-title title="Grupo económico"></lri-title>
+				<div class="row">
+					<h1 class="col-md-12">tabla</h1>
+				</div>
+				<lri-checkbox class-panel="col-md-3" checks-object=checks></lri-checkbox>
+				<lri-button class-boton="" id="cerrar3" dataid="cerrar3" name="Cerrar" type="button" url="" onaction=$ctrl.changeCurrentPage(1)></lri-button>
+			</div>
+		</form>	
+	</div>
+</div>

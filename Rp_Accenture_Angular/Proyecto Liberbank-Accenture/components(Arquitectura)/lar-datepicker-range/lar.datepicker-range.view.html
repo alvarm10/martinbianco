@@ -1,0 +1,74 @@
+
+<link rel="stylesheet" href="/lar/components/lar-datepicker-range/lar.datepicker-range.css">
+
+<ng-form name="larDatepickerForm" novalidate class="lar-datepicker-range">
+  <div class="row">
+    <div class="col-sm-6">
+      <h4>{{larDatepickerRange.beginDateLabel}}</h4>
+
+      <p class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          name="{{larDatepickerRange.beginDateName}}"
+          ng-model="larDatepickerRange.beginDate"
+          ng-change="larDatepickerRange.checkdate(larDatepickerForm)"
+          uib-datepicker-popup="{{larDatepickerRange.format}}"
+          is-open="larDatepickerRange.beginDateOpened"
+          datepicker-options="larDatepickerRange.beginDateOptions"
+          show-button-bar="false"
+          placeholder="dd/mm/yyyy"
+          required
+          uib-tooltip="{{larDatepickerRange.beginDateMessage}}"
+      		tooltip-placement="top-right"
+      		tooltip-is-open="larDatepickerForm[larDatepickerRange.beginDateName].$invalid"
+      		tooltip-trigger="none"
+      		tooltip-enable="larDatepickerForm[larDatepickerRange.beginDateName].$invalid" />
+
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default" ng-click="larDatepickerRange.beginDateOpened = !larDatepickerRange.beginDateOpened">
+            <i class="glyphicon glyphicon-calendar"></i>
+          </button>
+        </span>
+      </p>
+    </div>
+
+    <div class="col-sm-6">
+      <h4>{{larDatepickerRange.endDateLabel}}</h4>
+
+      <p class="input-group">
+        <input
+          type="text"
+          class="form-control"
+          name="{{larDatepickerRange.endDateName}}"
+          ng-model="larDatepickerRange.endDate"
+          ng-change="larDatepickerRange.checkdate(larDatepickerForm)"
+          uib-datepicker-popup="{{larDatepickerRange.format}}"
+          is-open="larDatepickerRange.endDateOpened"
+          datepicker-options="larDatepickerRange.endDateOptions"
+          show-button-bar="false"
+          placeholder="dd/MM/yyyy"
+          required
+          uib-tooltip="{{larDatepickerRange.endDateMessage}}"
+      		tooltip-placement="top-right"
+      		tooltip-is-open="larDatepickerForm[larDatepickerRange.endDateName].$invalid"
+      		tooltip-trigger="none"
+      		tooltip-enable="larDatepickerForm[larDatepickerRange.endDateName].$invalid"/>
+
+        <span class="input-group-btn">
+          <button type="button" class="btn btn-default" ng-click="larDatepickerRange.endDateOpened = !larDatepickerRange.endDateOpened">
+            <i class="glyphicon glyphicon-calendar"></i>
+          </button>
+        </span>
+      </p>
+    </div>
+  </div>
+
+  <div class="text-center date-range">
+    <p ng-style="{'visibility': larDatepickerForm.$valid && larDatepickerRange.beginDate || larDatepickerRange.endDate ? 'visible' : 'hidden'}">
+      {{larDatepickerRange.beginDate | date:'EEEE dd MMMM'}}
+      -
+      {{larDatepickerRange.endDate | date:'EEEE d MMMM '}}
+    </p>
+  </div>
+</ng-form>

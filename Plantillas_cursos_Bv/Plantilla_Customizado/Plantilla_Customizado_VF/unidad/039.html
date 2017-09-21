@@ -1,0 +1,562 @@
+
+      
+      
+<link href="../assets/css/sopa_letras_estilos.css" rel="stylesheet" media="screen">   
+
+<div id="ejercicioSopaLetras" style="display:none" game="2">
+    <link href="https://fonts.googleapis.com/css?family=Averia+Sans+Libre" rel="stylesheet">
+    <audio class="audiosopaletrastoqueuno" src="../assets/audios/select.mp3"></audio> 
+    <audio class="audiosopaletrascorrecto" src="../assets/audios/correcto.mp3"></audio>
+    <audio class="audiosopaletrasincorrecto" src="../assets/audios/incorrecto.mp3"></audio>
+    <audio class="audiosopaletrasganador" src="../assets/audios/ganador.mp3"></audio>
+
+
+    <div class="contenedorenunciadosopaletras enunciado">
+        <p class="enunciadosopaletras">Busca los siguientes órganos de marcha de una carretilla elevadora,<span></span></p>
+        <ul class="lista listasopaletras"></ul>
+    </div>
+
+    <div id="contenedor-sopaletras">
+
+          <div class="contenedor-puntuacion">
+            <span class="mensajepuntossopa">PUNTOS</span>
+            <span class="puntossopa">0</span>
+            <span class="cronometrosopa">00:00</span>
+          </div>
+
+          <div class="contenedormensajesopaletras">
+            <p id="mensajesopaletras"></p>
+          </div>
+
+            <div class="square" id="1"><span></span></div>
+            <div class="square" id="2"><span></span></div>
+            <div class="square" id="3"><span>R</span></div>
+            <div class="square" id="4"><span>O</span></div>
+            <div class="square" id="5"><span>D</span></div>
+            <div class="square" id="6"><span>I</span></div>
+            <div class="square" id="7"><span>T</span></div>
+            <div class="square" id="8"><span>S</span></div>
+            <div class="square" id="9"><span>A</span></div>
+            <div class="square" id="10"><span>B</span></div>
+            <div class="square" id="11"><span>D</span></div>
+            <div class="square" id="12"><span></span></div>
+            <div class="square" id="13"><span></span></div>
+            <div class="square" id="14"><span></span></div>
+            <div class="square" id="15"><span></span></div>
+            <div class="square" id="16"><span></span></div>
+            <div class="square" id="17"><span></span></div>
+            <div class="square" id="18"><span></span></div>
+            <div class="square" id="19"><span></span></div>
+            <div class="square" id="20"><span>S</span></div>
+            <div class="square" id="21"><span></span></div>
+            <div class="square" id="22"><span>I</span></div>
+            <div class="square" id="23"><span></span></div>
+            <div class="square" id="24"><span></span></div>
+            <div class="square" id="25"><span></span></div>
+            <div class="square" id="26"><span></span></div>
+            <div class="square" id="27"><span></span></div>
+            <div class="square" id="28"><span></span></div>
+            <div class="square" id="29"><span>O</span></div>
+            <div class="square" id="30"><span></span></div>
+            <div class="square" id="31"><span></span></div>
+            <div class="square" id="32"><span></span></div>
+            <div class="square" id="33"><span>R</span></div>
+            <div class="square" id="34"><span></span></div>
+            <div class="square" id="35"><span></span></div>
+            <div class="square" id="36"><span></span></div>
+            <div class="square" id="37"><span></span></div>
+            <div class="square" id="38"><span>N</span></div>
+            <div class="square" id="39"><span></span></div>
+            <div class="square" id="40"><span></span></div>
+            <div class="square" id="41"><span></span></div>
+            <div class="square" id="42"><span></span></div>
+            <div class="square" id="43"><span>U</span></div>
+            <div class="square" id="44"><span>E</span></div>
+            <div class="square" id="45"><span></span></div>
+            <div class="square" id="46"><span></span></div>
+            <div class="square" id="47"><span>E</span></div>
+            <div class="square" id="48"><span></span></div>
+            <div class="square" id="49"><span></span></div>
+            <div class="square" id="50"><span></span></div>
+            <div class="square" id="51"><span></span></div>
+            <div class="square" id="52"><span></span></div>
+            <div class="square" id="53"><span>E</span></div>
+            <div class="square" id="54"><span></span></div>
+            <div class="square" id="55"><span>C</span></div>
+            <div class="square" id="56"><span>R</span></div>
+            <div class="square" id="57"><span></span></div>
+            <div class="square" id="58"><span></span></div>
+            <div class="square" id="59"><span></span></div>
+            <div class="square" id="60"><span></span></div>
+            <div class="square" id="61"><span></span></div>
+            <div class="square" id="62"><span></span></div>
+            <div class="square" id="63"><span>D</span></div>
+            <div class="square" id="64"><span></span></div>
+            <div class="square" id="65"><span>F</span></div>
+            <div class="square" id="66"><span>C</span></div>
+            <div class="square" id="67"><span></span></div>
+            <div class="square" id="68"><span></span></div>
+            <div class="square" id="69"><span></span></div>
+            <div class="square" id="70"><span></span></div>
+            <div class="square" id="71"><span></span></div>
+            <div class="square" id="72"><span></span></div>
+            <div class="square" id="73"><span>A</span></div>
+            <div class="square" id="74"><span></span></div>
+            <div class="square" id="75"><span></span></div>
+            <div class="square" id="76"><span></span></div>
+            <div class="square" id="77"><span>I</span></div>
+            <div class="square" id="78"><span></span></div>
+            <div class="square" id="79"><span></span></div>
+            <div class="square" id="80"><span></span></div>
+            <div class="square" id="81"><span></span></div>
+            <div class="square" id="82"><span></span></div>
+            <div class="square" id="83"><span>S</span></div>
+            <div class="square" id="84"><span></span></div>
+            <div class="square" id="85"><span></span></div>
+            <div class="square" id="86"><span></span></div>
+            <div class="square" id="87"><span></span></div>
+            <div class="square" id="88"><span>O</span></div>
+            <div class="square" id="89"><span></span></div>
+            <div class="square" id="90"><span></span></div>
+            <div class="square" id="91"><span></span></div>
+            <div class="square" id="92"><span></span></div>
+            <div class="square" id="93"><span></span></div>
+            <div class="square" id="94"><span></span></div>
+            <div class="square" id="95"><span></span></div>
+            <div class="square" id="96"><span></span></div>
+            <div class="square" id="97"><span></span></div>
+            <div class="square" id="98"><span></span></div>
+            <div class="square" id="99"><span>N</span></div>
+            <div class="square" id="100"><span></span></div>
+         
+          
+
+    
+          
+<!--REJILLA DE MUESTRA-->
+<!--
+            <div class="square" id="1"><span></span></div>
+            <div class="square" id="2"><span></span></div>
+            <div class="square" id="3"><span></span></div>
+            <div class="square" id="4"><span></span></div>
+            <div class="square" id="5"><span></span></div>
+            <div class="square" id="6"><span></span></div>
+            <div class="square" id="7"><span></span></div>
+            <div class="square" id="8"><span></span></div>
+            <div class="square" id="9"><span></span></div>
+            <div class="square" id="10"><span></span></div>
+            <div class="square" id="11"><span></span></div>
+            <div class="square" id="12"><span></span></div>
+            <div class="square" id="13"><span></span></div>
+            <div class="square" id="14"><span></span></div>
+            <div class="square" id="15"><span></span></div>
+            <div class="square" id="16"><span></span></div>
+            <div class="square" id="17"><span></span></div>
+            <div class="square" id="18"><span></span></div>
+            <div class="square" id="19"><span></span></div>
+            <div class="square" id="20"><span></span></div>
+            <div class="square" id="21"><span></span></div>
+            <div class="square" id="22"><span></span></div>
+            <div class="square" id="23"><span></span></div>
+            <div class="square" id="24"><span></span></div>
+            <div class="square" id="25"><span></span></div>
+            <div class="square" id="26"><span></span></div>
+            <div class="square" id="27"><span></span></div>
+            <div class="square" id="28"><span></span></div>
+            <div class="square" id="29"><span></span></div>
+            <div class="square" id="30"><span></span></div>
+            <div class="square" id="31"><span></span></div>
+            <div class="square" id="32"><span></span></div>
+            <div class="square" id="33"><span></span></div>
+            <div class="square" id="34"><span></span></div>
+            <div class="square" id="35"><span></span></div>
+            <div class="square" id="36"><span></span></div>
+            <div class="square" id="37"><span></span></div>
+            <div class="square" id="38"><span></span></div>
+            <div class="square" id="39"><span></span></div>
+            <div class="square" id="40"><span></span></div>
+            <div class="square" id="41"><span></span></div>
+            <div class="square" id="42"><span></span></div>
+            <div class="square" id="43"><span></span></div>
+            <div class="square" id="44"><span></span></div>
+            <div class="square" id="45"><span></span></div>
+            <div class="square" id="46"><span></span></div>
+            <div class="square" id="47"><span></span></div>
+            <div class="square" id="48"><span></span></div>
+            <div class="square" id="49"><span></span></div>
+            <div class="square" id="50"><span></span></div>
+            <div class="square" id="51"><span></span></div>
+            <div class="square" id="52"><span></span></div>
+            <div class="square" id="53"><span></span></div>
+            <div class="square" id="54"><span></span></div>
+            <div class="square" id="55"><span></span></div>
+            <div class="square" id="56"><span></span></div>
+            <div class="square" id="57"><span></span></div>
+            <div class="square" id="58"><span></span></div>
+            <div class="square" id="59"><span></span></div>
+            <div class="square" id="60"><span></span></div>
+            <div class="square" id="61"><span></span></div>
+            <div class="square" id="62"><span></span></div>
+            <div class="square" id="63"><span></span></div>
+            <div class="square" id="64"><span></span></div>
+            <div class="square" id="65"><span></span></div>
+            <div class="square" id="66"><span></span></div>
+            <div class="square" id="67"><span></span></div>
+            <div class="square" id="68"><span></span></div>
+            <div class="square" id="69"><span></span></div>
+            <div class="square" id="70"><span></span></div>
+            <div class="square" id="71"><span></span></div>
+            <div class="square" id="72"><span></span></div>
+            <div class="square" id="73"><span></span></div>
+            <div class="square" id="74"><span></span></div>
+            <div class="square" id="75"><span></span></div>
+            <div class="square" id="76"><span></span></div>
+            <div class="square" id="77"><span></span></div>
+            <div class="square" id="78"><span></span></div>
+            <div class="square" id="79"><span></span></div>
+            <div class="square" id="80"><span></span></div>
+            <div class="square" id="81"><span></span></div>
+            <div class="square" id="82"><span></span></div>
+            <div class="square" id="83"><span></span></div>
+            <div class="square" id="84"><span></span></div>
+            <div class="square" id="85"><span></span></div>
+            <div class="square" id="86"><span></span></div>
+            <div class="square" id="87"><span></span></div>
+            <div class="square" id="88"><span></span></div>
+            <div class="square" id="89"><span></span></div>
+            <div class="square" id="90"><span></span></div>
+            <div class="square" id="91"><span></span></div>
+            <div class="square" id="92"><span></span></div>
+            <div class="square" id="93"><span></span></div>
+            <div class="square" id="94"><span></span></div>
+            <div class="square" id="95"><span></span></div>
+            <div class="square" id="96"><span></span></div>
+            <div class="square" id="97"><span></span></div>
+            <div class="square" id="98"><span></span></div>
+            <div class="square" id="99"><span></span></div>
+            <div class="square" id="100"><span></span></div>
+            <div class="square" id="101"><span></span></div>
+            <div class="square" id="102"><span></span></div>
+            <div class="square" id="103"><span></span></div>
+            <div class="square" id="104"><span></span></div>
+            <div class="square" id="105"><span></span></div>
+            <div class="square" id="106"><span></span></div>
+            <div class="square" id="107"><span></span></div>
+            <div class="square" id="108"><span></span></div>
+            <div class="square" id="109"><span></span></div>
+            <div class="square" id="110"><span></span></div>
+            <div class="square" id="111"><span></span></div>
+            <div class="square" id="112"><span></span></div>
+            <div class="square" id="113"><span></span></div>
+            <div class="square" id="114"><span></span></div>
+            <div class="square" id="115"><span></span></div>
+            <div class="square" id="116"><span></span></div>
+            <div class="square" id="117"><span></span></div>
+            <div class="square" id="118"><span></span></div>
+            <div class="square" id="119"><span></span></div>
+            <div class="square" id="120"><span></span></div>
+            <div class="square" id="121"><span></span></div>
+            <div class="square" id="122"><span></span></div>
+            <div class="square" id="123"><span></span></div>
+            <div class="square" id="124"><span></span></div>
+            <div class="square" id="125"><span></span></div>
+            <div class="square" id="126"><span></span></div>
+            <div class="square" id="127"><span></span></div>
+            <div class="square" id="128"><span></span></div>
+            <div class="square" id="129"><span></span></div>
+            <div class="square" id="130"><span></span></div>
+            <div class="square" id="131"><span></span></div>
+            <div class="square" id="132"><span></span></div>
+            <div class="square" id="133"><span></span></div>
+            <div class="square" id="134"><span></span></div>
+            <div class="square" id="135"><span></span></div>
+            <div class="square" id="136"><span></span></div>
+            <div class="square" id="137"><span></span></div>
+            <div class="square" id="138"><span></span></div>
+            <div class="square" id="139"><span></span></div>
+            <div class="square" id="140"><span></span></div>
+            <div class="square" id="141"><span></span></div>
+            <div class="square" id="142"><span></span></div>
+            <div class="square" id="143"><span></span></div>
+            <div class="square" id="144"><span></span></div>
+            <div class="square" id="145"><span></span></div>
+            <div class="square" id="146"><span></span></div>
+            <div class="square" id="147"><span></span></div>
+            <div class="square" id="148"><span></span></div>
+            <div class="square" id="149"><span></span></div>
+            <div class="square" id="150"><span></span></div>
+            <div class="square" id="151"><span></span></div>
+            <div class="square" id="152"><span></span></div>
+            <div class="square" id="153"><span></span></div>
+            <div class="square" id="154"><span></span></div>
+            <div class="square" id="155"><span></span></div>
+            <div class="square" id="156"><span></span></div>
+            <div class="square" id="157"><span></span></div>
+            <div class="square" id="158"><span></span></div>
+            <div class="square" id="159"><span></span></div>
+            <div class="square" id="160"><span></span></div>
+            <div class="square" id="161"><span></span></div>
+            <div class="square" id="162"><span></span></div>
+            <div class="square" id="163"><span></span></div>
+            <div class="square" id="164"><span></span></div>
+            <div class="square" id="165"><span></span></div>
+            <div class="square" id="166"><span></span></div>
+            <div class="square" id="167"><span></span></div>
+            <div class="square" id="168"><span></span></div>
+            <div class="square" id="169"><span></span></div>
+            <div class="square" id="170"><span></span></div>
+            <div class="square" id="171"><span></span></div>
+            <div class="square" id="172"><span></span></div>
+            <div class="square" id="173"><span></span></div>
+            <div class="square" id="174"><span></span></div>
+            <div class="square" id="175"><span></span></div>
+            <div class="square" id="176"><span></span></div>
+            <div class="square" id="177"><span></span></div>
+            <div class="square" id="178"><span></span></div>
+            <div class="square" id="179"><span></span></div>
+            <div class="square" id="180"><span></span></div>
+            <div class="square" id="181"><span></span></div>
+            <div class="square" id="182"><span></span></div>
+            <div class="square" id="183"><span></span></div>
+            <div class="square" id="184"><span></span></div>
+            <div class="square" id="185"><span></span></div>
+            <div class="square" id="186"><span></span></div>
+            <div class="square" id="187"><span></span></div>
+            <div class="square" id="188"><span></span></div>
+            <div class="square" id="189"><span></span></div>
+            <div class="square" id="190"><span></span></div>
+            <div class="square" id="191"><span></span></div>
+            <div class="square" id="192"><span></span></div>
+            <div class="square" id="193"><span></span></div>
+            <div class="square" id="194"><span></span></div>
+            <div class="square" id="195"><span></span></div>
+            <div class="square" id="196"><span></span></div>
+            <div class="square" id="197"><span></span></div>
+            <div class="square" id="198"><span></span></div>
+            <div class="square" id="199"><span></span></div>
+            <div class="square" id="200"><span></span></div>
+            <div class="square" id="201"><span></span></div>
+            <div class="square" id="202"><span></span></div>
+            <div class="square" id="203"><span></span></div>
+            <div class="square" id="204"><span></span></div>
+            <div class="square" id="205"><span></span></div>
+            <div class="square" id="206"><span></span></div>
+            <div class="square" id="207"><span></span></div>
+            <div class="square" id="208"><span></span></div>
+            <div class="square" id="209"><span></span></div>
+            <div class="square" id="210"><span></span></div>
+            <div class="square" id="211"><span></span></div>
+            <div class="square" id="212"><span></span></div>
+            <div class="square" id="213"><span></span></div>
+            <div class="square" id="214"><span></span></div>
+            <div class="square" id="215"><span></span></div>
+            <div class="square" id="216"><span></span></div>
+            <div class="square" id="217"><span></span></div>
+            <div class="square" id="218"><span></span></div>
+            <div class="square" id="219"><span></span></div>
+            <div class="square" id="220"><span></span></div>
+            <div class="square" id="221"><span></span></div>
+            <div class="square" id="222"><span></span></div>
+            <div class="square" id="223"><span></span></div>
+            <div class="square" id="224"><span></span></div>
+            <div class="square" id="225"><span></span></div>
+            <div class="square" id="226"><span></span></div>
+            <div class="square" id="227"><span></span></div>
+            <div class="square" id="228"><span></span></div>
+            <div class="square" id="229"><span></span></div>
+            <div class="square" id="230"><span></span></div>
+            <div class="square" id="231"><span></span></div>
+            <div class="square" id="232"><span></span></div>
+            <div class="square" id="233"><span></span></div>
+            <div class="square" id="234"><span></span></div>
+            <div class="square" id="235"><span></span></div>
+            <div class="square" id="236"><span></span></div>
+            <div class="square" id="237"><span></span></div>
+            <div class="square" id="238"><span></span></div>
+            <div class="square" id="239"><span></span></div>
+            <div class="square" id="240"><span></span></div>
+            <div class="square" id="241"><span></span></div>
+            <div class="square" id="242"><span></span></div>
+            <div class="square" id="243"><span></span></div>
+            <div class="square" id="244"><span></span></div>
+            <div class="square" id="245"><span></span></div>
+            <div class="square" id="246"><span></span></div>
+            <div class="square" id="247"><span></span></div>
+            <div class="square" id="248"><span></span></div>
+            <div class="square" id="249"><span></span></div>
+            <div class="square" id="250"><span></span></div>
+            <div class="square" id="251"><span></span></div>
+            <div class="square" id="252"><span></span></div>
+            <div class="square" id="253"><span></span></div>
+            <div class="square" id="254"><span></span></div>
+            <div class="square" id="255"><span></span></div>
+            <div class="square" id="256"><span></span></div>
+            <div class="square" id="257"><span></span></div>
+            <div class="square" id="258"><span></span></div>
+            <div class="square" id="259"><span></span></div>
+            <div class="square" id="260"><span></span></div>
+            <div class="square" id="261"><span></span></div>
+            <div class="square" id="262"><span></span></div>
+            <div class="square" id="263"><span></span></div>
+            <div class="square" id="264"><span></span></div>
+            <div class="square" id="265"><span></span></div>
+            <div class="square" id="266"><span></span></div>
+            <div class="square" id="267"><span></span></div>
+            <div class="square" id="268"><span></span></div>
+            <div class="square" id="269"><span></span></div>
+            <div class="square" id="270"><span></span></div>
+            <div class="square" id="271"><span></span></div>
+            <div class="square" id="272"><span></span></div>
+            <div class="square" id="273"><span></span></div>
+            <div class="square" id="274"><span></span></div>
+            <div class="square" id="275"><span></span></div>
+            <div class="square" id="276"><span></span></div>
+            <div class="square" id="277"><span></span></div>
+            <div class="square" id="278"><span></span></div>
+            <div class="square" id="279"><span></span></div>
+            <div class="square" id="280"><span></span></div>
+            <div class="square" id="281"><span></span></div>
+            <div class="square" id="282"><span></span></div>
+            <div class="square" id="283"><span></span></div>
+            <div class="square" id="284"><span></span></div>
+            <div class="square" id="285"><span></span></div>
+            <div class="square" id="286"><span></span></div>
+            <div class="square" id="287"><span></span></div>
+            <div class="square" id="288"><span></span></div>
+            <div class="square" id="289"><span></span></div>
+            <div class="square" id="290"><span></span></div>
+            <div class="square" id="291"><span></span></div>
+            <div class="square" id="292"><span></span></div>
+            <div class="square" id="293"><span></span></div>
+            <div class="square" id="294"><span></span></div>
+            <div class="square" id="295"><span></span></div>
+            <div class="square" id="296"><span></span></div>
+            <div class="square" id="297"><span></span></div>
+            <div class="square" id="298"><span></span></div>
+            <div class="square" id="299"><span></span></div>
+            <div class="square" id="300"><span></span></div>
+-->
+
+    </div>
+    
+    <div class="contenedor-btnreiniciar">
+          <div class="btn btn-reiniciar" onclick="cargarPagina()">Reiniciar</div>
+    </div>
+       
+</div>
+
+<!-- Modal Instrucciones-->
+<div class="modal fade" id="instruccionesSopaLetras" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <!-- Encabezado-->
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sopa de letras</h4>
+          </div>
+          <!-- Contenido-->
+          <div class="modal-body">
+          </div>
+      </div>      
+    </div>
+</div>
+<!-- Modal Instrucciones-->
+
+
+<style>
+            
+     #contenedor-sopaletras{
+           width:40%;
+      }
+
+  
+
+      @media only screen and (max-width: 1366px) and (max-height: 768px )
+      {
+            #contenedor-sopaletras{
+                  width:30%;
+            }
+            #contenedor-sopaletras .square>span{
+                  font-size: 21px;
+            }
+
+      }
+      @media only screen and (max-width: 1280px)
+      {
+            #contenedor-sopaletras{
+                 width:45%;
+            }
+
+      }
+      @media screen and (max-width: 950px) {
+        #contenedor-sopaletras{
+          width:60%;
+        }
+      }
+
+
+      @media screen and (max-width: 767px) {
+            #contenedor-sopaletras{
+                  width:70%;
+            }   
+            #contenedor-sopaletras .square>span{
+                  font-size: 18px;
+            }
+      }
+
+      @media screen and (max-width: 600px) {
+        #contenedor-sopaletras{
+          width:80%;
+        } 
+      }
+
+      @media screen and (max-width: 480px) {
+        #contenedor-sopaletras{
+          width:90%;
+        } 
+      }
+</style>
+
+
+
+
+      
+
+<script type="text/javascript">
+
+//INTENTOS QUE QUIERO QUE TENGA ESTA ACTIVIDAD
+intentosSopaLetras = 2;
+
+//PUNTOS DE ESTA ACTIVIDAD
+puntossopaletras = 750;
+
+//NUMERO DE CUADRADOS EN COLUMNA DE LA SOPA DE LETRAS
+numerocolumnassopaletras= 10;
+
+//AQUÍ INTRODUZCO LAS PALABRAS QUE HAY QUE BUSCAR EN LA SOPA DE LETRAS
+arraypalabras=["DIRECCION", "FRENOS", "RUEDAS", "BASTIDOR"];
+
+//INICIO CUENTA ATRÁS
+cuentaatrassopaletras= "02:00";
+
+function getRandomInt(min, max) {
+return Math.floor(Math.random() * (max - min)) + min;
+}
+
+abecedario = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+for(i=0; i<$("#contenedor-sopaletras .square").length; i++){
+
+   if($("#contenedor-sopaletras .square span")[i].innerHTML == ""){
+        //COMENTAR ESTA LÍNEA PARA DISEÑAR LA ACTIVIDAD
+        $("#contenedor-sopaletras .square span")[i].innerHTML = abecedario[getRandomInt(0, 26)];
+   }
+}
+</script>
+
+<script src="../assets/js/sopaletras.js"></script>
+
+
+
+        
+        
+

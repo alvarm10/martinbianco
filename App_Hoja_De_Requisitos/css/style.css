@@ -1,0 +1,38 @@
+
+body{
+	margin:0px;
+	padding: 0px;
+	background-color: white;
+}
+
+form{
+	background-color: whitesmoke;
+}
+
+
+legend{
+	margin-top: 20px;
+}
+
+label{
+	margin-top: 10px;
+}
+
+hr{
+	width: 50%;
+	height:1px; 
+	background-color:#e5e5e5; 
+   	border:none; 
+}
+
+
+.marginInput{
+	margin: 0px 15px 0px 5px !important;
+}
+
+
+@media only screen and (min-width: 768px){
+.modal-dialog {
+    width: 850px !important;
+    margin: 30px auto;}
+}

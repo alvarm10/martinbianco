@@ -1,0 +1,361 @@
+#ejercicioSopaLetras{
+  font-family: Arial;
+}
+
+#contenedor-sopaletras{
+  font-family: 'Averia Sans Libre', cursive;
+  text-align: center;
+  width:20%;
+  margin: 20px auto;
+  position: relative;
+}
+
+#contenedor-sopaletras .square>span{
+  position: absolute;
+  top:50%;
+  left:50%;
+  font-size: 28px;
+  opacity: 0;
+  transition:opacity 1.5s ease;
+}
+
+.contenedorenunciadosopaletras{
+  padding:0px 70px;
+  margin:1% 0 0% 0;
+}
+
+.contenedorenunciadosopaletras .listasopaletras{
+  margin:10px 0 30px 0;
+}
+
+.contenedorenunciadosopaletras .listasopaletras li{
+  margin:5px 15px;
+  float: left;
+  transition: all 0.5s ease;
+}
+
+.contenedorenunciadosopaletras .listasopaletras li.sopaletras-tachada{
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 1150px) {
+  #contenedor-sopaletras .square>span{
+    font-size: 23px;
+  }
+  .contenedorenunciadosopaletras{
+    padding:0 60px;
+  }
+  .listasopaletras{
+    font-size:15px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  #contenedor-sopaletras{
+    width:60%;
+  }
+  #contenedor-sopaletras .square>span{
+    font-size:24px;
+  }
+  .contenedorenunciadosopaletras{
+    padding:0 50px;
+  }
+  .listasopaletras{
+    font-size:14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #contenedor-sopaletras{
+    width:70%;
+  }
+  #contenedor-sopaletras .square>span{
+    font-size: 21px;
+  }
+  .contenedorenunciadosopaletras{
+    padding:0 40px;
+    margin:1% 0 4% 0;
+  }
+  .listasopaletras{
+    font-size:13px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #contenedor-sopaletras{
+    width:80%;
+  }
+  #contenedor-sopaletras .square>span{
+    font-size:20px;
+  }
+  .contenedorenunciadosopaletras{
+    padding:0 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #contenedor-sopaletras{
+    width:90%;
+  }
+  #contenedor-sopaletras .square>span{
+    font-size:16px;
+  }
+  .contenedorenunciadosopaletras{
+    padding:0 0px;
+  }
+}
+
+#contenedor-sopaletras .square{
+  position: relative;
+  float:left;
+  border: solid 1px #A4A4A4;
+  background: url("../img/texturasopaletras.jpg");
+  background-size: 100%;
+  background-position: 50% 50%;
+  cursor:pointer;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: all 1s ease;
+  box-shadow: 1px 1px 0 #A4A4A4, 2px 2px 0 #D8D8D8, 3px 3px 0 #A4A4A4, 4px 4px 0 #D8D8D8, 5px 5px 0 #A4A4A4, 6px 6px 0 #D8D8D8, 7px 7px 0 #A4A4A4, 8px 8px 0 #D8D8D8;
+} 
+
+#contenedor-sopaletras .square:last-child{
+  margin-right:0;
+}
+#contenedor-sopaletras .square:before{
+    content:"";
+    display:block;
+    padding-top:100%;
+    float: left; 
+}
+
+/*ESTADO HOVER DE LAS LETRAS, EN MÓVIL O TABLET NO FUNCIONA BIEN*/
+/*#contenedor-sopaletras .square:hover{
+  background-image: url("../img/texturasopaletras_seleccionada.jpg");
+}*/
+
+#contenedor-sopaletras .sopaletras-acertada{
+  background-image: url("../img/texturasopaletras_acierto.jpg") !important;
+  background-repeat: no-repeat;
+}
+
+/*POSIBILIDAD DE VER LAS LETRAS MARCADAS AL FALLAR*/
+
+/*#contenedor-sopaletras .sopaletras-fallada{
+  background-image: url("../img/texturasopaletras_fallo.jpg") !important;
+  background-repeat: no-repeat;
+}*/
+
+#contenedor-sopaletras .sopaletras-seleccionada{
+  background-image: url("../img/texturasopaletras_seleccionada.jpg") !important;
+  background-repeat: no-repeat;
+}
+
+.clearfix{
+  clear:both;
+}
+
+
+/*CUADRADO DE PUNTUACIÓN*/
+
+
+.contenedor-puntuacion{
+  position: absolute;
+  top:40%;
+  left:-25%;
+  float:left;
+  width: 20%;
+  background: url("../img/texturasopaletras.jpg");
+  background-size: 100%;
+  background-position: 50% 50%;
+  border: solid 1px #A4A4A4;
+  color:#fff;
+  box-shadow: 1px 1px 0 #A4A4A4, 2px 2px 0 #D8D8D8, 3px 3px 0 #A4A4A4, 4px 4px 0 #D8D8D8;
+}
+
+@media screen and (max-width: 767px) {
+  .contenedor-puntuacion{
+    position: relative;
+    top:0;
+    left:40%;
+    margin-bottom:10px;
+  }
+}
+
+.contenedor-puntuacion:last-child{
+  margin-right:0;
+}
+.contenedor-puntuacion:before{
+    content:"";
+    display:block;
+    padding-top:100%;
+    float: left; 
+}
+
+.contenedor-puntuacion .mensajepuntossopa{
+  display: block;
+  margin-top:8px;
+  font-size: 15px;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.contenedor-puntuacion .puntossopa{
+  position: absolute;
+  top:50%;
+  left:50%;
+  display: block;
+  font-size: 28px;
+  transition: opacity 1s ease;
+  opacity: 0;
+}
+
+.contenedor-puntuacion .cronometrosopa{
+  position: absolute;
+  top:-26%;
+  left:50%;
+  font-size: 21px;
+  transition: opacity 0.5s ease;
+}
+
+.contenedormensajesopaletras{
+  background:#DB0029;
+  background-position: 50% 50%;
+  background-size: 110%;
+  position: absolute;
+  color:#fff;
+  top:50%;
+  left:50%;
+  z-index: 1;
+  width: 60%;
+  padding: 20px;
+  transition: opacity 1s ease;
+  box-shadow: 1px 1px 0 #A4A4A4, 2px 2px 0 #D8D8D8, 3px 3px 0 #A4A4A4, 4px 4px 0 #D8D8D8, 5px 5px 0 #A4A4A4;
+  line-height: 22px;
+  font-size: 14px;
+  opacity:0;
+  display: none;
+}
+
+.contenedormensajesopaletras>p{
+  font-weight: bold;
+  color:#fff;
+}
+
+@media screen and (max-width: 767px) {
+  .contenedormensajesopaletras{
+    width: 70%;
+  }
+  .contenedormensajesopaletras>p{
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contenedormensajesopaletras{
+    width: 90%;
+  }
+  .contenedormensajesopaletras>p{
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contenedor-puntuacion .mensajepuntossopa{
+    margin-top:6px;
+    font-size: 15px;
+  }
+
+  .contenedor-puntuacion .puntossopa{
+    font-size: 24px;
+  }
+  .contenedor-puntuacion .cronometrosopa{
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .contenedor-puntuacion .mensajepuntossopa{
+    margin-top:10px;
+    font-size: 15px;
+  }
+
+  .contenedor-puntuacion .puntossopa{
+    font-size: 28px;
+  }
+  .contenedor-puntuacion .cronometrosopa{
+    font-size: 21px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contenedor-puntuacion .mensajepuntossopa{
+    margin-top:6px;
+    font-size: 15px;
+  }
+
+  .contenedor-puntuacion .puntossopa{
+    font-size: 22px;
+  }
+  .contenedor-puntuacion .cronometrosopa{
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contenedor-puntuacion .mensajepuntossopa{
+    margin-top:5px;
+    font-size: 15px;
+  }
+
+  .contenedor-puntuacion .puntossopa{
+    font-size: 20px;
+  }
+  .contenedor-puntuacion .cronometrosopa{
+    font-size: 16px;
+  }
+  .contenedormensajesopaletras{
+    line-height: 18px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .contenedor-puntuacion .mensajepuntossopa{
+    margin-top:4px;
+    font-size: 12px;
+  }
+
+  .contenedor-puntuacion .puntossopa{
+    font-size: 16px;
+  }
+  .contenedor-puntuacion .cronometrosopa{
+    font-size: 13px;
+  }
+}
+
+/* Para los bullets de las ventanas emergentes*/
+#instruccionesSopaLetras .modal-body>.lista span{
+  color:#B0002D;
+}
+
+/* Botón de reiniciar actividad */
+
+.contenedor-btnreiniciar{
+  display: none;
+  text-align: center;
+  margin-top:30px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.contenedor-btnreiniciar>.btn-reiniciar{
+    width: 46%;
+    background: rgba(183, 177, 169, 0.2);
+}
+
+/* Para que funcione el scroll en las ventanas modales en Safari */
+.modal {
+    /* ... */
+    -webkit-overflow-scrolling:auto
+}

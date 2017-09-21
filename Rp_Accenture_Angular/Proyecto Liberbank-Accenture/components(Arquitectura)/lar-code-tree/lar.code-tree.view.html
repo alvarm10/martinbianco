@@ -1,0 +1,8 @@
+<ng-form name="larCodeTree.codeTreeForm" novalidate class="lar-code-tree">
+  <label for="{{larCodeTree.name}}" class="label-control">{{larCodeTree.label}}</label>
+  <input ng-model="larCodeTree.code" ng-change="larCodeTree.codeChanged()" ng-keypress="larCodeTree.validateKey($event)" class="code-box" type="text" name="{{larCodeTree.name}}" placeholder="0000" maxlength="4" min="1" max="9999" />
+
+  <button class="btn btn-primary" ng-click="larCodeTree.open('md')"><i class="glyphicon glyphicon-list" aria-hidden="true"></i></button>
+
+  <input ng-model="larCodeTree.description" class="name-box" type="text" disabled />
+</ng-form>

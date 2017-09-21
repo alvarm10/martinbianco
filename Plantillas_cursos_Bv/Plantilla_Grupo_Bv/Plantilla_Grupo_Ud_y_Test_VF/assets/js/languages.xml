@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<languages>
+	<language idioma="ES">
+		<buttons>
+			<audio>Audio</audio>
+			<ayuda>Ayuda</ayuda>
+			<cerrar>Cerrar</cerrar>
+			<documentacion>Documentación</documentacion>
+			<glosario>Glosario</glosario>
+			<aumentartexto>Aumentar texto</aumentartexto>
+			<reducirtexto>Reducir texto</reducirtexto>
+			<corregir>Corregir</corregir>
+			<solucion>Solución</solucion>
+			<reiniciar>Reiniciar</reiniciar>
+		</buttons>
+		<elementos>
+			<sumario>Sumario</sumario>
+		</elementos>
+		<instrucciones>
+			
+		</instrucciones>
+	</language>
+	<language idioma="EN">
+		<buttons>
+			<audio>Audio</audio>
+			<ayuda>Help</ayuda>
+			<cerrar>Close</cerrar>
+			<documentacion>Additional documentation</documentacion>
+			<glosario>Glossary</glosario>
+			<aumentartexto>Enlarge text</aumentartexto>
+			<reducirtexto>Reduce text</reducirtexto>
+			<corregir>Check</corregir>
+			<solucion>Solution</solucion>
+			<reiniciar>Restart</reiniciar>
+		</buttons>
+		<elementos>
+			<sumario>Summary</sumario>
+		</elementos>
+		<instrucciones>
+			
+		</instrucciones>
+	</language>
+	<language idioma="FR">
+		<buttons>
+			<audio>Acoustique</audio>
+			<ayuda>Aide</ayuda>
+			<cerrar>Fermer</cerrar>
+			<documentacion>Doc. Supplémentaire</documentacion>
+			<glosario>Glossaire</glosario>
+			<aumentartexto>Agrandir le texte</aumentartexto>
+			<reducirtexto>Réduire le texte</reducirtexto>
+			<corregir>Vérifier</corregir>
+			<solucion>Solution</solucion>
+			<reiniciar>Reboot</reiniciar>
+		</buttons>
+		<elementos>
+			<sumario>Résumé</sumario>
+		</elementos>
+		<instrucciones>
+			
+		</instrucciones>
+	</language>
+</languages>

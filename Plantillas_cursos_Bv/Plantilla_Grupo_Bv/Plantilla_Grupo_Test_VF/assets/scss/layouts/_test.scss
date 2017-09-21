@@ -1,0 +1,376 @@
+
+
+.test{
+    font-size:1em;
+    @media (max-width: 480px){
+                font-size:0.9em;
+    }
+   .inputTest{display: none;}
+    .txtRespuesta{
+        color: $txtOpcion;
+        padding: 5px 15px 5px 51px;
+        margin-bottom: 10px;
+        display: inline-block;
+        position: relative;
+        font-size: 0.9em;
+        border-radius: 3px;
+        cursor: pointer;
+        -o-transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .txtRespuesta:hover{
+        background: $opcionHover;
+    }
+    .txtRespuesta:before{
+        content: "";
+        width: 17px;
+        height: 17px;
+        display: inline-block;
+        background: none;
+        border: 3px  solid #68655c;
+        border-radius: 50%;
+        position: absolute;
+        left: 17px;
+        top: 4px;
+    }
+    input[type="radio"]:checked + .txtRespuesta{
+        padding: 5px 15px;
+        background: $opcionMarcada;
+        border-radius: 5px;
+        color: $txtOpcionMarcada;
+    }
+    input[type="radio"]:checked + .txtRespuesta sub{
+        color: $txtOpcionMarcada;
+    }
+    input[type="radio"]:checked + .txtRespuesta sup{
+        color: $txtOpcionMarcada;
+    }
+    input[type="radio"]:checked + .txtRespuesta:before{
+        display: none;
+    }
+
+    /*Para que los elementos de lista de las opciones no tengan ningún estilo */
+
+    .listarespuestas{
+        list-style-type: none;
+    }
+
+    /*Para el número de preguntas*/
+
+    #npregunta{
+        font-size:1.2em;
+        line-height: 1em;
+        font-weight: bold;
+        color: $titleTheme;
+    }
+
+    /*Para el número de intentos*/
+
+    #nintento{
+        font-size:1em ;
+        line-height: 1.2em;
+        font-weight: bold;
+        color: $titleTheme;
+        margin-bottom:2%;
+    }
+    /*Para darle estilo a la pregunta*/
+    #pregunta{
+        margin-bottom:20px;
+        text-align: justify;
+        color:$pregunta;
+        font-weight: bold;
+        line-height: 1.3em;
+        @media (max-width: 780px){
+                font-size:0.95em !important;  
+            }
+        @media (max-width: 480px){
+                font-size:0.9em !important;
+        }
+    }
+
+    /*Para el estilo del texto de pregunta 1, pregunta 2, etc*/
+
+    h2{ 
+        margin-bottom:20px;
+        text-align: center;
+        font-size: 1em;
+        color:$color3;
+    }
+
+    /*Para darle estilo al cronómetro del test*/
+
+    #cronometrotest{
+        color:$cronometro;
+        font-size:1.3em;
+        margin-bottom: 10px;
+        @media (max-width: 480px){
+                font-size: 1.2em;
+        }
+    }
+
+    /*Para la pantalla de resultado final*/
+    #resultado{
+        text-align: center;
+        margin:0 5%;
+
+        h1{
+            font-size: 1.5em;
+            margin-bottom:20px;
+            color:$txtTituloRevision;
+        }
+
+        p{  
+            font-size: 1em;
+            margin-top:20px;
+        }
+
+        span{
+            font-size: 3em;
+        }
+    }
+
+    #btn-repetirtest,  #btn-revisarpreguntas, #btn-cerrartest, #btn-resetyrestart{
+        display: none;
+        margin: 20px;
+        padding: 6px 20px;
+        background: $backgroundBotones;
+        border: solid 2px $bordeBotones;
+        color:$txtBotones;
+    }
+
+    #btn-repetirtest:hover,  #btn-revisarpreguntas:hover, #btn-cerrartest:hover, #btn-resetyrestart:hover{
+        background: $backgroundBotonesHover;
+        border: solid 2px $bordeBotonesHover;
+        color:$txtBotonesHover;
+    }
+
+    .opcionimagen{
+        width:50%;
+            @media (max-width: 780px){
+                width:70%;
+            }
+
+            @media (max-width: 480px){
+                width:90%;
+            }
+    }
+    
+    /*PARA LOS RESULTADOS DEL TEST */
+    
+    #resultados-test{
+        display:none;
+        h1{
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.5em;
+            color:$txtTituloRevision;
+        }
+    }
+    
+    .accordion-toggle{
+        padding-right:15% !important;
+        
+        .textopregunta{
+            margin-top:-25px;
+            margin-left:6%;
+            color:$txtPregunta;
+            @media (max-width: 780px){
+                margin-left:12%;
+                font-size:0.9em
+            }
+
+            @media (max-width: 480px){
+                margin-left:16%;
+                font-size:0.8em
+            }
+        }
+    }
+
+    .accordion-toggle:hover{
+        .textopregunta{
+            color:$txtPreguntaHover;
+        }
+    }
+
+    .accordion-toggle {
+        .textopregunta{
+            color:$txtPreguntaHover;
+        }
+    }
+
+    .accordion-toggle.collapsed{
+        .textopregunta{
+            color:$txtPregunta;
+        }
+    }
+
+    .accordion-toggle.collapsed:hover{
+        .textopregunta{
+            color:$txtPreguntaHover;
+        }
+    }
+    
+    .accordion-heading{
+        position: relative;
+    }
+        
+    /*ICONO DE INCORRECTO*/
+    .incorrecto{
+        position:relative;
+        svg{
+            position: absolute;
+            z-index:1;
+            right: 4%;
+            top: 15px;
+            width: 20px;
+            height: 20px;    
+            border-radius: 50%;
+            background:#FF3B30;
+            @media (max-width: 480px){
+                top: 10px;
+            }
+            g{
+                fill:$blanco;
+            }
+            #Shape{
+                fill:#FF3B30;
+            }
+        }
+    }
+    /*ICONO DE CORRECTO*/
+    .correcto{
+        position:relative;
+        svg{
+            position: absolute;
+            z-index:1;
+            right: 4%;
+            top: 15px;
+            width: 20px;
+            height: 20px;    
+            border-radius: 50%;
+            background:#4CD964;
+            @media (max-width: 480px){
+                top: 10px;
+            }
+            g{
+                fill:$blanco;
+            }
+            #Shape{
+                fill:#4CD964;
+            }
+        }
+    }
+
+            /*INPUTS DE OPCIONES DE LAS PREGUNTAS EN LA PANTALLA DE REVISAR PREGUNTAS*/
+            .panel-body{
+                padding:15px 0 15px 15px;
+                li{ 
+                    position: relative;
+                    margin-bottom:20px;
+                    padding-right: 10%;
+                    
+                    input[type="radio"]{
+                        display: inline-block;
+                    } 
+                    label{
+                        display:block;
+                        margin-top:-21px;
+                        margin-left:4%;
+                        @media (max-width: 780px){
+                            margin-left:8%;
+                            margin-top:-20px;
+                            font-size:0.9em
+                        }
+
+                        @media (max-width: 480px){
+                            margin-left:12%;
+                            margin-top:-18px;
+                            font-size:0.8em
+                        }
+                    }
+                    .resultado{
+                        position: absolute;
+                        top: -14px;
+                        right: 4%;
+                    }
+                }  
+            }
+
+
+    /*CAJA DE TEXTO DE ENCABEZADO DE FEEDBACK*/
+    .headerfeedback, .feedback {
+        margin-right: 15px;
+        margin-bottom: 3px;
+        font-size: 0.9em;
+        font-style: italic;
+        color: $txtFeedback;
+    }
+
+    /*CAJA DE FEEDBACK*/
+    .headerfeedback{
+        font-weight: bold;
+    }
+
+    /*PARA QUE LOS ICONOS DE DESPLEGAR EL ACORDEÓN ESTÉN BIEN ALINEADOS DE ALTO EN VERSIÓN MOVIL*/
+
+    .accordion-heading .accordion-toggle svg {
+        @media (max-width: 480px){
+                top:0px;
+        }
+    }
+
+    
+
+    /*PARA LA PRIMERA PANTALLA DEL TEST*/
+
+    #paginainicio{
+        .contenedor-interrogacion{
+            svg{
+                width: 18%;
+                opacity: 0.7;
+                @media (max-width: 780px){
+                    width: 25%;
+                }
+                @media (max-width: 480px){
+                    width: 37%;
+                }
+                #Capa_1{
+                    fill:$circuloInterrogacion;
+                }
+                #Capa_2{
+                    fill:$interrogacion;
+                }
+            }
+        }
+
+        .mensajeautoeva{
+            color:$color3 !important;
+            font-weight: bold !important;
+            font-size:1.4em !important;
+            margin-top:10px !important;
+            line-height: 1.2em;
+            
+            @media (max-width: 780px){
+                    font-size:1.2em !important;
+            }
+            @media (max-width: 480px){
+                   font-size:1.1em !important;
+            }
+
+            span{
+                font-size:1.3em !important;
+                margin:0 4px;
+            }
+        }
+
+        ul{ 
+            margin-left: 3%;
+            margin-top:10px;
+            font-size:1em;
+            list-style-type: square;
+            color:$color3 !important;
+        }
+    }
+}

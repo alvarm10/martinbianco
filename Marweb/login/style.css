@@ -1,0 +1,25 @@
+body{
+    background-image: url("img/white-abstract.jpg");
+    background-attachment: fixed; 
+    padding-top: 100px;
+}
+
+.mytitle{
+    font-family: 'Permanent Marker', cursive;
+}
+
+.in-title{
+    color: darkorange;
+    font-size: 35px;
+}
+.for-title{
+   font-family: 'Exo', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    color: whitesmoke;
+}
+.all-title{
+    color: darkorange;
+    font-size: 35px;
+}
+

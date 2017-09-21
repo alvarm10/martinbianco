@@ -1,0 +1,28 @@
+<div class="{{$ctrl.classTitle}}">
+	<label>{{$ctrl.title}}</label>
+ 	<div>
+	  	<input ng-if="$ctrl.typeValidation =='importe'" ng-model="$ctrl.model" 
+		  	ng-disabled="$ctrl.disabled"  
+		  	type="{{$ctrl.options.type}}" 
+		  	maxlength="{{$ctrl.options.size}}" 
+		  	size="{{$ctrl.options.size}}"
+		  	ng-change="{{$ctrl.options.change}}" 
+		  	ng-blur="$ctrl.reformat(this)" 
+		  	ng-required="{{$ctrl.options.required}}"/>
+
+		<input ng-if="$ctrl.typeValidation !='importe' && $ctrl.typeValidation !='porcentaje'" ng-model="$ctrl.model" 
+		  	ng-disabled="{{$ctrl.disabled}}"  
+		  	type="{{$ctrl.options.type}}" 
+		  	maxlength="{{$ctrl.options.size}}" 
+		  	size="{{$ctrl.options.size}}"
+		  	ng-change="{{$ctrl.options.change}}" 
+		  	ng-required="{{$ctrl.options.required}}"/>
+		<input ng-if="$ctrl.typeValidation =='porcentaje'" ng-model="$ctrl.model" 
+		  	ng-disabled="{{$ctrl.disabled}}"  
+		  	type="{{$ctrl.options.type}}" 
+		  	maxlength="{{$ctrl.options.size}}" 
+		  	size="{{$ctrl.options.size}}"
+		  	ng-change="{{$ctrl.options.change}}" 
+		  	ng-blur="$ctrl.reformatporcentaje(this)" />
+  	</div>
+</div>
